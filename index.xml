@@ -11,5 +11,140 @@
 	<atom:link href="https://www.cookiestatus.com/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Current status</title>
+      <link>https://www.cookiestatus.com/safari/current-status/</link>
+      <pubDate>Thu, 21 Nov 2019 15:47:52 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/safari/current-status/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Current status</title>
+      <link>https://www.cookiestatus.com/firefox/current-status/</link>
+      <pubDate>Thu, 21 Nov 2019 15:46:35 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/firefox/current-status/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Current status</title>
+      <link>https://www.cookiestatus.com/edge/current-status/</link>
+      <pubDate>Thu, 21 Nov 2019 15:45:30 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/edge/current-status/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Current status</title>
+      <link>https://www.cookiestatus.com/chrome/current-status/</link>
+      <pubDate>Thu, 21 Nov 2019 15:43:50 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/chrome/current-status/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tracking protection?</title>
+      <link>https://www.cookiestatus.com/introduction/tracking-protection/</link>
+      <pubDate>Thu, 21 Nov 2019 15:28:47 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/introduction/tracking-protection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intelligent Tracking Prevention (ITP)</title>
+      <link>https://www.cookiestatus.com/safari/intelligent-tracking-prevention/</link>
+      <pubDate>Thu, 21 Nov 2019 15:47:59 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/safari/intelligent-tracking-prevention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Enhanced Tracking Protection (ETP)</title>
+      <link>https://www.cookiestatus.com/firefox/enhanced-tracking-protection/</link>
+      <pubDate>Thu, 21 Nov 2019 15:46:46 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/firefox/enhanced-tracking-protection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tracking Prevention</title>
+      <link>https://www.cookiestatus.com/edge/tracking-prevention/</link>
+      <pubDate>Thu, 21 Nov 2019 15:45:34 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/edge/tracking-prevention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy Sandbox</title>
+      <link>https://www.cookiestatus.com/chrome/privacy-sandobx/</link>
+      <pubDate>Thu, 21 Nov 2019 15:43:56 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/chrome/privacy-sandobx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Impact</title>
+      <link>https://www.cookiestatus.com/introduction/impact/</link>
+      <pubDate>Thu, 21 Nov 2019 15:29:14 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/introduction/impact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Useful resources</title>
+      <link>https://www.cookiestatus.com/safari/useful-resources/</link>
+      <pubDate>Thu, 21 Nov 2019 15:48:03 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/safari/useful-resources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Useful resources</title>
+      <link>https://www.cookiestatus.com/firefox/useful-resources/</link>
+      <pubDate>Thu, 21 Nov 2019 15:46:51 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/firefox/useful-resources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Useful resources</title>
+      <link>https://www.cookiestatus.com/edge/useful-resources/</link>
+      <pubDate>Thu, 21 Nov 2019 15:45:43 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/edge/useful-resources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Useful resources</title>
+      <link>https://www.cookiestatus.com/chrome/useful-resources/</link>
+      <pubDate>Thu, 21 Nov 2019 15:44:02 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/chrome/useful-resources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to prepare</title>
+      <link>https://www.cookiestatus.com/introduction/how-to-prepare/</link>
+      <pubDate>Thu, 21 Nov 2019 15:29:30 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/introduction/how-to-prepare/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

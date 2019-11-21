@@ -11,7 +11,140 @@
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": " Part 1 Introduction General introduction to the various mechanisms with which the major browsers (and browser engines) implement tracking prevention / protection.\n"
+	"content": " Introduction General introduction to tracking prevention / protection, what it is, and what its various implications are.\n"
+},
+{
+	"uri": "https://www.cookiestatus.com/chrome/",
+	"title": "Chrome",
+	"tags": [],
+	"description": "",
+	"content": "  Chrome Lorem Ipsum.\n"
+},
+{
+	"uri": "https://www.cookiestatus.com/edge/",
+	"title": "Edge",
+	"tags": [],
+	"description": "",
+	"content": "  Edge Lorem Ipsum.\n"
+},
+{
+	"uri": "https://www.cookiestatus.com/firefox/",
+	"title": "Firefox",
+	"tags": [],
+	"description": "",
+	"content": "  Firefox Lorem Ipsum.\n"
+},
+{
+	"uri": "https://www.cookiestatus.com/safari/",
+	"title": "Safari",
+	"tags": [],
+	"description": "",
+	"content": "  Safari Lorem Ipsum.\n"
+},
+{
+	"uri": "https://www.cookiestatus.com/safari/current-status/",
+	"title": "Current status",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/firefox/current-status/",
+	"title": "Current status",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/edge/current-status/",
+	"title": "Current status",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/chrome/current-status/",
+	"title": "Current status",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/introduction/tracking-protection/",
+	"title": "Tracking protection?",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/safari/intelligent-tracking-prevention/",
+	"title": "Intelligent Tracking Prevention (ITP)",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/firefox/enhanced-tracking-protection/",
+	"title": "Enhanced Tracking Protection (ETP)",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/edge/tracking-prevention/",
+	"title": "Tracking Prevention",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/chrome/privacy-sandobx/",
+	"title": "Privacy Sandbox",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/introduction/impact/",
+	"title": "Impact",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/safari/useful-resources/",
+	"title": "Useful resources",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/firefox/useful-resources/",
+	"title": "Useful resources",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/edge/useful-resources/",
+	"title": "Useful resources",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/chrome/useful-resources/",
+	"title": "Useful resources",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.cookiestatus.com/introduction/how-to-prepare/",
+	"title": "How to prepare",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://www.cookiestatus.com/categories/",
