@@ -12,20 +12,20 @@
     <title>Tracking protection? :: Current Status Of Browser Tracking Prevention | cookiestatus.com</title>
 
     
-    <link href="/css/nucleus.css?1574761573" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1574761573" rel="stylesheet">
-    <link href="/css/hybrid.css?1574761573" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1574761573" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1574761573" rel="stylesheet">
-    <link href="/css/auto-complete.css?1574761573" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1574761573" rel="stylesheet">
-    <link href="/css/theme.css?1574761573" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1574761573" rel="stylesheet">
+    <link href="/css/nucleus.css?1574773462" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1574773462" rel="stylesheet">
+    <link href="/css/hybrid.css?1574773462" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1574773462" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1574773462" rel="stylesheet">
+    <link href="/css/auto-complete.css?1574773462" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1574773462" rel="stylesheet">
+    <link href="/css/theme.css?1574773462" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1574773462" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1574761573" rel="stylesheet">
+      <link href="/css/theme-blue.css?1574773462" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1574761573"></script>
+    <script src="/js/jquery-3.3.1.min.js?1574773462"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -33,7 +33,22 @@
       }
       
     </style>
-    
+    <style type="text/css">
+  figure.left-align {
+      display: inline-block;
+      margin: 1rem;
+  }
+  figure.left-align img {
+      margin: 1rem auto !important;
+  }
+  figure.left-align h4 {
+      margin-top: 0 !important;
+  }
+  blockquote p {
+      color: #666 !important;
+  }
+</style>
+
   </head>
   <body class="" data-url="/introduction/tracking-protection/">
     <nav id="sidebar" class="">
@@ -490,14 +505,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1574761573"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1574761573"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1574773462"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1574773462"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.cookiestatus.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1574761573"></script>
+<script type="text/javascript" src="/js/search.js?1574773462"></script>
 
     
   </div>
@@ -1019,7 +1034,16 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#first-party-and-third-party">First-party and third-party</a></li>
+<li><a href="#cross-site-tracking">Cross-site tracking</a></li>
+<li><a href="#restrict-access">Restrict access</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1044,6 +1068,75 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 
 
+
+
+<p>Tracking protection, and similar measures, seek to protect the <strong>user</strong> against harmful data collection and exploitation by third-party platforms, scripts, and applications.</p>
+
+<p>As a concept, it&rsquo;s convoluted and multi-faceted. The terminology used is often very vague. Information about the different mechanisms employed by web browsers is distributed across release notes, discussion forums, Twitter threads, and developer guides, some of which are outdated soon after release.</p>
+
+<p>In this introductory chapter, we&rsquo;ll take a look at what tracking protection means <em>in general</em>, before directing you to the other parts of this site for more indepth information on how different browsers implement countermeasures.</p>
+
+<p>In short, tracking protection, tracking prevention, anti-tracking, cookie blocking, content blocking, etc. are designed to:</p>
+
+<ul>
+<li><strong>Identify and classify</strong> domains that have been recognized to employ tracking mechanisms harmful to (browsers&rsquo; intepretation of) user privacy.</li>
+<li>If a script or resource is loaded in a <strong>third-party context</strong> from such a domain, restrict access to browser storage so that the trackers could not exploit data stored within.</li>
+<li>In some cases (namely Safari&rsquo;s ITP), restrict storage access in a first-party context where it&rsquo;s likely that it could be exploited for <strong>cross-site tracking</strong> purposes.</li>
+</ul>
+
+<h2 id="first-party-and-third-party">First-party and third-party</h2>
+
+<p>Lorem ipsum.</p>
+
+<h2 id="cross-site-tracking">Cross-site tracking</h2>
+
+<p>A common thread in the rhetoric is that browsers want to quench <strong>cross-site tracking</strong>. Here&rsquo;s how <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">Safari describes it</a>:</p>
+
+<blockquote>
+<p>Imagine a user who first browses example-products.com for a new gadget and later browses example-recipies.com for dinner ideas. If both these sites load resources from example-tracker.com and example-tracker.com has a cookie stored in the user’s browser, the owner of example-tracker.com has the ability to know that the user visited both the product website and the recipe website, what they did on those sites, what kind of web browser was used, et cetera. This is what’s called <em>cross-site tracking</em> and the cookie used by example-tracker.com is called a <em>third-party cookie</em>. In our testing we found popular websites with over 70 such trackers, all silently collecting data on users.</p>
+</blockquote>
+
+<p>In essence, <strong>cross-site tracking</strong> utilizes centralized tracking domains for scripts to communicate with from the sites the user actually visits. These tracking domains leverage third parties&rsquo; access to <em>browser storage</em> (mainly cookies) to build profiles of all the sites the user has visited.</p>
+
+<figure class="left-align">
+    <img src="/images/content/cross-site-tracking.jpg"/> <figcaption>
+            <h4>Cross-site tracking</h4>
+        </figcaption>
+</figure>
+
+
+<h2 id="restrict-access">Restrict access</h2>
+
+<p>The biggest impact is on <strong>storage access</strong>, and how tracking protection measures restrict this access for third parties that have been identified as compromising user privacy.</p>
+
+<p><strong>Mozilla Firefox</strong>, for example, describes their own effort <a href="https://blog.mozilla.org/futurereleases/2018/08/30/changing-our-approach-to-anti-tracking/">like this</a>:</p>
+
+<blockquote>
+<p>In order to help give users the private web browsing experience they expect and deserve, Firefox will strip cookies and block storage access from third-party tracking content, based on lists of tracking domains by <a href="https://disconnect.me/">Disconnect</a>.</p>
+</blockquote>
+
+<p>This approach of comparing the third-party domains against a curated list is utilized also by <strong>Microsoft Edge</strong>. Here&rsquo;s how they introduce <a href="https://blogs.windows.com/msedgedev/2019/06/27/tracking-prevention-microsoft-edge-preview/">Edge&rsquo;s tracking prevention</a>:</p>
+
+<blockquote>
+<p>We’ve added a new component to Microsoft Edge, Trust Protection Lists<strong>,</strong> that contains the latest information on which organizations may be trying to track users on the web. This component allows us to be flexible with where we source details on what a tracker is and when we deliver updated lists to our users.</p>
+</blockquote>
+
+<p>The <strong>Safari</strong> browser has the most interesting approach. Instead of a binary approach (blocked vs. not blocked) and a set list of domains, Safari&rsquo;s <a href="https://webkit.org/blog/category/privacy/">Intelligent Tracking Prevention</a> uses multiple methods to restrict the storage access for third parties that are <em>algorithmically</em> classified as having cross-site tracking capabilities. Here&rsquo;s how they describe the <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">classification process</a>:</p>
+
+<blockquote>
+<p>A machine learning model is used to classify which top privately-controlled domains have the ability to track the user cross-site, based on the collected statistics. Out of the various statistics collected, three vectors turned out to have strong signal for classification based on current tracking practices: subresource under number of unique domains, sub frame under number of unique domains, and number of unique domains redirected to. All data collection and classification happens on-device.</p>
+</blockquote>
+
+<p>However, Safari&rsquo;s approach <em>is</em> binary in a sense - you can either enable <strong>all</strong> cross-site tracking or <strong>none</strong>.</p>
+
+<figure class="left-align">
+    <img src="/images/content/safari-settings.jpg"/> <figcaption>
+            <h4>Safari privacy settings</h4>
+        </figcaption>
+</figure>
+
+
+<p>The <strong>Chrome</strong> browser is, for now, devoid of any significant tracking protection measures. However, they have contributed to the discussion with their <a href="https://www.blog.google/products/chrome/building-a-more-private-web/">privacy sandbox</a> initiative, as well as with upcoming features involving <a href="https://blog.chromium.org/2019/05/improving-privacy-and-security-on-web.html">cookie restrictions</a> and <a href="https://www.chromestatus.com/feature/6251880185331712">referrer policies</a>.</p>
 
 
 <footer class=" footline" >
@@ -1424,19 +1517,19 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1574761573"></script>
-    <script src="/js/perfect-scrollbar.min.js?1574761573"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1574761573"></script>
-    <script src="/js/jquery.sticky.js?1574761573"></script>
-    <script src="/js/featherlight.min.js?1574761573"></script>
-    <script src="/js/highlight.pack.js?1574761573"></script>
+    <script src="/js/clipboard.min.js?1574773462"></script>
+    <script src="/js/perfect-scrollbar.min.js?1574773462"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1574773462"></script>
+    <script src="/js/jquery.sticky.js?1574773462"></script>
+    <script src="/js/featherlight.min.js?1574773462"></script>
+    <script src="/js/highlight.pack.js?1574773462"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1574761573"></script>
-    <script src="/js/learn.js?1574761573"></script>
-    <script src="/js/hugo-learn.js?1574761573"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1574773462"></script>
+    <script src="/js/learn.js?1574773462"></script>
+    <script src="/js/hugo-learn.js?1574773462"></script>
 
-    <link href="/mermaid/mermaid.css?1574761573" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1574761573"></script>
+    <link href="/mermaid/mermaid.css?1574773462" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1574773462"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
