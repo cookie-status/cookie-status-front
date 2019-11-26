@@ -12,20 +12,20 @@
     <title>Cookie Status :: Current Status Of Browser Tracking Prevention | cookiestatus.com</title>
 
     
-    <link href="/css/nucleus.css?1574759736" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1574759736" rel="stylesheet">
-    <link href="/css/hybrid.css?1574759736" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1574759736" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1574759736" rel="stylesheet">
-    <link href="/css/auto-complete.css?1574759736" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1574759736" rel="stylesheet">
-    <link href="/css/theme.css?1574759736" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1574759736" rel="stylesheet">
+    <link href="/css/nucleus.css?1574761573" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1574761573" rel="stylesheet">
+    <link href="/css/hybrid.css?1574761573" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1574761573" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1574761573" rel="stylesheet">
+    <link href="/css/auto-complete.css?1574761573" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1574761573" rel="stylesheet">
+    <link href="/css/theme.css?1574761573" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1574761573" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1574759736" rel="stylesheet">
+      <link href="/css/theme-blue.css?1574761573" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1574759736"></script>
+    <script src="/js/jquery-3.3.1.min.js?1574761573"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -490,14 +490,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1574759736"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1574759736"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1574761573"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1574761573"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.cookiestatus.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1574759736"></script>
+<script type="text/javascript" src="/js/search.js?1574761573"></script>
 
     
   </div>
@@ -1079,11 +1079,19 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 
 <tr>
-<td align="right"><strong>Other browser storage (e.g. localStorage, IndexedDB)</strong></td>
+<td align="right"><strong>Other browser storage in 3rd party context</strong></td>
 <td>No restrictions.</td>
-<td>Access restricted in third-party context for known trackers.</td>
-<td>localStorage and IndexedDB restricted in third-party context for known trackers, sessionStorage is not restricted. No restrictions in first-party context.</td>
-<td>Access restricted in third-party context in all cases. First-party storage restricted to 7 days on pages with URL decoration (query parameters or fragments) when referring domain is a known tracker.</td>
+<td>Access restricted for known trackers. No restrictions for other domains.</td>
+<td><code>localStorage</code> and <code>IndexedDB</code> restricted for known trackers. <code>sessionStorage</code> is not restricted. No restrictions for other domains.</td>
+<td>Access restricted in all cases.</td>
+</tr>
+
+<tr>
+<td align="right"><strong>Other browser storage in 1st party context</strong></td>
+<td>No restrictions.</td>
+<td>No restrictions.</td>
+<td>No restrictions.</td>
+<td>Restricted to 7 days maximum storage on pages with URL decoration (query parameters or fragments) when referring domain is a known tracker.</td>
 </tr>
 
 <tr>
@@ -1468,19 +1476,19 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1574759736"></script>
-    <script src="/js/perfect-scrollbar.min.js?1574759736"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1574759736"></script>
-    <script src="/js/jquery.sticky.js?1574759736"></script>
-    <script src="/js/featherlight.min.js?1574759736"></script>
-    <script src="/js/highlight.pack.js?1574759736"></script>
+    <script src="/js/clipboard.min.js?1574761573"></script>
+    <script src="/js/perfect-scrollbar.min.js?1574761573"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1574761573"></script>
+    <script src="/js/jquery.sticky.js?1574761573"></script>
+    <script src="/js/featherlight.min.js?1574761573"></script>
+    <script src="/js/highlight.pack.js?1574761573"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1574759736"></script>
-    <script src="/js/learn.js?1574759736"></script>
-    <script src="/js/hugo-learn.js?1574759736"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1574761573"></script>
+    <script src="/js/learn.js?1574761573"></script>
+    <script src="/js/hugo-learn.js?1574761573"></script>
 
-    <link href="/mermaid/mermaid.css?1574759736" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1574759736"></script>
+    <link href="/mermaid/mermaid.css?1574761573" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1574761573"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
