@@ -23,6 +23,17 @@ In short, tracking protection, tracking prevention, anti-tracking, cookie blocki
     </item>
     
     <item>
+      <title>Summary of exploits</title>
+      <link>https://www.cookiestatus.com/introduction/summary-of-exploits/</link>
+      <pubDate>Thu, 28 Nov 2019 13:12:55 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/introduction/summary-of-exploits/</guid>
+      <description>There are a number of ways in which data exploitation is attempted. On this page, these will be listed superficially.
+The problem is that all these method also serve valid and benign use cases, which means that when browsers seek to prevent these, they also end up preventing non-malicious and non-exploitative use of browser storage.
+And this is the nature of the beast. The very same APIs and methodologies that are used, for example, to improve the user experience of the site, are being repurposed by third parties for malicious data collection and manipulation.</description>
+    </item>
+    
+    <item>
       <title>Impact</title>
       <link>https://www.cookiestatus.com/introduction/impact/</link>
       <pubDate>Thu, 21 Nov 2019 15:29:14 +0200</pubDate>
