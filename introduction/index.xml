@@ -12,14 +12,14 @@
     
     
     <item>
-      <title>Tracking protection?</title>
+      <title>Tracking protection</title>
       <link>https://www.cookiestatus.com/introduction/tracking-protection/</link>
       <pubDate>Thu, 21 Nov 2019 15:28:47 +0200</pubDate>
       
       <guid>https://www.cookiestatus.com/introduction/tracking-protection/</guid>
       <description>Tracking protection, and similar measures, seek to protect the user against harmful data collection and exploitation by third-party platforms, scripts, and applications.
-In this introductory chapter, we&amp;rsquo;ll take a look at what tracking protection means in general, before directing you to the other parts of this site for more indepth information on how different browsers implement countermeasures.
-In short, tracking protection, tracking prevention, anti-tracking, cookie blocking, content blocking, etc. are designed to:</description>
+In short, tracking protection, tracking prevention, anti-tracking, cookie blocking, content blocking, etc. are designed to:
+ Identify and classify domains that have been recognized as employing tracking mechanisms harmful to (browsers&amp;rsquo; intepretation of) user privacy. If a script or resource is loaded in a third-party context from such a domain, restrict access to browser storage so that the trackers could not exploit data stored within.</description>
     </item>
     
     <item>

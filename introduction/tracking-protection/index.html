@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tracking protection? :: Current Status Of Browser Tracking Prevention | cookiestatus.com</title>
+    <title>Tracking protection :: Current Status Of Browser Tracking Prevention | cookiestatus.com</title>
 
     
-    <link href="/css/nucleus.css?1574853484" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1574853484" rel="stylesheet">
-    <link href="/css/hybrid.css?1574853484" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1574853484" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1574853484" rel="stylesheet">
-    <link href="/css/auto-complete.css?1574853484" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1574853484" rel="stylesheet">
-    <link href="/css/theme.css?1574853484" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1574853484" rel="stylesheet">
+    <link href="/css/nucleus.css?1574935678" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1574935678" rel="stylesheet">
+    <link href="/css/hybrid.css?1574935678" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1574935678" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1574935678" rel="stylesheet">
+    <link href="/css/auto-complete.css?1574935678" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1574935678" rel="stylesheet">
+    <link href="/css/theme.css?1574935678" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1574935678" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1574853484" rel="stylesheet">
+      <link href="/css/theme-blue.css?1574935678" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1574853484"></script>
+    <script src="/js/jquery-3.3.1.min.js?1574935678"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -505,14 +505,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1574853484"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1574853484"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1574935678"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1574935678"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.cookiestatus.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1574853484"></script>
+<script type="text/javascript" src="/js/search.js?1574935678"></script>
 
     
   </div>
@@ -558,9 +558,9 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/introduction/tracking-protection/" title="Tracking protection?" class="dd-item active">
+      <li data-nav-id="/introduction/tracking-protection/" title="Tracking protection" class="dd-item active">
         <a href="/introduction/tracking-protection/">
-        Tracking protection?
+        Tracking protection
         
         </a>
     </li>
@@ -1021,7 +1021,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
             
           
           
-            <a href='/'>Cookie Status</a> > <a href='/introduction/'>Introduction</a> > Tracking protection?
+            <a href='/'>Cookie Status</a> > <a href='/introduction/'>Introduction</a> > Tracking protection
           
          
           
@@ -1038,9 +1038,10 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <ul>
 <li>
 <ul>
-<li><a href="#first-party-and-third-party">First-party and third-party</a></li>
+<li><a href="#cookies">Cookies</a></li>
+<li><a href="#first-party-and-third-party-context">First-party and third-party context</a></li>
 <li><a href="#cross-site-tracking">Cross-site tracking</a></li>
-<li><a href="#restrict-access">Restrict access</a></li>
+<li><a href="#restrict-storage-access">Restrict storage access</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1060,7 +1061,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
           
             <h1>
               
-              Tracking protection?
+              Tracking protection
             </h1>
           
 
@@ -1072,19 +1073,101 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <p>Tracking protection, and similar measures, seek to protect the <strong>user</strong> against harmful data collection and exploitation by third-party platforms, scripts, and applications.</p>
 
-<p>In this introductory chapter, we&rsquo;ll take a look at what tracking protection means <em>in general</em>, before directing you to the other parts of this site for more indepth information on how different browsers implement countermeasures.</p>
-
 <p>In short, tracking protection, tracking prevention, anti-tracking, cookie blocking, content blocking, etc. are designed to:</p>
 
 <ul>
-<li><strong>Identify and classify</strong> domains that have been recognized to employ tracking mechanisms harmful to (browsers&rsquo; intepretation of) user privacy.</li>
+<li><strong>Identify and classify</strong> domains that have been recognized as employing tracking mechanisms harmful to (browsers&rsquo; intepretation of) user privacy.</li>
 <li>If a script or resource is loaded in a <strong>third-party context</strong> from such a domain, restrict access to browser storage so that the trackers could not exploit data stored within.</li>
-<li>In some cases (namely Safari&rsquo;s ITP), restrict storage access in a first-party context where it&rsquo;s likely that it could be exploited for <strong>cross-site tracking</strong> purposes.</li>
+<li>In some cases, restrict storage access in a first-party context where it&rsquo;s likely that it could be exploited for <strong>cross-site tracking</strong> purposes.</li>
 </ul>
 
-<h2 id="first-party-and-third-party">First-party and third-party</h2>
+<p>Here is a <strong>glossary</strong> of sorts on the terminology and jargon central to tracking protection.</p>
 
-<p>Lorem ipsum.</p>
+<h2 id="cookies">Cookies</h2>
+
+<p><strong>Browser cookies</strong> are key-value pairs (e.g. <code>id=abcd1234</code>) of information stored on the user&rsquo;s computer. Websites set them in order to persist information from one page to the next. This is because the web is effectively stateless - only a very limited set of information is shared from one page the next. By writing information into browser storage, that information persists even if the pages the user navigates on are unloaded and their storage is purged.</p>
+
+<p>When the user browses a website, that site has the capability to <strong>set</strong> or <strong>write</strong> cookies on the user&rsquo;s computer, and the site also has the ability to <strong>get</strong> or <strong>read</strong> the cookies stored on the user&rsquo;s computer. Due to browser security and same-origin restrictions - the website <strong>can only get and set cookies for the domain the user is currently on</strong>, i.e. in a <em>first-party context</em> (see the next chapter).</p>
+
+
+<div class="notices info" ><p>More specifically, the website has access to any cookies written on <strong>the current domain</strong> the user is browsing on, and on any domains <em>higher</em> up in the domain (or DNS) hierarchy, all the way to the effective top-level domain (<strong>eTLD</strong>) plus one part.</p>
+</div>
+
+
+<figure class="left-align">
+    <img src="/images/content/cookie-example.jpg"/> <figcaption>
+            <h4>Cookies set on current domain and on the eTLD&#43;1</h4>
+        </figcaption>
+</figure>
+
+
+<p>As an example, let&rsquo;s say the user is browsing <strong>blog.ecommerce.cookiestatus.com</strong>. This is the <strong>domain</strong> the user is currently on.</p>
+
+<p>The following three domains are all considered to be in the same domain hierarchy:</p>
+
+<ul>
+<li><strong>blog.ecommerce.cookiestatus.com</strong> (current domain)</li>
+<li><strong>ecommerce.cookiestatus.com</strong> (one level up in the hierarchy)</li>
+<li><strong>cookiestatus.com</strong> (effective top-level-domain (<code>.com</code>) plus one part (<code>cookiestatus</code>))</li>
+</ul>
+
+<p>The following three domains are <strong>not</strong> part of the same hierarchy:</p>
+
+<ul>
+<li><strong>store</strong>.ecommerce.cookiestatus.com (not an ancestor of blog.ecommerce.cookiestatus.com)</li>
+<li>blog.ecommerce.cookiestatus.<strong>co.uk</strong> (different eTLD)</li>
+<li>blog.ecommerce.<strong>storagestatus</strong>.com (different eTLD+1)</li>
+</ul>
+
+<p>The user&rsquo;s browser can set cookies on any of the three domains in the first list. For instance, they can set an identifier cookie on the eTLD+1 with JavaScript like this:</p>
+
+<pre><code class="language-JavaScript">document.cookie = 'userId=abcd1234;domain=cookiestatus.com';
+</code></pre>
+
+<p>If the user&rsquo;s browser requests a resource from <strong>cookiestatus.com</strong>, such as an image or a JavaScript file, then the response from the web server can also use the <code>Set-Cookie</code> header to set a cookie on <strong>cookiestatus.com</strong>, and it will then be available for reading on <strong>ecommerce.cookiestatus.com</strong> and <strong>blog.ecommerce.cookiestatus.com</strong>.</p>
+
+<p>Similarly, any HTTP request for any resource on one of the three domains in the first list would include all cookies written on any one of the three domains as well. Thus the web server can read these stored bits of information and parse them however they like.</p>
+
+<p>The browser can also read any cookies set on these three domains with JavaScript (except if they have been specifically flagged as <code>HttpOnly</code>, meaning they can only be read in HTTP headers).</p>
+
+<pre><code class="language-JavaScript">console.log(document.cookie); // Outputs &quot;userId=abcd1234&quot;
+</code></pre>
+
+<p>These examples show how cookies are accessed in a <strong>first-party context</strong>.</p>
+
+<h2 id="first-party-and-third-party-context">First-party and third-party context</h2>
+
+<p>It&rsquo;s common in the parlance of the web to talk about <strong>first-party cookies</strong> and <strong>third-party cookies</strong>. This is a bit of a misnomer. Cookies are pieces of information that are stored on the user&rsquo;s computer. There is no distinction between <em>first-party</em> and <em>third-party</em> in how these cookies are classified and stored on the computer.</p>
+
+<p>What matters is the <strong>context</strong> of the access.</p>
+
+<p>The examples presented in the previous chapter describe cookie access in a <strong>first-party context</strong>. When the user&rsquo;s browser requests a resource from the same domain hierarchy (up to eTLD+1) as the website the user is currently on, that request will include all the cookies that have been set for that domain.</p>
+
+
+<div class="notices info" ><p><strong>This is important</strong>. The endpoint of the request has access to <em>all</em> cookies written on the domain that is mapped to that endpoint. This means that if the endpoint is controlled by a third party, any requests for resources from that endpoint would include cookies you might not want to share with the third party.</p>
+</div>
+
+
+<p>However, if the user&rsquo;s browser requests a resource from a domain that is not part of the domain hierarchy the user is currently on, the request is a <strong>cross-origin</strong> request.</p>
+
+<p>As mentioned above, the endpoint has access to all cookies written on the domain mapped to that endpoint. Thus if <strong>blog.ecommerce.cookiestatus.com</strong> makes a request from <strong>image.imagestore.com</strong>, the request would include all the cookies written on the user&rsquo;s computer for <strong>image.imagestore.com</strong> and <strong>imagestore.com</strong>.</p>
+
+<p>Similarly, if the endpoint responds with a <code>Set-Cookie</code> header, they can <strong>write</strong> cookies on <strong>image.imagestore.com</strong> with the HTTP response.</p>
+
+
+<div class="notices info" ><p>The endpoint at <strong>image.imagestore.com</strong> would <strong>not</strong> have access to cookies written on <strong>blog.ecommerce.cookiestatus.com</strong>, even if the request originated from there.</p>
+</div>
+
+
+<p>This type of cookie access happens in a <strong>third-party context</strong>, because the cookies are read from and written on a domain that is not part of the domain hierarchy the user is currently on.</p>
+
+<blockquote>
+<p>You can get and set cookies in third-party context with JavaScript as well. If the website loads content from the external domain in an <code>&lt;iframe&gt;</code> element, for example, the user&rsquo;s browser can run <code>document.cookie</code> commands within that <code>&lt;iframe&gt;</code>, and the reading and writing would happen in the context of <em>that</em> domain and not the one the user is currently on.</p>
+</blockquote>
+
+<p>Accessing cookies in a <strong>third-party context</strong> is necessary for some benign features of the web, such as persisting user authentication across the domains of an organization (SSO), or for passing information about user&rsquo;s marketing consent from one part of the organization to another.</p>
+
+<p>However, cookie access in a third-party context can be abused as well, because it can be used for <strong>cross-site tracking</strong> without the user&rsquo;s consent or awareness.</p>
 
 <h2 id="cross-site-tracking">Cross-site tracking</h2>
 
@@ -1103,9 +1186,17 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </figure>
 
 
-<h2 id="restrict-access">Restrict access</h2>
+<p>To continue the examples from the previous chapters, when the user&rsquo;s browser makes a request for <strong>image.imagestore.com</strong> while on the <strong>blog.ecommerce.cookiestatus.com</strong>, the endpoint at <strong>image.imagestore.com</strong> will now know that the request originated from <strong>blog.ecommerce.cookiestatus.com</strong>, as this is included in the <code>origin</code> and <code>referer</code> [sic] headers.</p>
 
-<p>The biggest impact is on <strong>storage access</strong>, and how tracking protection measures restrict this access for third parties that have been identified as compromising user privacy.</p>
+<p>Thus the endpoint at <strong>image.imagestore.com</strong> could now check if the user has an identifier cookie set on that domain, and they can augment the profile for that identifier with knowledge that the user has visited <strong>blog.ecommerce.cookiestatus.com</strong>.</p>
+
+<p>If the user then visits another page on the internet that also communicates with <strong>image.imagestore.com</strong>, then that endpoint will be privy to yet another origin, and they can keep building the profile.</p>
+
+<p>This is the essence of cross-site tracking - using a consolidated and centralized store (e.g. a cookie) to collect information from different domains.</p>
+
+<h2 id="restrict-storage-access">Restrict storage access</h2>
+
+<p>Browsers&rsquo; main weapon against cross-site tracking is restricting <strong>storage access</strong>. Because there are valid reasons for cross-site tracking (persisting user authentication, shopping baskets, consent status), tracking protection methods restrict storage access for third parties that have been <strong>identified</strong> and <strong>classified</strong> as compromising user privacy.</p>
 
 <p><strong>Mozilla Firefox</strong>, for example, describes their own effort <a href="https://blog.mozilla.org/futurereleases/2018/08/30/changing-our-approach-to-anti-tracking/">like this</a>:</p>
 
@@ -1515,19 +1606,19 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1574853484"></script>
-    <script src="/js/perfect-scrollbar.min.js?1574853484"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1574853484"></script>
-    <script src="/js/jquery.sticky.js?1574853484"></script>
-    <script src="/js/featherlight.min.js?1574853484"></script>
-    <script src="/js/highlight.pack.js?1574853484"></script>
+    <script src="/js/clipboard.min.js?1574935678"></script>
+    <script src="/js/perfect-scrollbar.min.js?1574935678"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1574935678"></script>
+    <script src="/js/jquery.sticky.js?1574935678"></script>
+    <script src="/js/featherlight.min.js?1574935678"></script>
+    <script src="/js/highlight.pack.js?1574935678"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1574853484"></script>
-    <script src="/js/learn.js?1574853484"></script>
-    <script src="/js/hugo-learn.js?1574853484"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1574935678"></script>
+    <script src="/js/learn.js?1574935678"></script>
+    <script src="/js/hugo-learn.js?1574935678"></script>
 
-    <link href="/mermaid/mermaid.css?1574853484" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1574853484"></script>
+    <link href="/mermaid/mermaid.css?1574935678" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1574935678"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
