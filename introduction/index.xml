@@ -19,7 +19,7 @@
       <guid>https://www.cookiestatus.com/introduction/tracking-protection/</guid>
       <description>Tracking protection, and similar measures, seek to protect the user against harmful data collection and exploitation by third-party platforms, scripts, and applications.
 In short, tracking protection, tracking prevention, anti-tracking, cookie blocking, content blocking, etc. are designed to:
- Identify and classify domains that have been recognized as employing tracking mechanisms harmful to (browsers&amp;rsquo; intepretation of) user privacy. If a script or resource is loaded in a third-party context from such a domain, restrict access to browser storage so that the trackers can not exploit data stored within.</description>
+ Identify and classify domains that have been recognized as employing tracking mechanisms harmful to (browsers&amp;rsquo; interpretation of) user privacy. If a script or resource is loaded in a third-party context from such a domain, restrict access to browser storage so that the trackers can not exploit data stored within.</description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@ In short, tracking protection, tracking prevention, anti-tracking, cookie blocki
       
       <guid>https://www.cookiestatus.com/introduction/summary-of-exploits/</guid>
       <description>There are a number of ways in which data exploitation is attempted by malicious trackers. On this page, these will be listed superficially.
-The problem is that all these method also serve valid and benign use cases, which means that when browsers seek to prevent these, they also end up preventing non-malicious and non-exploitative use of browser storage.
+The problem is that all these methods also serve valid and benign use cases, which means that when browsers seek to prevent these, they also end up preventing non-malicious and non-exploitative use of browser storage.
 And this is the nature of the beast. The very same APIs and methodologies that are used, for example, to improve the user experience of the site are simultaneously being repurposed by third parties for data collection and manipulation.</description>
     </item>
     
