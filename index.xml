@@ -53,7 +53,7 @@
       <pubDate>Thu, 21 Nov 2019 15:28:47 +0200</pubDate>
       
       <guid>https://www.cookiestatus.com/introduction/tracking-protection/</guid>
-      <description>Tracking protection, and similar measures, seek to protect the user against harmful data collection and exploitation by third-party platforms, scripts, and applications.
+      <description>TABLE OF CONTENTS  Tracking protection, and similar measures, seek to protect the user against harmful data collection and exploitation by third-party platforms, scripts, and applications.
 In short, tracking protection, tracking prevention, anti-tracking, cookie blocking, content blocking, etc. are designed to:
  Identify and classify domains that have been recognized as employing tracking mechanisms harmful to (browsers&amp;rsquo; interpretation of) user privacy. If a script or resource is loaded in a third-party context from such a domain, restrict access to browser storage so that the trackers can not exploit data stored within.</description>
     </item>
@@ -64,9 +64,9 @@ In short, tracking protection, tracking prevention, anti-tracking, cookie blocki
       <pubDate>Thu, 28 Nov 2019 13:12:55 +0200</pubDate>
       
       <guid>https://www.cookiestatus.com/introduction/summary-of-exploits/</guid>
-      <description>There are a number of ways in which data exploitation is attempted by malicious trackers. On this page, these will be listed superficially.
+      <description>TABLE OF CONTENTS  There are a number of ways in which data exploitation is attempted by malicious trackers. On this page, these will be listed superficially.
 The problem is that all these methods also serve valid and benign use cases, which means that when browsers seek to prevent these, they also end up preventing non-malicious and non-exploitative use of browser storage.
-And this is the nature of the beast. The very same APIs and methodologies that are used, for example, to improve the user experience of the site are simultaneously being repurposed by third parties for data collection and manipulation.</description>
+And this is the nature of the beast.</description>
     </item>
     
     <item>
@@ -111,7 +111,7 @@ And this is the nature of the beast. The very same APIs and methodologies that a
       <pubDate>Thu, 21 Nov 2019 15:29:14 +0200</pubDate>
       
       <guid>https://www.cookiestatus.com/introduction/impact/</guid>
-      <description>The tracking protection measures taken by browsers have a widespread impact on a variety of things, including web development, advertising and marketing technologies, digital analytics, and user experience optimization.
+      <description>TABLE OF CONTENTS  The tracking protection measures taken by browsers have a widespread impact on a variety of things, including web development, advertising and marketing technologies, digital analytics, and user experience optimization.
 Websites use cookies and other browser storage for a plethora of things, such as persisting login state, preserving items in a shopping cart, and for presenting tailored experiences in a first-party context, based on what the user has done while visiting the site.</description>
     </item>
     
@@ -157,12 +157,14 @@ Websites use cookies and other browser storage for a plethora of things, such as
       <pubDate>Mon, 02 Dec 2019 11:57:51 +0200</pubDate>
       
       <guid>https://www.cookiestatus.com/glossary/</guid>
-      <description>This is a glossary of terms used in the website.
-Terms AdTech Lorem ipsum
+      <description>TABLE OF CONTENTS  This is a glossary of terms used in the website.
+AdTech Lorem ipsum
 Analytics Lorem ipsum
 Blink Lorem ipsum
 Chromium Lorem ipsum
+Conversion Lorem ipsum
 Cookie Lorem ipsum
+Cookie matching / syncing Lorem ipsum
 Cross-site tracking Lorem ipsum
 Enhanced Tracking Protection (ETP) Lorem ipsum
 eTLD+1 Lorem ipsum
@@ -170,19 +172,7 @@ First-party Lorem ipsum
 Intelligent Tracking Prevention (ITP) Lorem Ipsum
 Link decoration Lorem ipsum
 Mozilla Lorem ipsum
-Referrer Lorem ipsum
-Script-writable storage Lorem ipsum
-Third-party Lorem ipsum
-WebKit Lorem ipsum</description>
-    </item>
-    
-    <item>
-      <title>How to prepare</title>
-      <link>https://www.cookiestatus.com/introduction/how-to-prepare/</link>
-      <pubDate>Thu, 21 Nov 2019 15:29:30 +0200</pubDate>
-      
-      <guid>https://www.cookiestatus.com/introduction/how-to-prepare/</guid>
-      <description></description>
+Referrer Lorem ipsum</description>
     </item>
     
   </channel>
