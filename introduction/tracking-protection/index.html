@@ -12,20 +12,20 @@
     <title>Tracking protection :: Current Status Of Browser Tracking Prevention | cookiestatus.com</title>
 
     
-    <link href="/css/nucleus.css?1575374903" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1575374903" rel="stylesheet">
-    <link href="/css/hybrid.css?1575374903" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1575374903" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1575374903" rel="stylesheet">
-    <link href="/css/auto-complete.css?1575374903" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1575374903" rel="stylesheet">
-    <link href="/css/theme.css?1575374903" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1575374903" rel="stylesheet">
+    <link href="/css/nucleus.css?1575379577" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1575379577" rel="stylesheet">
+    <link href="/css/hybrid.css?1575379577" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1575379577" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1575379577" rel="stylesheet">
+    <link href="/css/auto-complete.css?1575379577" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1575379577" rel="stylesheet">
+    <link href="/css/theme.css?1575379577" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1575379577" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1575374903" rel="stylesheet">
+      <link href="/css/theme-blue.css?1575379577" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1575374903"></script>
+    <script src="/js/jquery-3.3.1.min.js?1575379577"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -532,14 +532,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1575374903"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1575374903"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1575379577"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1575379577"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.cookiestatus.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1575374903"></script>
+<script type="text/javascript" src="/js/search.js?1575379577"></script>
 
     
   </div>
@@ -1136,14 +1136,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </div>
 
 
-<p>Tracking protection, and similar measures, seek to protect the <strong>user</strong> against harmful data collection and exploitation by third-party platforms, scripts, and applications.</p>
+<p>Tracking protection, and similar measures, seek to protect the <strong>user</strong> from covert data collection and exploitation by scripts and applications created for such purposes.</p>
 
 <p>In short, tracking protection, tracking prevention, anti-tracking, cookie blocking, content blocking, etc. are designed to:</p>
 
 <ul>
-<li><strong>Identify and classify</strong> domains that have been recognized as employing tracking mechanisms harmful to (browsers&rsquo; interpretation of) user privacy.</li>
-<li>If a script or resource is loaded in a <strong>third-party context</strong> from such a domain, restrict access to browser storage so that the trackers can not exploit data stored within.</li>
-<li>In some cases, restrict storage access in a first-party context where it&rsquo;s likely that it could be exploited for <strong>cross-site tracking</strong> purposes.</li>
+<li><strong>Identify and classify</strong> domains that utilize and distribute tracking mechanisms obstructive to (browsers&rsquo; interpretation of) web user privacy.</li>
+<li>Restrict <strong>storage access</strong> in <strong>third-party context</strong> for such scripts so that the trackers cannot build cross-site profiles of web users.</li>
+<li>In some cases, restrict storage access in <strong>first-party context</strong> where it&rsquo;s likely that it could be exploited for <strong>cross-site tracking</strong> purposes.</li>
 </ul>
 
 <p>In this introductory chapter, we&rsquo;ll gloss over some of the key terminology regarding tracking protection. You are then advised to visit the other pages of Cookie Status for more details.</p>
@@ -1157,7 +1157,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <h2 id="cookies">Cookies</h2>
 
-<p><strong>Browser cookies</strong> are key-value pairs (e.g. <code>id=abcd1234</code>) of information stored on the user&rsquo;s computer. Websites set them in order to persist information from one page to the next. This is because the web is effectively stateless - only a very limited set of information is shared from one page to the next. By writing information into browser storage, that information persists even if the pages the user navigates on are unloaded and their storage purged.</p>
+<p><strong>Browser cookies</strong> are key-value pairs (e.g. <code>id=abcd1234</code>) of information stored on the user&rsquo;s computer. Websites set them in order to persist information from one page to the next. This is because the web is effectively <em>stateless</em> - only a very limited set of information is shared from one page to the next. By writing information into browser storage, that information persists even if the pages the user navigates from are unloaded and their storage purged.</p>
 
 <p>When the user browses a website, that site has the capability to <strong>set</strong> or <strong>write</strong> cookies on the user&rsquo;s computer, and the site also has the ability to <strong>get</strong> or <strong>read</strong> the cookies stored on the user&rsquo;s computer. Due to browser security and same-origin restrictions - the website <strong>can only get and set cookies for the domain the user is currently on</strong>, i.e. in a <em>first-party context</em> (see the next chapter).</p>
 
@@ -1180,7 +1180,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <ul>
 <li><strong>blog.ecommerce.cookiestatus.com</strong> (current domain)</li>
 <li><strong>ecommerce.cookiestatus.com</strong> (one level up in the hierarchy)</li>
-<li><strong>cookiestatus.com</strong> (effective top-level-domain (<code>.com</code>) plus one part (<code>cookiestatus</code>))</li>
+<li><strong>cookiestatus.com</strong> (eTLD (<code>.com</code>) plus one part (<code>cookiestatus</code>))</li>
 </ul>
 
 <p>The following three domains are <strong>not</strong> part of the same hierarchy:</p>
@@ -1207,7 +1207,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </figure>
 
 
-<p>The browser can also read any cookies available to the current domain with JavaScript (except if they have been specifically flagged as <code>HttpOnly</code>, meaning they can only be read in HTTP headers).</p>
+<p>The browser can also read any cookies available to the current domain with JavaScript (except if they have been specifically flagged as <code>HttpOnly</code>, meaning they are only passed in HTTP headers).</p>
 
 <pre><code class="language-JavaScript">console.log(document.cookie); // Outputs &quot;userId=abcd1234&quot;
 </code></pre>
@@ -1219,6 +1219,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>It&rsquo;s common in the parlance of the web to talk about <strong>first-party cookies</strong> and <strong>third-party cookies</strong>. This is a bit of a misnomer. Cookies are pieces of information that are stored on the user&rsquo;s computer. There is no distinction between <em>first-party</em> and <em>third-party</em> in how these cookies are classified and stored on the computer.</p>
 
 <p>What matters is the <strong>context</strong> of the access.</p>
+
+
+<div class="notices info" ><p>Nevertheless, to align with other discussions around the same topic, Cookie Status will use <em>first-party cookie</em>  and <em>third-party cookie</em> for clarity&rsquo;s sake.</p>
+</div>
+
 
 <p>The examples presented in the previous chapter describe cookie access in a <strong>first-party context</strong>. When the user&rsquo;s browser requests a resource from the same domain hierarchy (up to eTLD+1) as the website the user is currently on, that request will include all the cookies that have been set for that domain.</p>
 
@@ -1685,19 +1690,19 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1575374903"></script>
-    <script src="/js/perfect-scrollbar.min.js?1575374903"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1575374903"></script>
-    <script src="/js/jquery.sticky.js?1575374903"></script>
-    <script src="/js/featherlight.min.js?1575374903"></script>
-    <script src="/js/highlight.pack.js?1575374903"></script>
+    <script src="/js/clipboard.min.js?1575379577"></script>
+    <script src="/js/perfect-scrollbar.min.js?1575379577"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1575379577"></script>
+    <script src="/js/jquery.sticky.js?1575379577"></script>
+    <script src="/js/featherlight.min.js?1575379577"></script>
+    <script src="/js/highlight.pack.js?1575379577"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1575374903"></script>
-    <script src="/js/learn.js?1575374903"></script>
-    <script src="/js/hugo-learn.js?1575374903"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1575379577"></script>
+    <script src="/js/learn.js?1575379577"></script>
+    <script src="/js/hugo-learn.js?1575379577"></script>
 
-    <link href="/mermaid/mermaid.css?1575374903" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1575374903"></script>
+    <link href="/mermaid/mermaid.css?1575379577" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1575379577"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,20 +12,20 @@
     <title>Impact :: Current Status Of Browser Tracking Prevention | cookiestatus.com</title>
 
     
-    <link href="/css/nucleus.css?1575374903" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1575374903" rel="stylesheet">
-    <link href="/css/hybrid.css?1575374903" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1575374903" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1575374903" rel="stylesheet">
-    <link href="/css/auto-complete.css?1575374903" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1575374903" rel="stylesheet">
-    <link href="/css/theme.css?1575374903" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1575374903" rel="stylesheet">
+    <link href="/css/nucleus.css?1575379577" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1575379577" rel="stylesheet">
+    <link href="/css/hybrid.css?1575379577" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1575379577" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1575379577" rel="stylesheet">
+    <link href="/css/auto-complete.css?1575379577" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1575379577" rel="stylesheet">
+    <link href="/css/theme.css?1575379577" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1575379577" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1575374903" rel="stylesheet">
+      <link href="/css/theme-blue.css?1575379577" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1575374903"></script>
+    <script src="/js/jquery-3.3.1.min.js?1575379577"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -532,14 +532,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1575374903"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1575374903"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1575379577"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1575379577"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.cookiestatus.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1575374903"></script>
+<script type="text/javascript" src="/js/search.js?1575379577"></script>
 
     
   </div>
@@ -1308,13 +1308,20 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <p>For experimentation and data collection, it&rsquo;s important that the user&rsquo;s experience on the site be <strong>consistent</strong>. Being exposed to a different variant of the site with every page load can lead to confusion and introduce friction, especially in ecommerce contexts.</p>
 
-<p>To ensure consistency, optimization platforms set an identifier in the user&rsquo;s browser storage that tells these platforms which experimentation variant or personalization group they belong to. This storage would <em>typically</em> be accessed in a first-party context, but if the optimization derives targeting parameters from a global profile, the storage access might be required in a third-party context, too.</p>
+<figure class="left-align">
+    <img src="/images/content/optimizely-storage.jpg"/> <figcaption>
+            <h4>Storage specification on the Optimizely platform https://bit.ly/2YdKmVG</h4>
+        </figcaption>
+</figure>
+
+
+<p>To ensure consistency, optimization platforms set <strong>identifiers</strong> in the user&rsquo;s browser storage that tells these platforms which experimentation variant or personalization group they belong to. This storage would <em>typically</em> be accessed in a first-party context, but if the optimization derives targeting parameters from a global profile, the storage access might be required in a third-party context, too.</p>
 
 <p>Because the vendors often provide their solutions using global content delivery networks (CDN), these domains tend to get blacklisted in browsers&rsquo; tracking protection lists and algorithms. Thus their capability to deliver experiences based on data harvested from third-party storage is compromised.</p>
 
-<p>Similar to digital analytics, first-party storage is also restricted on Safari. Due to the short expiration time of script-writable storage, experimentation and personalization platforms can&rsquo;t deliver consistent experiences. In addition to this, the inability to control the sample sizes and deduplicate conversions often leads to too much noise in the calculation of statistical significance for the experimentation variations.</p>
+<p>Similar to digital analytics, first-party storage for content optimization is also restricted on <strong>Safari</strong>. Due to the short expiration time of script-writable storage, experimentation and personalization platforms <strong>can&rsquo;t deliver consistent experiences</strong>. In addition to this, the inability to control the sample sizes and deduplicate conversions often leads to too much noise in the calculation of <em>statistical significance</em> for the experimentation variations.</p>
 
-<p>Optimization platforms and websites running them should look into utilizing HTTP headers for getting and setting these cookies and for determining which content to show to the user, rather than the JavaScript APIs that have been compromised by Safari&rsquo;s ITP.</p>
+<p>Optimization platforms and websites running them should look into utilizing <strong>HTTP headers</strong> for getting and setting these cookies and for determining which content to show to the user, rather than the JavaScript APIs that have been compromised by Safari&rsquo;s ITP.</p>
 
 
 <footer class=" footline" >
@@ -1698,19 +1705,19 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1575374903"></script>
-    <script src="/js/perfect-scrollbar.min.js?1575374903"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1575374903"></script>
-    <script src="/js/jquery.sticky.js?1575374903"></script>
-    <script src="/js/featherlight.min.js?1575374903"></script>
-    <script src="/js/highlight.pack.js?1575374903"></script>
+    <script src="/js/clipboard.min.js?1575379577"></script>
+    <script src="/js/perfect-scrollbar.min.js?1575379577"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1575379577"></script>
+    <script src="/js/jquery.sticky.js?1575379577"></script>
+    <script src="/js/featherlight.min.js?1575379577"></script>
+    <script src="/js/highlight.pack.js?1575379577"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1575374903"></script>
-    <script src="/js/learn.js?1575374903"></script>
-    <script src="/js/hugo-learn.js?1575374903"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1575379577"></script>
+    <script src="/js/learn.js?1575379577"></script>
+    <script src="/js/hugo-learn.js?1575379577"></script>
 
-    <link href="/mermaid/mermaid.css?1575374903" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1575374903"></script>
+    <link href="/mermaid/mermaid.css?1575379577" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1575379577"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
