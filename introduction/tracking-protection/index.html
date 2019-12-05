@@ -12,25 +12,29 @@
     <title>Tracking protection :: Current Status Of Browser Tracking Prevention | cookiestatus.com</title>
 
     
-    <link href="/css/nucleus.css?1575460368" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1575460368" rel="stylesheet">
-    <link href="/css/hybrid.css?1575460368" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1575460368" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1575460368" rel="stylesheet">
-    <link href="/css/auto-complete.css?1575460368" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1575460368" rel="stylesheet">
-    <link href="/css/theme.css?1575460368" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1575460368" rel="stylesheet">
+    <link href="/css/nucleus.css?1575551584" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1575551584" rel="stylesheet">
+    <link href="/css/hybrid.css?1575551584" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1575551584" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1575551584" rel="stylesheet">
+    <link href="/css/auto-complete.css?1575551584" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1575551584" rel="stylesheet">
+    <link href="/css/theme.css?1575551584" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1575551584" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1575460368" rel="stylesheet">
+      <link href="/css/theme-blue.css?1575551584" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1575460368"></script>
+    <script src="/js/jquery-3.3.1.min.js?1575551584"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
       }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
       
     </style>
     <style type="text/css">
@@ -539,14 +543,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1575460368"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1575460368"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1575551584"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1575551584"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.cookiestatus.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1575460368"></script>
+<script type="text/javascript" src="/js/search.js?1575551584"></script>
 
     
   </div>
@@ -1096,7 +1100,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <ul>
 <li><a href="#cookies">Cookies</a>
 <ul>
-<li><a href="#reading-and-writing-cookies">Reading and writing cookies</a></li>
+<li><a href="#reading-cookies">Reading cookies</a></li>
+<li><a href="#writing-cookies">Writing cookies</a></li>
 </ul></li>
 <li><a href="#first-party-and-third-party-context">First-party and third-party context</a></li>
 <li><a href="#cross-site-tracking">Cross-site tracking</a></li>
@@ -1138,7 +1143,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <ul>
 <li><a href="#cookies">Cookies</a>
 <ul>
-<li><a href="#reading-and-writing-cookies">Reading and writing cookies</a></li>
+<li><a href="#reading-cookies">Reading cookies</a></li>
+<li><a href="#writing-cookies">Writing cookies</a></li>
 </ul></li>
 <li><a href="#first-party-and-third-party-context">First-party and third-party context</a></li>
 <li><a href="#cross-site-tracking">Cross-site tracking</a></li>
@@ -1177,12 +1183,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </div>
 
 
-<p>When the user browses a website, that site has the capability to <strong>write</strong> cookies on the user&rsquo;s computer, and the site also has the ability to <strong>read</strong> the cookies stored on the user&rsquo;s computer. Due to browser security and same-origin restrictions - the website <strong>can only read and write cookies for the website the user is currently on</strong>, i.e. in a <em>first-party context</em> (see the next chapter).</p>
-
-
-<div class="notices info" ><p>More specifically, the website has access to any cookies written on <strong>the current domain</strong> the user is browsing on, and on any domains <em>higher</em> up in the domain (or DNS) hierarchy, all the way to the effective top-level domain (<strong>eTLD</strong>) plus one part.</p>
-</div>
-
+<p>Websites can <strong>write</strong> cookies on the user&rsquo;s computer, and they can <strong>read</strong> cookies from the user&rsquo;s computer. How effective this is depends on whether the user&rsquo;s browser allows cookie access in <strong>third-party context</strong>, and whether cookies in <strong>first-party context</strong> have restrictions as well.</p>
 
 <figure class="left-align">
     <img src="/images/content/cookie-example.jpg"/> <figcaption>
@@ -1191,29 +1192,20 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </figure>
 
 
-<p>As an example, let&rsquo;s say the user is browsing the <strong>blog.ecommerce.cookiestatus.com</strong> website. This is the <strong>domain</strong> the user is currently on.</p>
-
-<p>The following three domains are all considered to be in the same domain hierarchy:</p>
-
-<ul>
-<li><strong>blog.ecommerce.cookiestatus.com</strong> (current domain)</li>
-<li><strong>ecommerce.cookiestatus.com</strong> (one level up in the hierarchy)</li>
-<li><strong>cookiestatus.com</strong> (eTLD (<code>.com</code>) plus one part (<code>cookiestatus</code>))</li>
-</ul>
-
-<p>The following three domains are <strong>not</strong> part of the same hierarchy:</p>
-
-<ul>
-<li><strong>store</strong>.ecommerce.cookiestatus.com (different subdomain)</li>
-<li>blog.ecommerce.cookiestatus.<strong>co.uk</strong> (different eTLD)</li>
-<li>blog.ecommerce.<strong>storagestatus</strong>.com (different eTLD+1)</li>
-</ul>
-
-<h3 id="reading-and-writing-cookies">Reading and writing cookies</h3>
+<h3 id="reading-cookies">Reading cookies</h3>
 
 <p>Cookies can be <strong>read</strong> and <strong>written</strong> in two ways: with <strong>HTTP headers</strong> and with <strong>JavaScript</strong>.</p>
 
-<p>The first method relates to the browser <strong>requesting</strong> resources from a target web address. This is done via an <strong>HTTP request</strong>. When the browser requests a resource from a web address, that <strong>request</strong> will include a <code>cookie</code> header, which includes <strong>all the cookies</strong> written on the <em>target</em> domain.</p>
+<p>The first method relates to the browser <strong>requesting</strong> resources from a web address. This is done via an <strong>HTTP request</strong>.</p>
+
+<p>When the browser requests a resource from a web address, that <strong>request</strong> will include a <code>cookie</code> header, which includes <strong>all the cookies</strong> written on the <em>target</em> domain and all the domains in its domain hierarchy up to the <strong>eTLD+1</strong>.</p>
+
+
+<div class="notices info" ><p><strong>eTLD+1</strong> means <em>effective top-level domain plus one part</em>. The eTLD is the same thing as the <a href="https://publicsuffix.org/">Public Suffix</a>. For a domain like <strong>blog.ecommerce.cookiestatus.co.uk</strong>, the eTLD would be <strong>.co.uk</strong>, and the eTLD+1 would be <strong>cookiestatus.co.uk</strong>. For a domain such as <strong>cookiestatus.github.io</strong>, the eTLD would be <strong>github.io</strong> and the eTLD+1 would be <strong>cookiestatus.github.io</strong>.</p>
+</div>
+
+
+<p>This is what a sample HTTP request would look like with the <code>cookie</code> header in place:</p>
 
 <figure class="left-align">
     <img src="/images/content/cookie-header.jpg"/> <figcaption>
@@ -1222,16 +1214,27 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </figure>
 
 
-<p>The web server that receives the request from the website thus has access to the cookies in the <code>cookie</code> header. If the target domain is within the hierarchy of the website the request originated from, the cookie access is said to happen in <strong>first-party context</strong>, and browsers do not restrict the <code>cookie</code> header in this scenario.</p>
+<p>The <code>cookie</code> header must respect the cookie settings in the browser. If the browser blocks <strong>third-party cookies</strong>, the <code>cookie</code> header is only included for requests in <strong>first-party context</strong>. Similarly, if the browser blocks <em>all</em> cookies, the <code>cookie</code> header will not be included in any requests.</p>
 
-<p>If the target domain is <strong>not</strong> part of the same domain hierarchy as the website the request originated from, the <code>cookie</code> header will be populated only if the browser <strong>does not block</strong> third-party cookies.</p>
+<p>Because the <code>cookie</code> header is part of the HTTP request, it means that the <strong>web server</strong> hosting the resource will be able to read this header and use this information at will.</p>
 
+<p>The browser can read cookies with <strong>JavaScript</strong> as well.</p>
 
-<div class="notices info" ><p>Instead of blocking <strong>all</strong> third-party cookies, some browsers block storage access from domains that are <strong>known trackers</strong>. Thus it&rsquo;s possible that the <code>cookie</code> header is populated for some third-party requests but missing from others.</p>
-</div>
+<p>While the user is browsing a website, that website can use JavaScript to read the cookies written on the current domain and all the domains up to the eTLD+1.</p>
 
+<pre><code class="language-JavaScript">const cookies = document.cookie;
+console.log(cookies); // userId=abcd1234; logged-in=true
+</code></pre>
 
-<p>Similar to reading cookies, the HTTP protocol can be used to <strong>write</strong> cookies as well. The web server can return with an <strong>HTTP response</strong> including the <code>Set-Cookie</code> header. This header is an instruction to the browser to <strong>write</strong> the included cookie(s) on the domain the response was sent from (i.e. the target of the original request).</p>
+<p>If <code>document.cookie</code> is invoked in a third-party context, such as an <code>&lt;iframe&gt;</code> element embedding content from a third-party source, the string will be populated only if the web browser <strong>allows third-party cookies</strong>.</p>
+
+<p>Since the cookies are readily available for any JavaScript running on the page, a malicious vendor with a <strong>script running on the site</strong> could utilize the API to read and process the cookies stored on the user&rsquo;s company.</p>
+
+<h3 id="writing-cookies">Writing cookies</h3>
+
+<p>Similar to reading cookies, the HTTP protocol can be used to <strong>write</strong> cookies as well. The web server can return with an <strong>HTTP response</strong> including the <code>Set-Cookie</code> header.</p>
+
+<p>This header is an instruction to the browser to <strong>write</strong> the included cookie(s) on the domain specified in the header.</p>
 
 <figure class="left-align">
     <img src="/images/content/set-cookie.jpg"/> <figcaption>
@@ -1240,25 +1243,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </figure>
 
 
+<p>Using <strong>JavaScript</strong>, the <code>document.cookie</code> API can be used to <strong>write</strong> cookies, too.</p>
 
-<div class="notices info" ><p>As with reading cookies, <strong>writing</strong> cookies is subject to context of the operation as well. If the domain the request originated from is in the same hierarchy as the domain that responds to the request, the <code>Set-Cookie</code> header operates in a first-party context and browsers do not limit this. If the domains differ, the cookie write will only work if the browser allows third-party cookies to be written,</p>
-</div>
+<p>While on the www.cookiestatus.com domain, the following command would write a <code>userId</code> cookie on cookiestatus.com.</p>
 
-
-<p>The browser can read and write cookies with <strong>JavaScript</strong> as well.</p>
-
-<p>While the user is browsing a website, that website can use JavaScript to read the cookies written on the domain hierarchy of the current page.</p>
-
-<pre><code class="language-JavaScript">const cookies = document.cookie;
-console.log(cookies); // userId=abcd1234; logged-in=true
+<pre><code class="language-JavaScript">document.cookie = 'userId=abcd1234;domain=cookiestatus.com;path=/';
 </code></pre>
 
-<p>If <code>document.cookie</code> is invoked in a third-party context, such as an <code>&lt;iframe&gt;</code> element embedding content from a third-party source, the string will be populated only if the web browser allows third-party cookies.</p>
-
-<p>The same <code>document.cookie</code> API can be used to <strong>write</strong> cookies, too. The cookie can be written on the current domain name or any name higher in the domain hierarchy (up to eTLD+1).</p>
-
-<pre><code class="language-JavaScript">document.cookie = 'userId=abcd1234;domain=cookiestatus.com';
-</code></pre>
+<p>Web servers and JavaScript libraries can thus write cookies on the <strong>eTLD+1</strong>, which means they become automatically available to all subdomains of that host. Thus a script running on <strong>blog.ecommerce.cookiestatus.com</strong> can check if the user has an identifier written on <strong>cookiestatus.com</strong>, and utilize that. This can be abused for <strong>cross-site tracking purposes</strong>.</p>
 
 <h2 id="first-party-and-third-party-context">First-party and third-party context</h2>
 
@@ -1271,29 +1263,59 @@ console.log(cookies); // userId=abcd1234; logged-in=true
 </div>
 
 
-<p>The examples presented in the previous chapter describe cookie access in a <strong>first-party context</strong>. When the user&rsquo;s browser requests a resource from the same domain hierarchy (up to eTLD+1) as the website the user is currently on, that request will include all the cookies that have been set for that domain.</p>
+<p><strong>First-party context</strong> means that the operation happens within or across domains that share the <strong>eTLD+1</strong>. <strong>Third-party context</strong> means that the operation happens within or across domains that do not share the <strong>eTLD+1</strong>.</p>
 
+<p>Here are some examples. Consider the user to be on the domain <strong>www.cookiestatus.com</strong>.</p>
 
-<div class="notices info" ><p><strong>This is important</strong>. The endpoint of the request has access to <em>all</em> cookies written on the domain that is mapped to that endpoint. This means that if the endpoint is controlled by a third party, any requests for resources from that endpoint would include cookies you might not want to share with the third party.</p>
+<div style="overflow-x:auto;">
+  <table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Type of context</th>
+<th>eTLD+1</th>
+<th>Details</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>The browser requests an image from <strong>images.cookiestatus.com</strong>.</td>
+<td>First-party context</td>
+<td>cookiestatus.com</td>
+<td>The <code>cookie</code> header includes all cookies written on <strong>images.cookiestatus.com</strong> and <strong>cookiestatus.com</strong>. The <code>Set-Cookie</code> header can write a cookie on *<strong>.cookiestatus.com</strong>.</td>
+</tr>
+
+<tr>
+<td>The browser loads a JavaScript file from <strong>cdn.vendor.com</strong>.</td>
+<td>Third-party context</td>
+<td>cookiestatus.com vs. vendor.com</td>
+<td>The <code>cookie</code> header includes all cookies written on <strong>cdn.vendor.com</strong> and <strong>vendor.com</strong>. The <code>Set-Cookie</code> header can write a cookie on *<strong>.vendor.com</strong>.</td>
+</tr>
+
+<tr>
+<td>The browser runs <code>document.cookie</code> on the page in the top frame (the main window).</td>
+<td>First-party context</td>
+<td>cookiestatus.com</td>
+<td>The command can be used to read and write cookies on <strong>www.cookiestatus.com</strong> and <strong>cookiestatus.com</strong>.</td>
+</tr>
+
+<tr>
+<td>The browser loads a page from <strong>booking.vendor.com</strong> in an <code>&lt;iframe&gt;</code> and runs <code>document.cookie</code> on that page.</td>
+<td>Third-party context</td>
+<td>vendor.com</td>
+<td>The command can be used to read and write cookies on <strong>booking.vendor.com</strong> and <strong>vendor.com</strong>.</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
-<p>However, if the user&rsquo;s browser requests a resource from a domain that is <em>not</em> part of the domain hierarchy the user is currently on, cookies would not be shared between the source and the target of the request.</p>
+<p>In the <strong>first-party context</strong> scenarios above, the cookie read/write operations will work unless the browser blocks <em>all</em> cookies or has <strong>cookiestatus.com</strong> in a blacklist.</p>
 
-<p>As mentioned above, the endpoint has access to all cookies written on the domain mapped to that endpoint. Thus if <strong>blog.ecommerce.cookiestatus.com</strong> makes a request to <strong>image.imagestore.com</strong>, the request would include all the cookies written on the user&rsquo;s computer for <strong>image.imagestore.com</strong> and <strong>imagestore.com</strong>.</p>
+<p>In the <strong>third-party context</strong> scenarios, the cookie operations will work unless the browser blocks all third-party cookies, has <strong>vendor.com</strong> in the blacklist, or the possible <em>tracking protection mechanisms</em> have deemed <strong>vendor.com</strong> to be a <em>tracking domain</em>.</p>
 
-<p>Similarly, if the endpoint responds with a <code>Set-Cookie</code> header, they can <strong>write</strong> cookies on <strong>image.imagestore.com</strong> or <strong>imagestore.com</strong> with the HTTP response.</p>
-
-
-<div class="notices info" ><p>The endpoint at <strong>image.imagestore.com</strong> would <strong>not</strong> have access to cookies written on <strong>blog.ecommerce.cookiestatus.com</strong>, even if the request originated from the latter.</p>
-</div>
-
-
-<p>This type of cookie access occurs in a <strong>third-party context</strong>, because the cookies are read from and written on a domain that is not part of the domain hierarchy the user is currently on.</p>
-
-<blockquote>
-<p>You can get and set cookies in third-party context with JavaScript as well. If the website loads content from the external domain in an <code>&lt;iframe&gt;</code> element, for example, the user&rsquo;s browser can run <code>document.cookie</code> commands within that <code>&lt;iframe&gt;</code>, and the reading and writing would happen in the context of <em>that</em> domain and not the one the user is currently on.</p>
-</blockquote>
+<p>Cookie access in a <strong>first-party context</strong> is rarely blocked, because many features of modern websites rely on state management in the browser (using cookies or other browser storage). However, some vendors are repurposing first-party cookies for <strong>cross-site tracking</strong>, which has led to browsers (especially Safari) to place restrictions on first-party storage as well.</p>
 
 <p>Accessing cookies in a <strong>third-party context</strong> is necessary for some benign features of the web, such as persisting user authentication across the domains of an organization (SSO), or for passing information about user&rsquo;s marketing consent from one part of the organization to another.</p>
 
@@ -1316,7 +1338,7 @@ console.log(cookies); // userId=abcd1234; logged-in=true
 </figure>
 
 
-<p>To continue the examples from the previous chapters, when the user&rsquo;s browser makes a request for <strong>image.imagestore.com</strong> while on the <strong>blog.ecommerce.cookiestatus.com</strong>, the endpoint at <strong>image.imagestore.com</strong> will now know that the request originated from <strong>blog.ecommerce.cookiestatus.com</strong>, as this is included in the <code>origin</code> and <code>referer</code> [sic] headers.</p>
+<p>To continue the examples from the previous chapters, when the user&rsquo;s browser makes a request for <strong>image.imagestore.com</strong> while on the <strong>blog.ecommerce.cookiestatus.com</strong> website, the endpoint at <strong>image.imagestore.com</strong> will now know that the request originated from <strong>blog.ecommerce.cookiestatus.com</strong>, as this is included in the <code>origin</code> and <code>referer</code> [sic] headers.</p>
 
 <p>Thus the endpoint at <strong>image.imagestore.com</strong> could now check if the user has an identifier cookie set on that domain, and they can augment the profile for that identifier with knowledge that the user has visited <strong>blog.ecommerce.cookiestatus.com</strong>.</p>
 
@@ -1736,19 +1758,19 @@ console.log(cookies); // userId=abcd1234; logged-in=true
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1575460368"></script>
-    <script src="/js/perfect-scrollbar.min.js?1575460368"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1575460368"></script>
-    <script src="/js/jquery.sticky.js?1575460368"></script>
-    <script src="/js/featherlight.min.js?1575460368"></script>
-    <script src="/js/highlight.pack.js?1575460368"></script>
+    <script src="/js/clipboard.min.js?1575551584"></script>
+    <script src="/js/perfect-scrollbar.min.js?1575551584"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1575551584"></script>
+    <script src="/js/jquery.sticky.js?1575551584"></script>
+    <script src="/js/featherlight.min.js?1575551584"></script>
+    <script src="/js/highlight.pack.js?1575551584"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1575460368"></script>
-    <script src="/js/learn.js?1575460368"></script>
-    <script src="/js/hugo-learn.js?1575460368"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1575551584"></script>
+    <script src="/js/learn.js?1575551584"></script>
+    <script src="/js/hugo-learn.js?1575551584"></script>
 
-    <link href="/mermaid/mermaid.css?1575460368" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1575460368"></script>
+    <link href="/mermaid/mermaid.css?1575551584" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1575551584"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
