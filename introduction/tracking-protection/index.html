@@ -12,20 +12,20 @@
     <title>Tracking protection :: Current Status Of Browser Tracking Prevention | cookiestatus.com</title>
 
     
-    <link href="/css/nucleus.css?1575977709" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1575977709" rel="stylesheet">
-    <link href="/css/hybrid.css?1575977709" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1575977709" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1575977709" rel="stylesheet">
-    <link href="/css/auto-complete.css?1575977709" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1575977709" rel="stylesheet">
-    <link href="/css/theme.css?1575977709" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1575977709" rel="stylesheet">
+    <link href="/css/nucleus.css?1575981935" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1575981935" rel="stylesheet">
+    <link href="/css/hybrid.css?1575981935" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1575981935" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1575981935" rel="stylesheet">
+    <link href="/css/auto-complete.css?1575981935" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1575981935" rel="stylesheet">
+    <link href="/css/theme.css?1575981935" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1575981935" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1575977709" rel="stylesheet">
+      <link href="/css/theme-blue.css?1575981935" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1575977709"></script>
+    <script src="/js/jquery-3.3.1.min.js?1575981935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -557,14 +557,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1575977709"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1575977709"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1575981935"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1575981935"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.cookiestatus.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1575977709"></script>
+<script type="text/javascript" src="/js/search.js?1575981935"></script>
 
     
   </div>
@@ -1208,7 +1208,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </ul></li>
 <li><a href="#first-party-and-third-party-context">First-party and third-party context</a></li>
 <li><a href="#cross-site-tracking">Cross-site tracking</a></li>
-<li><a href="#storage-access-restriction">Storage access restriction</a></li>
+<li><a href="#storage-access-restriction">Storage access restriction</a>
+<ul>
+<li><a href="#list-based-protection">List-based protection</a></li>
+<li><a href="#algorithmic-protection">Algorithmic protection</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -1251,7 +1255,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </ul></li>
 <li><a href="#first-party-and-third-party-context">First-party and third-party context</a></li>
 <li><a href="#cross-site-tracking">Cross-site tracking</a></li>
-<li><a href="#storage-access-restriction">Storage access restriction</a></li>
+<li><a href="#storage-access-restriction">Storage access restriction</a>
+<ul>
+<li><a href="#list-based-protection">List-based protection</a></li>
+<li><a href="#algorithmic-protection">Algorithmic protection</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -1370,7 +1378,7 @@ console.log(cookies); // userId=abcd1234; logged-in=true
 
 <p>Here are some examples. Consider the user to be on the domain <strong>www.cookiestatus.com</strong>.</p>
 
-<div id="cs" style="overflow-x:auto;">
+<div id="" style="overflow-x:auto;">
   <table>
 <thead>
 <tr>
@@ -1453,6 +1461,10 @@ console.log(cookies); // userId=abcd1234; logged-in=true
 
 <p>Browsers&rsquo; main weapon against cross-site tracking is restricting <strong>storage access</strong>. Because there are valid reasons for cross-site tracking (persisting user authentication, shopping baskets, consent status), tracking protection methods restrict storage access for third parties that have been <strong>identified</strong> and <strong>classified</strong> as compromising user privacy.</p>
 
+<p>The <strong>Chrome</strong> browser is, for now, devoid of any significant tracking protection measures with regard to storage access. However, they have contributed to the discussion with their <a href="https://www.blog.google/products/chrome/building-a-more-private-web/">privacy sandbox</a> initiative, as well as with upcoming features involving <a href="https://blog.chromium.org/2019/05/improving-privacy-and-security-on-web.html">cookie restrictions</a> and <a href="https://www.chromestatus.com/feature/6251880185331712">referrer policies</a>.</p>
+
+<h3 id="list-based-protection">List-based protection</h3>
+
 <p><strong>Mozilla Firefox</strong>, for example, describes their own effort <a href="https://blog.mozilla.org/futurereleases/2018/08/30/changing-our-approach-to-anti-tracking/">like this</a>:</p>
 
 <blockquote>
@@ -1465,7 +1477,27 @@ console.log(cookies); // userId=abcd1234; logged-in=true
 <p>We’ve added a new component to Microsoft Edge, Trust Protection Lists<strong>,</strong> that contains the latest information on which organizations may be trying to track users on the web. This component allows us to be flexible with where we source details on what a tracker is and when we deliver updated lists to our users.</p>
 </blockquote>
 
-<p>The <strong>Safari</strong> browser has the most interesting approach. Instead of a binary approach (blocked vs. not blocked) and a set list of domains, Safari&rsquo;s <a href="https://webkit.org/blog/category/privacy/">Intelligent Tracking Prevention</a> uses multiple methods to restrict the storage access for third parties that are <em>algorithmically</em> classified as having cross-site tracking capabilities. Here&rsquo;s how they describe the <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">classification process</a>:</p>
+<p>The <strong>Brave</strong> browser, similarly, pulls in tracking domains from <a href="https://github.com/brave/adblock-rust/blob/master/src/filter_lists/default.rs">multiple sources</a>.</p>
+
+<p>With <strong>list-based protection</strong>, the browser maintains a list of domains against which each outgoing HTTP request from the site is pattern-matched. If there is a match between the request target and one of the domains in these lists, the request is <strong>blocked</strong>.</p>
+
+<p>This means that browsers block both <strong>downloading script resources</strong> and <strong>HTTP requests to tracking endpoints</strong> (e.g. image pixels).</p>
+
+<p>By blocking the script download, browsers don&rsquo;t need to worry about further storage access restrictions, because the JavaScript from the vendor was never loaded and thus can&rsquo;t abuse the browser storage on the user&rsquo;s company.</p>
+
+<p>By blocking the pixel and other HTTP endpoints, browsers ensure that in cases where the site is loading the JavaScript from a non-blocked source, the script will not be able to communicate with its endpoint.</p>
+
+<p>The biggest problems with list-based protection are:</p>
+
+<ul>
+<li>The <strong>performance overhead</strong> of pattern-matching each HTTP request against an ever-growing list of domains (something that these browsers are <a href="https://brave.com/improved-ad-blocker-performance/">actively optimizing</a>).</li>
+<li><strong>Reaction lag</strong> to new trackers and domains that need to be blacklisted.</li>
+<li>Inability to handle <strong>locally cached and/or proxied requests</strong>.</li>
+</ul>
+
+<h3 id="algorithmic-protection">Algorithmic protection</h3>
+
+<p>The <strong>Safari</strong> browser has opted for a different tact. Instead of a binary approach (blocked vs. not blocked) and a set list of domains, Safari&rsquo;s <a href="https://webkit.org/blog/category/privacy/">Intelligent Tracking Prevention</a> uses multiple methods to restrict the storage access for third parties that are <em>algorithmically</em> classified as having cross-site tracking capabilities. Here&rsquo;s how they describe the <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">classification process</a>:</p>
 
 <blockquote>
 <p>A machine learning model is used to classify which top privately-controlled domains have the ability to track the user cross-site, based on the collected statistics. Out of the various statistics collected, three vectors turned out to have strong signal for classification based on current tracking practices: subresource under number of unique domains, sub frame under number of unique domains, and number of unique domains redirected to. All data collection and classification happens on-device.</p>
@@ -1480,7 +1512,22 @@ console.log(cookies); // userId=abcd1234; logged-in=true
 </figure>
 
 
-<p>The <strong>Chrome</strong> browser is, for now, devoid of any significant tracking protection measures. However, they have contributed to the discussion with their <a href="https://www.blog.google/products/chrome/building-a-more-private-web/">privacy sandbox</a> initiative, as well as with upcoming features involving <a href="https://blog.chromium.org/2019/05/improving-privacy-and-security-on-web.html">cookie restrictions</a> and <a href="https://www.chromestatus.com/feature/6251880185331712">referrer policies</a>.</p>
+<p>The algorithmic approach is effective because it identifies potential tracking domains <strong>dynamically</strong> and without using a centralized list. This means that there&rsquo;s less overhead in pattern-matching the HTTP requests as the list of domains for the browser would only include those the browser has actually communicated with.</p>
+
+<p>The algorithm also ensures that locally hosted tracking domains and reverse proxies would also be under scrutiny (unless served in a same-site context).</p>
+
+<p>The main problems with this approach are:</p>
+
+<ul>
+<li><strong>False positives</strong>, where ITP classifies domains that serve no cross-site tracking purpose.</li>
+<li>There is also some <strong>reaction lag</strong>, because ITP would require enough data to run the algorithm. It&rsquo;s thus possible some communication with a tracking domain would be permitted before ITP restricts access.</li>
+<li><strong>Lack of predictability</strong>, which is not necessarily a problem or a bad thing, but a list-based approach allows for community oversight of the domains that have been blacklisted. Since the ITP algorithm is not prescriptive, only the algorithm itself can be scrutinized, not its end result.</li>
+</ul>
+
+
+<div class="notices info" ><p>Note that for <strong>false positives</strong> blocking access to cross-origin storage, ITP offers the <strong>Storage Access API</strong>. However, there is no provision in ITP to remove a domain from the list of classified domains, which means that <strong>first-party restrictions</strong> would still apply.</p>
+</div>
+
 
 
 <footer class=" footline" >
@@ -1925,19 +1972,19 @@ console.log(cookies); // userId=abcd1234; logged-in=true
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1575977709"></script>
-    <script src="/js/perfect-scrollbar.min.js?1575977709"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1575977709"></script>
-    <script src="/js/jquery.sticky.js?1575977709"></script>
-    <script src="/js/featherlight.min.js?1575977709"></script>
-    <script src="/js/highlight.pack.js?1575977709"></script>
+    <script src="/js/clipboard.min.js?1575981935"></script>
+    <script src="/js/perfect-scrollbar.min.js?1575981935"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1575981935"></script>
+    <script src="/js/jquery.sticky.js?1575981935"></script>
+    <script src="/js/featherlight.min.js?1575981935"></script>
+    <script src="/js/highlight.pack.js?1575981935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1575977709"></script>
-    <script src="/js/learn.js?1575977709"></script>
-    <script src="/js/hugo-learn.js?1575977709"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1575981935"></script>
+    <script src="/js/learn.js?1575981935"></script>
+    <script src="/js/hugo-learn.js?1575981935"></script>
 
-    <link href="/mermaid/mermaid.css?1575977709" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1575977709"></script>
+    <link href="/mermaid/mermaid.css?1575981935" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1575981935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
