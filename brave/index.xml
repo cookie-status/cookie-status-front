@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brave on Current Status Of Browser Tracking Prevention | cookiestatus.com</title>
+    <link>https://www.cookiestatus.com/brave/</link>
+    <description>Recent content in Brave on Current Status Of Browser Tracking Prevention | cookiestatus.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Nov 2019 15:32:10 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.cookiestatus.com/brave/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Current status</title>
+      <link>https://www.cookiestatus.com/brave/current-status/</link>
+      <pubDate>Thu, 21 Nov 2019 15:43:50 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/brave/current-status/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shields</title>
+      <link>https://www.cookiestatus.com/brave/shields/</link>
+      <pubDate>Thu, 21 Nov 2019 15:43:56 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/brave/shields/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Useful resources</title>
+      <link>https://www.cookiestatus.com/brave/useful-resources/</link>
+      <pubDate>Thu, 21 Nov 2019 15:44:02 +0200</pubDate>
+      
+      <guid>https://www.cookiestatus.com/brave/useful-resources/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

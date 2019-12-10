@@ -13,21 +13,6 @@
   </url>
   
   <url>
-    <loc>https://www.cookiestatus.com/safari/</loc>
-    <lastmod>2019-11-21T15:33:32+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.cookiestatus.com/firefox/</loc>
-    <lastmod>2019-11-21T15:33:28+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.cookiestatus.com/edge/</loc>
-    <lastmod>2019-11-21T15:33:24+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.cookiestatus.com/safari/current-status/</loc>
     <lastmod>2019-11-21T15:47:52+02:00</lastmod>
   </url>
@@ -43,12 +28,17 @@
   </url>
   
   <url>
+    <loc>https://www.cookiestatus.com/brave/current-status/</loc>
+    <lastmod>2019-11-21T15:43:50+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.cookiestatus.com/chrome/current-status/</loc>
     <lastmod>2019-11-21T15:43:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.cookiestatus.com/chrome/</loc>
+    <loc>https://www.cookiestatus.com/brave/</loc>
     <lastmod>2019-11-21T15:32:10+02:00</lastmod>
   </url>
   
@@ -78,7 +68,12 @@
   </url>
   
   <url>
-    <loc>https://www.cookiestatus.com/chrome/privacy-sandobx/</loc>
+    <loc>https://www.cookiestatus.com/chrome/privacy-sandbox/</loc>
+    <lastmod>2019-11-21T15:43:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cookiestatus.com/brave/shields/</loc>
     <lastmod>2019-11-21T15:43:56+02:00</lastmod>
   </url>
   
@@ -103,8 +98,33 @@
   </url>
   
   <url>
+    <loc>https://www.cookiestatus.com/brave/useful-resources/</loc>
+    <lastmod>2019-11-21T15:44:02+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.cookiestatus.com/chrome/useful-resources/</loc>
     <lastmod>2019-11-21T15:44:02+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cookiestatus.com/chrome/</loc>
+    <lastmod>2019-11-21T15:32:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cookiestatus.com/edge/</loc>
+    <lastmod>2019-11-21T15:33:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cookiestatus.com/firefox/</loc>
+    <lastmod>2019-11-21T15:33:28+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cookiestatus.com/safari/</loc>
+    <lastmod>2019-11-21T15:33:32+02:00</lastmod>
   </url>
   
   <url>
