@@ -12,20 +12,20 @@
     <title>Tracking protection :: Current Status Of Browser Tracking Prevention | cookiestatus.com</title>
 
     
-    <link href="/css/nucleus.css?1576052738" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1576052738" rel="stylesheet">
-    <link href="/css/hybrid.css?1576052738" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1576052738" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1576052738" rel="stylesheet">
-    <link href="/css/auto-complete.css?1576052738" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1576052738" rel="stylesheet">
-    <link href="/css/theme.css?1576052738" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1576052738" rel="stylesheet">
+    <link href="/css/nucleus.css?1576063296" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1576063296" rel="stylesheet">
+    <link href="/css/hybrid.css?1576063296" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1576063296" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1576063296" rel="stylesheet">
+    <link href="/css/auto-complete.css?1576063296" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1576063296" rel="stylesheet">
+    <link href="/css/theme.css?1576063296" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1576063296" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1576052738" rel="stylesheet">
+      <link href="/css/theme-blue.css?1576063296" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1576052738"></script>
+    <script src="/js/jquery-3.3.1.min.js?1576063296"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -494,14 +494,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1576052738"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1576052738"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1576063296"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1576063296"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.cookiestatus.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1576052738"></script>
+<script type="text/javascript" src="/js/search.js?1576063296"></script>
 
     
   </div>
@@ -1414,11 +1414,11 @@ console.log(cookies); // userId=abcd1234; logged-in=true
 <p>We’ve added a new component to Microsoft Edge, Trust Protection Lists<strong>,</strong> that contains the latest information on which organizations may be trying to track users on the web. This component allows us to be flexible with where we source details on what a tracker is and when we deliver updated lists to our users.</p>
 </blockquote>
 
-<p>The <strong>Brave</strong> browser, similarly, pulls in tracking domains from <a href="https://github.com/brave/adblock-rust/blob/master/src/filter_lists/default.rs">multiple sources</a>.</p>
+<p>The <strong>Brave</strong> browser, similarly, pulls in tracking domains from <a href="https://github.com/brave/adblock-rust/blob/master/src/filter_lists/default.rs">multiple sources</a>. Notably, Brave combines prescribed lists (from e.g. <a href="https://easylist.to/">EasyList</a> and <a href="https://github.com/gorhill/uBlock">uBlock Origin</a>) with a more dynamic list based on crawl data (<a href="https://github.com/brave/brave-browser/wiki/PageGraph">PageGraph</a>).</p>
 
 <p>With <strong>list-based protection</strong>, the browser maintains a list of domains against which each outgoing HTTP request from the site is pattern-matched. If there is a match between the request target and one of the domains in these lists, the request is <strong>blocked</strong>.</p>
 
-<p>This means that browsers block both <strong>downloading script resources</strong> and <strong>HTTP requests to tracking endpoints</strong> (e.g. image pixels).</p>
+<p>This means that browsers can block both <strong>downloading script resources</strong> and <strong>HTTP requests to tracking endpoints</strong> (e.g. image pixels).</p>
 
 <p>By blocking the script download, browsers don&rsquo;t need to worry about further storage access restrictions, because the JavaScript from the vendor was never loaded and thus can&rsquo;t abuse the browser storage on the user&rsquo;s company.</p>
 
@@ -1429,7 +1429,8 @@ console.log(cookies); // userId=abcd1234; logged-in=true
 <ul>
 <li>The <strong>performance overhead</strong> of pattern-matching each HTTP request against an ever-growing list of domains (something that these browsers are <a href="https://brave.com/improved-ad-blocker-performance/">actively optimizing</a>).</li>
 <li><strong>Reaction lag</strong> to new trackers and domains that need to be blacklisted.</li>
-<li>Inability to handle <strong>locally cached and/or proxied requests</strong>.</li>
+<li>Difficulty in handling <strong>locally cached and/or proxied requests</strong>.</li>
+<li>Harm to <strong>other functionality</strong> (besides tracking) that these blocked libraries provide.</li>
 </ul>
 
 <h3 id="algorithmic-protection">Algorithmic protection</h3>
@@ -1462,7 +1463,7 @@ console.log(cookies); // userId=abcd1234; logged-in=true
 </ul>
 
 
-<div class="notices info" ><p>Note that for <strong>false positives</strong> blocking access to cross-origin storage, ITP offers the <strong>Storage Access API</strong>. However, there is no provision in ITP to remove a domain from the list of classified domains, which means that <strong>first-party restrictions</strong> would still apply.</p>
+<div class="notices info" ><p>Note that for <strong>false positives</strong> blocking access to cross-origin storage, ITP offers the <strong>Storage Access API</strong>. However, there is no provision in ITP to remove a domain from the list of classified domains, which means that <strong>first-party protections</strong> would still apply.</p>
 </div>
 
 
@@ -1909,21 +1910,21 @@ console.log(cookies); // userId=abcd1234; logged-in=true
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1576052738"></script>
-    <script src="/js/perfect-scrollbar.min.js?1576052738"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1576052738"></script>
-    <script src="/js/jquery.sticky.js?1576052738"></script>
-    <script src="/js/featherlight.min.js?1576052738"></script>
-    <script src="/js/highlight.pack.js?1576052738"></script>
+    <script src="/js/clipboard.min.js?1576063296"></script>
+    <script src="/js/perfect-scrollbar.min.js?1576063296"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1576063296"></script>
+    <script src="/js/jquery.sticky.js?1576063296"></script>
+    <script src="/js/featherlight.min.js?1576063296"></script>
+    <script src="/js/highlight.pack.js?1576063296"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1576052738"></script>
-    <script src="/js/learn.js?1576052738"></script>
-    <script src="/js/hugo-learn.js?1576052738"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1576063296"></script>
+    <script src="/js/learn.js?1576063296"></script>
+    <script src="/js/hugo-learn.js?1576063296"></script>
     
     <script src="/js/custom.js"></script>
 
-    <link href="/mermaid/mermaid.css?1576052738" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1576052738"></script>
+    <link href="/mermaid/mermaid.css?1576063296" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1576063296"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
