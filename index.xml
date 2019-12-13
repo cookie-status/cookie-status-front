@@ -17,7 +17,7 @@
       <pubDate>Thu, 21 Nov 2019 15:28:47 +0200</pubDate>
       
       <guid>https://www.cookiestatus.com/introduction/tracking-protection/</guid>
-      <description>TABLE OF CONTENTS  Tracking protection, and similar measures, seek to protect the user from covert data collection and exploitation by scripts and applications created for such purposes.
+      <description>Tracking protection, and similar measures, seek to protect the user from covert data collection and exploitation by scripts and applications created for such purposes.
 In short, tracking protection, tracking prevention, anti-tracking, cookie blocking, content blocking, etc. are designed to:
  Identify and classify domains that utilize and distribute tracking mechanisms obstructive to (browsers&amp;rsquo; interpretation of) web user privacy. Restrict storage access in third-party context for such scripts so that the trackers cannot build cross-site profiles of web users.</description>
     </item>
@@ -28,7 +28,7 @@ In short, tracking protection, tracking prevention, anti-tracking, cookie blocki
       <pubDate>Thu, 28 Nov 2019 13:12:55 +0200</pubDate>
       
       <guid>https://www.cookiestatus.com/introduction/summary-of-exploits/</guid>
-      <description>TABLE OF CONTENTS  There are a number of ways in which data exploitation is attempted by malicious trackers. On this page, these will be listed superficially.
+      <description>There are a number of ways in which data exploitation is attempted by malicious trackers. On this page, these will be listed superficially.
 The problem is that all these methods also serve valid and benign use cases, which means that when browsers seek to prevent these, they also end up preventing non-malicious and non-exploitative use of browser storage.
 And this is the nature of the beast. The very same APIs and methodologies that are used, for example, to improve the user experience of the site are simultaneously being repurposed by third parties for data collection and manipulation.</description>
     </item>
@@ -93,7 +93,7 @@ And this is the nature of the beast. The very same APIs and methodologies that a
       <pubDate>Thu, 21 Nov 2019 15:29:14 +0200</pubDate>
       
       <guid>https://www.cookiestatus.com/introduction/impact/</guid>
-      <description>TABLE OF CONTENTS  The tracking protection measures taken by browsers have a widespread impact on a variety of things, including web development, advertising and marketing technologies, digital analytics, and user experience optimization.
+      <description>The tracking protection measures taken by browsers have a widespread impact on a variety of things, including web development, advertising and marketing technologies, digital analytics, and user experience optimization.
 Websites use cookies and other browser storage for a plethora of things, such as persisting login state, preserving items in a shopping cart, and for presenting tailored experiences in a first-party context, based on what the user has done while visiting the site.</description>
     </item>
     
