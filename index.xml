@@ -12,51 +12,6 @@
     
     
     <item>
-      <title>Current status</title>
-      <link>https://www.cookiestatus.com/safari/current-status/</link>
-      <pubDate>Thu, 21 Nov 2019 15:47:52 +0200</pubDate>
-      
-      <guid>https://www.cookiestatus.com/safari/current-status/</guid>
-      <description> Classification of &amp;ldquo;known trackers&amp;rdquo; Third-party cookies First-party cookies Other third-party storage Other first-party storage Referrer </description>
-    </item>
-    
-    <item>
-      <title>Current status</title>
-      <link>https://www.cookiestatus.com/firefox/current-status/</link>
-      <pubDate>Thu, 21 Nov 2019 15:46:35 +0200</pubDate>
-      
-      <guid>https://www.cookiestatus.com/firefox/current-status/</guid>
-      <description> Classification of &amp;ldquo;known trackers&amp;rdquo; Third-party cookies First-party cookies Other third-party storage Other first-party storage Referrer </description>
-    </item>
-    
-    <item>
-      <title>Current status</title>
-      <link>https://www.cookiestatus.com/edge/current-status/</link>
-      <pubDate>Thu, 21 Nov 2019 15:45:30 +0200</pubDate>
-      
-      <guid>https://www.cookiestatus.com/edge/current-status/</guid>
-      <description> Classification of &amp;ldquo;known trackers&amp;rdquo; Third-party cookies First-party cookies Other third-party storage Other first-party storage Referrer </description>
-    </item>
-    
-    <item>
-      <title>Current status</title>
-      <link>https://www.cookiestatus.com/brave/current-status/</link>
-      <pubDate>Thu, 21 Nov 2019 15:43:50 +0200</pubDate>
-      
-      <guid>https://www.cookiestatus.com/brave/current-status/</guid>
-      <description> Classification of &amp;ldquo;known trackers&amp;rdquo; Third-party cookies First-party cookies Other third-party storage Other first-party storage Referrer </description>
-    </item>
-    
-    <item>
-      <title>Current status</title>
-      <link>https://www.cookiestatus.com/chrome/current-status/</link>
-      <pubDate>Thu, 21 Nov 2019 15:43:50 +0200</pubDate>
-      
-      <guid>https://www.cookiestatus.com/chrome/current-status/</guid>
-      <description> Classification of &amp;ldquo;known trackers&amp;rdquo; Third-party cookies First-party cookies Other third-party storage Other first-party storage Referrer </description>
-    </item>
-    
-    <item>
       <title>Tracking protection</title>
       <link>https://www.cookiestatus.com/introduction/tracking-protection/</link>
       <pubDate>Thu, 21 Nov 2019 15:28:47 +0200</pubDate>
@@ -75,7 +30,7 @@ In short, tracking protection, tracking prevention, anti-tracking, cookie blocki
       <guid>https://www.cookiestatus.com/introduction/summary-of-exploits/</guid>
       <description>TABLE OF CONTENTS  There are a number of ways in which data exploitation is attempted by malicious trackers. On this page, these will be listed superficially.
 The problem is that all these methods also serve valid and benign use cases, which means that when browsers seek to prevent these, they also end up preventing non-malicious and non-exploitative use of browser storage.
-And this is the nature of the beast.</description>
+And this is the nature of the beast. The very same APIs and methodologies that are used, for example, to improve the user experience of the site are simultaneously being repurposed by third parties for data collection and manipulation.</description>
     </item>
     
     <item>
@@ -186,7 +141,7 @@ Websites use cookies and other browser storage for a plethora of things, such as
       <guid>https://www.cookiestatus.com/glossary/</guid>
       <description>TABLE OF CONTENTS  This is a glossary of terms used in the website.
 AdTech Term used to describe advertising technologies and the companies and vendors working in AdTech. Many AdTech vendors utilize cross-site tracking to exploit user data in browser storage.
-Analytics Industry, vendors, tools, platforms, and methodologies grouped together by the pursuit of empirical data for measuring things like web performance, user behavior and advertising efforts.
+ Analytics Industry, vendors, tools, platforms, and methodologies grouped together by the pursuit of empirical data for measuring things like web performance, user behavior and advertising efforts.
 Often focuses on data collection in a first-party context, but especially in AdTech, analytics tools are used for collecting and analyzing data in third-party context as well.</description>
     </item>
     
