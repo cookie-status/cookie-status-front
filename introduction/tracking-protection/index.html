@@ -16,20 +16,20 @@
     </title>
 
     
-    <link href="/css/nucleus.css?1576222698" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1576222698" rel="stylesheet">
-    <link href="/css/hybrid.css?1576222698" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1576222698" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1576222698" rel="stylesheet">
-    <link href="/css/auto-complete.css?1576222698" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1576222698" rel="stylesheet">
-    <link href="/css/theme.css?1576222698" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1576222698" rel="stylesheet">
+    <link href="/css/nucleus.css?1576227474" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1576227474" rel="stylesheet">
+    <link href="/css/hybrid.css?1576227474" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1576227474" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1576227474" rel="stylesheet">
+    <link href="/css/auto-complete.css?1576227474" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1576227474" rel="stylesheet">
+    <link href="/css/theme.css?1576227474" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1576227474" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1576222698" rel="stylesheet">
+      <link href="/css/theme-blue.css?1576227474" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1576222698"></script>
+    <script src="/js/jquery-3.3.1.min.js?1576227474"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -498,14 +498,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1576222698"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1576222698"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1576227474"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1576227474"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.cookiestatus.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1576222698"></script>
+<script type="text/javascript" src="/js/search.js?1576227474"></script>
 
     
   </div>
@@ -731,6 +731,76 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     
       <li data-nav-id="/chrome/useful-resources/" title="Useful resources" class="dd-item ">
         <a href="/chrome/useful-resources/">
+        Useful resources
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cliqz/" title="Cliqz" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cliqz/">
+          <b class="temp-cliqz"></b>Cliqz
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cliqz/anti-tracking/" title="Anti-Tracking" class="dd-item ">
+        <a href="/cliqz/anti-tracking/">
+        Anti-Tracking
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cliqz/useful-resources/" title="Useful resources" class="dd-item ">
+        <a href="/cliqz/useful-resources/">
         Useful resources
         
         </a>
@@ -1258,13 +1328,16 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
         </figcaption>
 </figure>
 
+<p><strong>Cliqz</strong> has a similar tact. This is explained in detail in <a href="https://arxiv.org/abs/1804.08959">this research paper</a>, and in this <a href="https://whotracks.me/blog/how_cliqz_antitracking_protects_users.html">blog post</a>. Basically, they combine local and global evaluation of the data passed to and from the web browser to establish heuristical models for identifying potential tracker connections.</p>
+<p>Cliqz&rsquo; approach is two-fold. First, they <strong>purge</strong> identifiers from the HTTP requests that could be misused for tracking. Second, they <strong>block</strong> cookie access in third-party context, unless the user interacts with the third-party domain (e.g. in a widget).</p>
+<p>A <strong>global safe set</strong> is compiled from the actions Cliqz&rsquo; anti-tracking mechanism takes on each individual browser, and this <em>global</em> research data is used to fine-tune the <em>local</em> behavior of Cliqz&rsquo; tracking protections.</p>
 <p>The algorithmic approach is effective because it identifies potential tracking domains <strong>dynamically</strong> and without using a centralized list. This means that there's less overhead in pattern-matching the HTTP requests as the list of domains for the browser would only include those the browser has actually communicated with.</p>
 <p>The algorithm also ensures that locally hosted tracking domains and reverse proxies would also be under scrutiny (unless served in a same-site context).</p>
 <p>The main problems with this approach are:</p>
 <ul>
-<li><strong>False positives</strong>, where ITP classifies domains that serve no cross-site tracking purpose.</li>
-<li>There is also some <strong>reaction lag</strong>, because ITP would require enough data to run the algorithm. It's thus possible some communication with a tracking domain would be permitted before ITP restricts access.</li>
-<li><strong>Lack of predictability</strong>, which is not necessarily a problem or a bad thing, but a list-based approach allows for community oversight of the domains that have been blacklisted. Since the ITP algorithm is not prescriptive, only the algorithm itself can be scrutinized, not its end result.</li>
+<li><strong>False positives</strong>, where the algorithm classifies domains that serve no cross-site tracking purpose, or purges identifiers that are not used for tracking.</li>
+<li>There is also some <strong>reaction lag</strong>, because the algorithm would require enough data to classify each new domain. It's thus possible some communication with a tracking domain would be permitted before access is restricted.</li>
+<li><strong>Lack of predictability</strong>, which is not necessarily a problem or a bad thing, but a list-based approach allows for community oversight of the domains that have been blacklisted.</li>
 </ul>
 
 <div class="notices info" ><p>Note that for <strong>false positives</strong> blocking access to cross-origin storage, ITP offers the <strong>Storage Access API</strong>. However, there is no provision in ITP to remove a domain from the list of classified domains, which means that <strong>first-party protections</strong> would still apply.</p>
@@ -1612,6 +1685,54 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
         
@@ -1634,21 +1755,21 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1576222698"></script>
-    <script src="/js/perfect-scrollbar.min.js?1576222698"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1576222698"></script>
-    <script src="/js/jquery.sticky.js?1576222698"></script>
-    <script src="/js/featherlight.min.js?1576222698"></script>
-    <script src="/js/highlight.pack.js?1576222698"></script>
+    <script src="/js/clipboard.min.js?1576227474"></script>
+    <script src="/js/perfect-scrollbar.min.js?1576227474"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1576227474"></script>
+    <script src="/js/jquery.sticky.js?1576227474"></script>
+    <script src="/js/featherlight.min.js?1576227474"></script>
+    <script src="/js/highlight.pack.js?1576227474"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1576222698"></script>
-    <script src="/js/learn.js?1576222698"></script>
-    <script src="/js/hugo-learn.js?1576222698"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1576227474"></script>
+    <script src="/js/learn.js?1576227474"></script>
+    <script src="/js/hugo-learn.js?1576227474"></script>
     
     <script src="/js/custom.js"></script>
 
-    <link href="/mermaid/mermaid.css?1576222698" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1576222698"></script>
+    <link href="/mermaid/mermaid.css?1576227474" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1576227474"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
