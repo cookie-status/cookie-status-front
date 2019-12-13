@@ -137,7 +137,7 @@
 	"title": "Cliqz",
 	"tags": [],
 	"description": "",
-	"content": "Current status    Detail Description     Mechanism Anti-Tracking   Originally deployed in 1.30.0   Latest update deployed in [1.30.0](https://cliqz.com/en/magazine/cliqz-browser-release-notes\\   -1-30-0)    Latest update includes Cliqz\u0026rsquo; own Anti-Tracking Mechanism deployed.   User controls Site-specific and global controls for: Anti-tracking activationBlocking adsCookie pop-up blocking (consent requests)Anti-phishingAutomatic HTTPS connection upgrade    Classification of \u0026ldquo;known trackers\u0026rdquo; Third-party cookies First-party cookies Other third-party storage Other first-party storage Referrer "
+	"content": "Current status    Detail Description     Mechanism Anti-Tracking   Originally deployed in 1.30.0   Latest update deployed in 1.30.0   Latest update includes Cliqz\u0026rsquo; own Anti-Tracking Mechanism deployed.   User controls Site-specific and global controls for: Anti-tracking activationBlocking adsCookie pop-up blocking (consent requests)Anti-phishingAutomatic HTTPS connection upgrade    Classification of \u0026ldquo;known trackers\u0026rdquo; Third-party cookies First-party cookies Other third-party storage Other first-party storage Referrer "
 },
 {
 	"uri": "https://www.cookiestatus.com/edge/",
