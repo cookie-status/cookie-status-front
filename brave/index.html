@@ -1084,8 +1084,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
                         </a>
                     </span>
                   
-                  <a href="#toc"><i class="fas fa-list-alt"></i></a>
-                  
                   <span class="links">
                  
                  
@@ -1181,22 +1179,57 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 </tbody>
 </table>
-<p>The Brave browser takes a very strong stance against cross-site tracking and third-party advertising. The browser proactively <em>monitors</em>, <em>modifies</em>, and <em>blocks</em> scripts and network resources that are deemed to compromise user privacy.</p>
-<p>The browser employs a number of blocking methods, including:</p>
-<ul>
-<li>Block cookie access in third-party context</li>
-<li>Strip or spoof referrer headers in cross-site requests</li>
-<li>Neutralizes fingerprinting sources in third-party context (e.g. Canvas API, WebGL, Web Audio API)</li>
-<li>Blocks or modifies requests to known tracker sources, curated in multiple source lists including Brave's own, algorithmically derived tracker lists</li>
-<li>Removes known tracking query parameters from URLs (e.g. <code>gclid</code>, <code>fbclid</code>)</li>
-<li>Upgrades unsecure URLs to HTTPS when possible and non-disruptive</li>
-</ul>
+<figure class="left-align">
+    <img src="/images/content/brave-blocking-general.jpg"/> <figcaption>
+            <h4>Brave Shields default settings</h4>
+        </figcaption>
+</figure>
+
 <h2 id="classification-of-known-trackers">Classification of &ldquo;known trackers&rdquo;</h2>
+<p>Brave classifies tracking domains using input from multiple <strong>lists</strong>:</p>
+<ul>
+<li><a href="https://easylist.to/easylist/easylist.txt">EasyList</a></li>
+<li><a href="https://easylist.to/easylist/easyprivacy.txt">EasyPrivacy</a></li>
+<li><a href="https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt">uBlock Origin Unbreak</a></li>
+<li><a href="https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt">uBlock Origin Filters</a></li>
+<li><a href="https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt">uBlock Origin Filters - Privacy</a></li>
+<li><a href="https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt">Brave's own Unbreak list</a></li>
+<li><a href="https://raw.githubusercontent.com/brave/adblock-lists/master/coin-miners.txt">Brave's own cryptominer list</a></li>
+<li><a href="https://raw.githubusercontent.com/brave/adblock-lists/master/brave-disconnect.txt">Brave's fork of Disconnect.me</a></li>
+</ul>
+<p>Brave matches each outgoing request from the web browser against these lists (using various methods for achieving <a href="https://brave.com/improved-ad-blocker-performance/">optimized performance</a>), and if a match is made, the request is <strong>blocked</strong>.</p>
+<p>By blocking requests upstream, it means that if the request initiated a resource download (such as a JavaScript library), this resource is never downloaded and thus the code is not executed in the user's browser. If the request initiated a pixel call (such as a GET for an image), it means the pixel call will be aborted before it is received by the endpoint.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
+<p><strong>All</strong> third-party cookies are blocked by default.</p>
+<figure class="left-align">
+    <img src="/images/content/brave-cookie-block.jpg"/> <figcaption>
+            <h4>Brave uses &#34;cross-site&#34; interchangeably with &#34;third-party&#34; in this case</h4>
+        </figcaption>
+</figure>
+
 <h2 id="first-party-cookies">First-party cookies</h2>
+<p>For cookies set with JavaScript's <code>document.cookie</code>, expiration is set to a maximum of <strong>7 days</strong>.</p>
+<p>For cookies set with the <code>Set-Cookie</code> HTTP response header, expiration is set to a maximum of <strong>6 months</strong>.</p>
 <h2 id="other-third-party-storage">Other third-party storage</h2>
+<p>No restrictions.</p>
+<blockquote>
+<p>Note that since Brave <em>blocks</em> resources found in their <a href="#classification-of-known-trackers">classification lists</a>, it has the downstream effect of blocking storage access from these vendors who now can't execute their JavaScript in the user's browser, or respond to the blocked HTTP requests.</p>
+</blockquote>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
+<p>No restrictions.</p>
+<blockquote>
+<p>Note that since Brave <em>blocks</em> resources found in their <a href="#classification-of-known-trackers">classification lists</a>, it has the downstream effect of blocking storage access from these vendors who now can't execute their JavaScript in the user's browser, or respond to the blocked HTTP requests.</p>
+</blockquote>
 <h2 id="referrer">Referrer</h2>
+<p>Cross-origin referrers are <strong>spoofed</strong> in non-navigational HTTP requests.</p>
+<blockquote>
+<p>For example, if the page on <em><a href="https://domain.com/page">https://domain.com/page</a></em> requests a resource from <em><a href="https://anotherdomain.com/image.jpg">https://anotherdomain.com/image.jpg</a></em>, the <code>referer</code> header in the HTTP requests will be set to the <strong>referred-to</strong> origin (<em><a href="https://anotherdomain.com/">https://anotherdomain.com/</a></em>) rather than the <strong>referred-from</strong> origin (<em><a href="https://domain.com/">https://domain.com/</a></em>) as is the typical behavior.</p>
+</blockquote>
+<p>For top-level navigation, cross-origin referrers are <strong>stripped</strong> entirely.</p>
+<blockquote>
+<p>For example, when clicking a link from <em><a href="https://domain.com/page">https://domain.com/page</a></em> to <em><a href="https://anotherdomain.com/another-page/">https://anotherdomain.com/another-page/</a></em>, the <code>referer</code> header is removed from the request. Similarly, the <code>document.referrer</code> will return an empty string once the user lands on <em>anotherdomain.com</em>.</p>
+</blockquote>
+<p>For same-origin requests (both navigational and non-navigational), referrer has <strong>normal</strong> behavior.</p>
 
 
 
