@@ -1114,6 +1114,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <li><a href="#other-third-party-storage">Other third-party storage</a></li>
     <li><a href="#other-first-party-storage">Other first-party storage</a></li>
     <li><a href="#referrer">Referrer</a></li>
+    <li><a href="#other">Other</a></li>
   </ul>
 </nav>
     </div>
@@ -1179,12 +1180,41 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 </tbody>
 </table>
+<figure class="left-align">
+    <img src="/images/content/cliqz-settings.jpg"/> <figcaption>
+            <h4>Cliqz Anti-Tracking default settings</h4>
+        </figcaption>
+</figure>
+
 <h2 id="classification-of-known-trackers">Classification of &ldquo;known trackers&rdquo;</h2>
+<p>Cliqz uses an algorithmic classification model for identifying trackers with cross-site tracking capabilities.</p>
+<p>This model is run both <strong>locally</strong> (in the user's browser) and <strong>globally</strong> (derived from a global database, periodically updated with data from local contexts).</p>
+<p>To understand this better, read this research paper:</p>
+<p><a href="https://arxiv.org/abs/1804.08959">WhoTracks .Me: Shedding light on the opaque world of online tracking</a></p>
+<p>You can also browse the <a href="https://whotracks.me/">whotracks.me</a> service to learn about the status of the global tracker database Cliqz uses.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
+<p>Known trackers have third-party cookie access blocked. There is a heuristical model in place to determine exceptions to this rule. The model includes (<a href="https://github.com/cliqz-oss/browser-core/issues/58#issuecomment-394285634">source</a>):</p>
+<ul>
+<li><strong>User interaction with the 3rd party widget</strong>. When an element is clicked, Cliqz looks for tracker domain access within the embedded element and temporarily whitelists cookie access for the domain.</li>
+<li><strong>Redirects</strong>. When a domain redirects to a classified domain, the classified domain is whitelisted for temporary cookie access. This is to preserve things like login flows that handle state with cookies.</li>
+<li><strong>OAuth detection</strong>. OAuth flows can be identified fairly easily, and classified domains are whitelisted for temporary access to cookies necessary to keep the flow running.</li>
+</ul>
+<p>Cookies that are <strong>set</strong> on classified domains without first-party interaction (i.e. as third-party cookies) have a maximum expiration set to <strong>1 hour</strong>.</p>
 <h2 id="first-party-cookies">First-party cookies</h2>
+<p>How first-party cookies expire is determined by a) whether the domain the cookies are set is a classified domain, and b) how frequently the classified domain is visited in first-party context.</p>
+<p>If the domain is <strong>not</strong> a classified domain, first-party cookies have a maximum expiration of <strong>7 days</strong> (if set without the <code>HttpOnly</code> flag) or <strong>30 days</strong> (if set with the <code>HttpOnly</code> flag).</p>
+<p>If the domain <strong>is</strong> a classified domain, then <em>infrequent</em> visits to the domain impose a maximum expiration of <strong>7 days</strong> to the first-party cookie. If the domain is visited frequently, the maximum expiration is set to <strong>30 days</strong> (with the <code>HttpOnly</code> limitation same as above).</p>
 <h2 id="other-third-party-storage">Other third-party storage</h2>
+<p>No current restrictions.</p>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
+<p>No current restrictions.</p>
 <h2 id="referrer">Referrer</h2>
+<p>Default browser policy (<code>no-referrer-when-downgrade</code>).</p>
+<h2 id="other">Other</h2>
+<p>Cliqz automatically purges <em>potential user identifiers</em> from the URL, headers, and POST data of third-party requests.</p>
+<p>The model tokenizes all key-value pairs found, and then evaluates the values against a set of rules to determine if it's <em>safe</em> (should not be removed) or <em>unsafe</em> (should be removed).</p>
+<p>This evaluation is done locally first, and then the values are compared against a <strong>global safe set</strong> (derived from data collected from global Cliqz usage). If the value is flagged as <em>unsafe</em> and does not have a match in the global set, it is purged from the request.</p>
+<p><a href="https://whotracks.me/blog/how_cliqz_antitracking_protects_users.html">This article</a> has an excellent overview of how this process works (beginning with chapter titled <strong>Unsafe Data Removal</strong>).</p>
 
 
 

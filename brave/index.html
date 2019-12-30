@@ -1114,6 +1114,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <li><a href="#other-third-party-storage">Other third-party storage</a></li>
     <li><a href="#other-first-party-storage">Other first-party storage</a></li>
     <li><a href="#referrer">Referrer</a></li>
+    <li><a href="#other">Other</a></li>
   </ul>
 </nav>
     </div>
@@ -1230,6 +1231,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>For example, when clicking a link from <em><a href="https://domain.com/page">https://domain.com/page</a></em> to <em><a href="https://anotherdomain.com/another-page/">https://anotherdomain.com/another-page/</a></em>, the <code>referer</code> header is removed from the request. Similarly, the <code>document.referrer</code> will return an empty string once the user lands on <em>anotherdomain.com</em>.</p>
 </blockquote>
 <p>For same-origin requests (both navigational and non-navigational), referrer has <strong>normal</strong> behavior.</p>
+<h2 id="other">Other</h2>
+<p>Brave <a href="https://github.com/brave/brave-browser/issues/4239">removes known tracker identifier parameters</a> from third-party request URL strings.</p>
 
 
 
