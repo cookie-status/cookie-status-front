@@ -11,23 +11,5 @@
 	<atom:link href="https://www.cookiestatus.com/safari/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Intelligent Tracking Prevention (ITP)</title>
-      <link>https://www.cookiestatus.com/safari/intelligent-tracking-prevention/</link>
-      <pubDate>Thu, 21 Nov 2019 15:47:59 +0200</pubDate>
-      
-      <guid>https://www.cookiestatus.com/safari/intelligent-tracking-prevention/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Useful resources</title>
-      <link>https://www.cookiestatus.com/safari/useful-resources/</link>
-      <pubDate>Thu, 21 Nov 2019 15:48:03 +0200</pubDate>
-      
-      <guid>https://www.cookiestatus.com/safari/useful-resources/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

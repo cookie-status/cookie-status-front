@@ -11,23 +11,5 @@
 	<atom:link href="https://www.cookiestatus.com/chrome/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Privacy Sandbox</title>
-      <link>https://www.cookiestatus.com/chrome/privacy-sandbox/</link>
-      <pubDate>Thu, 21 Nov 2019 15:43:56 +0200</pubDate>
-      
-      <guid>https://www.cookiestatus.com/chrome/privacy-sandbox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Useful resources</title>
-      <link>https://www.cookiestatus.com/chrome/useful-resources/</link>
-      <pubDate>Thu, 21 Nov 2019 15:44:02 +0200</pubDate>
-      
-      <guid>https://www.cookiestatus.com/chrome/useful-resources/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
