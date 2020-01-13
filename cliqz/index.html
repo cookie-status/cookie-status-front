@@ -913,8 +913,12 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </ul>
 <p>Cookies that are <strong>set</strong> on classified domains without first-party interaction (i.e. as third-party cookies) have a maximum expiration set to <strong>1 hour</strong>.</p>
 <h2 id="first-party-cookies">First-party cookies</h2>
-<p>How first-party cookies expire is determined by a) whether the domain the cookies are set is a classified domain, and b) how frequently the classified domain is visited in first-party context.</p>
+<p>How first-party cookies expire is determined by a) whether the domain the cookies are set on is a classified domain, and b) how frequently the classified domain is visited in first-party context.</p>
 <p>If the domain is <strong>not</strong> a classified domain, first-party cookies have a maximum expiration of <strong>7 days</strong> (if set without the <code>HttpOnly</code> flag) or <strong>30 days</strong> (if set with the <code>HttpOnly</code> flag).</p>
+
+<div class="notices note" ><p><strong>Example</strong>: A JavaScript SDK (e.g. an analytics) tool writes a cookie in the user's browser, assigning them with an anonymous, randomly generated client identifier. The purpose of this identifier is to assign multiple visits by the same browser to the same &ldquo;user&rdquo;. If the user visits the site within 7 days of the previous visit, the cookie will persist in the browser, and the analytics platform will be able to identify the browser as one that has previously visited the site. If the visits happen more than 7 days apart, the user will always be a &ldquo;new user&rdquo; to the analytics platform.</p>
+</div>
+
 <p>If the domain <strong>is</strong> a classified domain, then <em>infrequent</em> visits to the domain impose a maximum expiration of <strong>7 days</strong> to the first-party cookie. If the domain is visited frequently, the maximum expiration is set to <strong>30 days</strong> (with the <code>HttpOnly</code> limitation same as above).</p>
 <h2 id="other-third-party-storage">Other third-party storage</h2>
 <p>No current restrictions.</p>
@@ -926,6 +930,10 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Cliqz automatically purges <em>potential user identifiers</em> from the URL, headers, and POST data of third-party requests.</p>
 <p>The model tokenizes all key-value pairs found, and then evaluates the values against a set of rules to determine if it's <em>safe</em> (should not be removed) or <em>unsafe</em> (should be removed).</p>
 <p>This evaluation is done locally first, and then the values are compared against a <strong>global safe set</strong> (derived from data collected from global Cliqz usage). If the value is flagged as <em>unsafe</em> and does not have a match in the global set, it is purged from the request.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: If the browser sends a request to a third-party resource using something like <code>?userId=abcd-1234-efgh-5678</code> in the request URL, it's possible that this parameter will be stripped from the outgoing request so that the service receiving the request will not be able to access the data.</p>
+</div>
+
 <p><a href="https://whotracks.me/blog/how_cliqz_antitracking_protects_users.html">This article</a> has an excellent overview of how this process works (beginning with chapter titled <strong>Unsafe Data Removal</strong>).</p>
 
 

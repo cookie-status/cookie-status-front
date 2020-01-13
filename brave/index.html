@@ -911,6 +911,10 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <li><a href="https://raw.githubusercontent.com/brave/adblock-lists/master/brave-disconnect.txt">Brave's fork of Disconnect.me</a></li>
 </ul>
 <p>Brave matches each outgoing request from the web browser against these lists (using various methods for achieving <a href="https://brave.com/improved-ad-blocker-performance/">optimized performance</a>), and if a match is made, the request is <strong>blocked</strong>.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user visits a site that tries to load the Google Analytics JavaScript library from <code>https://www.google-analytics.com/analytics.js</code>. This URL (and the entire domain, in fact), is listed in the <a href="https://easylist.to/easylist/easyprivacy.txt">EasyPrivacy list</a>. Thus Brave blocks the request, preventing the browser from downloading the library and executing the Google Analytics tracking code in the web browser.</p>
+</div>
+
 <p>By blocking requests upstream, it means that if the request initiated a resource download (such as a JavaScript library), this resource is never downloaded and thus the code is not executed in the user's browser. If the request initiated a pixel call (such as a GET for an image), it means the pixel call will be aborted before it is received by the endpoint.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p><strong>All</strong> third-party cookies are blocked by default.</p>
@@ -922,29 +926,41 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <h2 id="first-party-cookies">First-party cookies</h2>
 <p>For cookies set with JavaScript's <code>document.cookie</code>, expiration is set to a maximum of <strong>7 days</strong>.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user visits a page that is running an A/B testing tool which stores the experiment details into a cookie named <code>__exp</code>. This cookie is set with <strong>JavaScript</strong>. Even though setting the cookie works, and the user is assigned to an experiment group successfully, if the user takes more than <strong>7 days</strong> to revisit the site, the cookie will have been expired and the user would potentially get assigned to a new, different group upon their next visit.</p>
+</div>
+
 <p>For cookies set with the <code>Set-Cookie</code> HTTP response header, expiration is set to a maximum of <strong>6 months</strong>.</p>
 <h2 id="other-third-party-storage">Other third-party storage</h2>
 <p>No restrictions.</p>
-<blockquote>
-<p>Note that since Brave <em>blocks</em> resources found in their <a href="#classification-of-known-trackers">classification lists</a>, it has the downstream effect of blocking storage access from these vendors who now can't execute their JavaScript in the user's browser, or respond to the blocked HTTP requests.</p>
-</blockquote>
+
+<div class="notices info" ><p>Note that since Brave <em>blocks</em> resources found in their <a href="#classification-of-known-trackers">classification lists</a>, it has the downstream effect of blocking storage access from these vendors who now can't execute their JavaScript in the user's browser, or respond to the blocked HTTP requests.</p>
+</div>
+
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>No restrictions.</p>
-<blockquote>
-<p>Note that since Brave <em>blocks</em> resources found in their <a href="#classification-of-known-trackers">classification lists</a>, it has the downstream effect of blocking storage access from these vendors who now can't execute their JavaScript in the user's browser, or respond to the blocked HTTP requests.</p>
-</blockquote>
+
+<div class="notices info" ><p>Note that since Brave <em>blocks</em> resources found in their <a href="#classification-of-known-trackers">classification lists</a>, it has the downstream effect of blocking storage access from these vendors who now can't execute their JavaScript in the user's browser, or respond to the blocked HTTP requests.</p>
+</div>
+
 <h2 id="referrer">Referrer</h2>
 <p>Cross-origin referrers are <strong>spoofed</strong> in non-navigational HTTP requests.</p>
-<blockquote>
-<p>For example, if the page on <em><a href="https://domain.com/page">https://domain.com/page</a></em> requests a resource from <em><a href="https://anotherdomain.com/image.jpg">https://anotherdomain.com/image.jpg</a></em>, the <code>referer</code> header in the HTTP requests will be set to the <strong>referred-to</strong> origin (<em><a href="https://anotherdomain.com/">https://anotherdomain.com/</a></em>) rather than the <strong>referred-from</strong> origin (<em><a href="https://domain.com/">https://domain.com/</a></em>) as is the typical behavior.</p>
-</blockquote>
+
+<div class="notices note" ><p><strong>Example</strong>: If the page on <code>https://domain.com/page</code> requests a resource from <code>https://anotherdomain.com/image.jpg</code>, the <code>referer</code> header in the HTTP requests will be set to the <strong>referred-to</strong> origin (<code>https://anotherdomain.com/</code>) rather than the <strong>referred-from</strong> origin (<code>https://domain.com/</code>) as is the typical behavior.</p>
+</div>
+
 <p>For top-level navigation, cross-origin referrers are <strong>stripped</strong> entirely.</p>
-<blockquote>
-<p>For example, when clicking a link from <em><a href="https://domain.com/page">https://domain.com/page</a></em> to <em><a href="https://anotherdomain.com/another-page/">https://anotherdomain.com/another-page/</a></em>, the <code>referer</code> header is removed from the request. Similarly, the <code>document.referrer</code> will return an empty string once the user lands on <em>anotherdomain.com</em>.</p>
-</blockquote>
+
+<div class="notices note" ><p><strong>Example</strong>: When clicking a link from <code>https://domain.com/page</code> to <code>https://anotherdomain.com/another-page/</code>, the <code>referer</code> header is removed from the request. Similarly, the <code>document.referrer</code> will return an empty string once the user lands on <code>anotherdomain.com</code>.</p>
+</div>
+
 <p>For same-origin requests (both navigational and non-navigational), referrer has <strong>normal</strong> behavior.</p>
 <h2 id="other">Other</h2>
 <p>Brave <a href="https://github.com/brave/brave-browser/issues/4239">removes known tracker identifier parameters</a> from third-party request URL strings.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: If the browser sends a request to a third-party resource using something like <code>?fbclid=abcd-1234-efgh-5678</code> in the request URL, it's possible that this parameter will be stripped from the outgoing request so that the service receiving the request will not be able to access the data.</p>
+</div>
+
 
 
 

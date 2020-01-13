@@ -904,16 +904,28 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>A machine learning model is used to classify which top privately-controlled domains have the ability to track the user cross-site, based on the collected statistics. Out of the various statistics collected, three vectors turned out to have strong signal for classification based on current tracking practices: <strong>subresource under number of unique domains</strong>, <strong>sub frame under number of unique domains</strong>, and <strong>number of unique domains redirected to</strong>. All data collection and classification happens on-device.</p>
 </blockquote>
 <p>If a domain is classified by Safari as having cross-site tracking capabilities, it will have several restrictions placed upon it, listed below.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: A website loads an iframe from <code>www.iframe-domain.com</code>. This is the first time the user's browser has loaded content from this domain in a frame. ITP does not yet react to this, as it's a single occurrence. Later, the user visits multiple different websites, all loading data from the same domain into an iframe. At this point, ITP classifies the domain as having cross-site capabilities, and the restrictions listed on this page will be put into effect.</p>
+</div>
+
 <p>To monitor the list of domains classified by your Safari instance, or to test ITP in action, you can utilize the <strong>ITP Debug Mode</strong>, with instructions for use found behind <a href="https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/">this link</a>.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p>Safari has a number of different approaches to blocking third-party cookie access.</p>
 <p>First, there's Safari's <strong>default cookie policy</strong>, which has been active since as early as 2003. The default policy prevents a third-party domain from setting cookies <strong>if that domain hasn't already been &ldquo;seeded&rdquo; with a cookie in first-party context</strong>.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user visits a website which sends a request to <code>www.third-party-domain.com</code>, which subsequently attempts to set a cookie in the HTTP response. Safari blocks this, as the user's browser has no cookies set on <code>www.third-party-domain.com</code> yet. If the user were to visit <code>www.third-party-comain.com</code> in first-party context (actually typing the URL in the browser omnibox), by setting a cookie in first-party context would relax this default cookie policy for this particular domain in future third-party requests.</p>
+</div>
+
 <p>Second, Safari blocks all third-party cookies if the user has not <strong>interacted with the site in first-party context first</strong>.</p>
 <p>Finally, if the domain is classified as having <strong>cross-site tracking capabilities</strong>, third-party cookie access is blocked.</p>
 <p>If the browser wants to access cookies on domains classified by ITP, it needs to utilize the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API#Safari_implementation_differences">Storage Access API</a> to prompt the user whether it is OK to share data with the third-party domain.</p>
 <h2 id="first-party-cookies">First-party cookies</h2>
 <p>For first-party cookies set with JavaScript's <code>document.cookie</code> API, maximum expiration is set to <strong>7 days</strong>.</p>
 <p>If the referring domain is a known tracker, and if the URL has query parameters (<code>?key=value</code>) or fragments (<code>#somevalue</code>), cookies set with JavaScript's <code>document.cookie</code> API have a maximum expiration of <strong>24 hours</strong>.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user follows a link from <code>www.facebook.com</code> (a known tracking domain), and lands on the website. Facebook appends an <code>?fbclid=123123123123</code> parameter to the URL. Because the referring URL is on a classified domain, and because the landing page has a query parameter, ITP sets a maximum expiration of <strong>24 hours</strong> to any cookies set with JavaScript while on that landing page.</p>
+</div>
+
 <p>First-party cookies set with the <code>Set-Cookie</code> HTTP response header are not impacted by ITP, and have no restrictions placed on their expiration.</p>
 <h2 id="other-third-party-storage">Other third-party storage</h2>
 <p><code>localStorage</code> is partitioned, so that access is keyed to the combination of the source and target domains. Thus <code>www.domain.com</code> has a different <code>localStorage</code> store in third-party context when accessed from <code>www.domain1.com</code> and from <code>www.domain2.com</code>. This partitioned store is also cleared between application launches.</p>
@@ -921,6 +933,10 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p><code>sessionStorage</code> has no restrictions.</p>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>If the referring domain is a known tracker, and if the URL has query parameters (<code>?key=value</code>) or fragments (<code>#somevalue</code>), then <strong>all</strong> non-cookie website storage in first-party context is restricted to maximum <strong>7 days</strong> lifetime since the last user interaction (click, tap, or text input) with the site.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user clicks a link on <code>www.known-tracker.com</code> (a classified domain), and the landing page URL is appended with the fragment <code>#abcd1234</code>. ITP sets the maximum lifetime of all non-cookie website storage (e.g. <code>localStorage</code>) to <strong>7 days</strong>, and the timer starts from the first interaction with the site. If the user doesn't interact with the site again for 7 days, all non-cookie storage is deleted.</p>
+</div>
+
 <p>If there is <strong>no user interaction</strong> with the first-party site, this type of storage is expired within few seconds.</p>
 <h2 id="referrer">Referrer</h2>
 <p>Safari downgrades referrers from <strong>all</strong> cross-site requests to their <strong>origin</strong>. Thus a request originating from <code>https://www.domain.com/page/page.html</code> would show up as <code>https://www.domain.com</code> in the <code>referer</code> header and in the <code>document.referrer</code> property of the landing page.</p>

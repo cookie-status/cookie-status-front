@@ -925,7 +925,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p><strong>B</strong> means that all resources are blocked for domains falling under the given category.</p>
 <p>To prevent storage access and resource blocking from breaking user experience, Edge has introduced some <strong>mitigations</strong> to how cross-site tracking prevention works.</p>
 <h3 id="same-org-mitigation">Same-org mitigation</h3>
-<p>If two domains, e.g. <code>www.company-domain.com</code> and <code>www.company-cdn.com</code>, are owned and operated by the same company, Edge introduces a mitigation where tracking prevention is relaxed when one such domain requests resources from the other. Thus, even if Edge's Trust Protection Lists have identified <code>www.company-cdn.com</code> as a tracking domain, access to it from <code>www.company-domain.com</code> would not be restricted.</p>
+<p>If two domain sare owned and operated by the same company, Edge introduces a mitigation where tracking prevention is relaxed when one such domain requests resources from the other.</p>
+
+<div class="notices info" ><p><strong>Example</strong>: <code>www.company-domain.com</code> and <code>www.company-cdn.com</code> are different domains, but they are registered by the same company, and Edge recognizes them as belonging to the same organization. Thus, even if Edge's Trust Protection Lists have identified <code>www.company-cdn.com</code> as a tracking domain, access to it from <code>www.company-domain.com</code> would not be restricted.</p>
+</div>
+
 <h3 id="site-engagement-mitigation">Site engagement mitigation</h3>
 <p>Edge introduced the <strong>Site engagement score</strong> from the <a href="https://www.chromium.org/developers/design-documents/site-engagement">Chromium project</a> as a further mitigation to accessing resources on classified domains.</p>
 <p>Activities that improve the site engagement score are:</p>
@@ -937,31 +941,33 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>The site engagement score is calculated as a double value between 0-100.</p>
 <p>Engagement scores are keyed <strong>by origin</strong> (so <code>www.domain.com</code> would have a different engagement score from <code>sub.domain.com</code>), and engagement scores are cleared with browser history (or, for scores accumulated in <em>incognito mode</em>, when the browser is shut down). Engagement scores also <strong>decay with time</strong>.</p>
 <p>Edge determines a score of <strong>4.1</strong> to represent sufficient engagement with a site to enable mitigation for tracking prevention.</p>
-<blockquote>
-<p>You can view the site engagement scores stored in your Edge instance by typing <code>edge://site-engagement</code> in the address bar of the browser.</p>
-</blockquote>
+
+<div class="notices tip" ><p>You can view the site engagement scores stored in your Edge instance by typing <code>edge://site-engagement</code> in the address bar of the browser.</p>
+</div>
+
 <p>If the browser requests a resource from a site with an engagement score of 4.1 or better, Edge does not restrict storage access or resource loads <strong>unless the site is classified in the Fingerprinting or Cryptomining categories</strong>.</p>
 <h3 id="org-engagement-mitigation">Org engagement mitigation</h3>
 <p>Organization engagement mitigation means that if one site in an organization receives a site engagement score high enough to not be impacted by tracking prevention (i.e. a score of 4.1 or better), then the user is considered to have a relationship <strong>with the organization</strong>.</p>
-<p>Thus if the user has interacted with <code>www.company-domain.com</code> enough to accumulate a score of 4.1 or better, then <code>www.company-cdn.com</code> would enjoy the site engagement mitigation as well, because it is part of the same organization.</p>
-<p>If a website then does a cross-site request to <code>www.company-cdn.com</code>, Edge would not block storage access even if the domain were in the Trust Protection Lists.</p>
-<blockquote>
-<p>Unless, of course, <code>www.company-cdn.com</code> falls under the Fingerprinting or Cryptomining categories).</p>
-</blockquote>
+
+<div class="notices note" ><p><strong>Example</strong>: If the user has interacted with <code>www.company-domain.com</code> enough to accumulate a score of 4.1 or better, then <code>www.company-cdn.com</code>would enjoy the benefits of site engagement mitigation as well, because it is recognized as part of the same organization. Thus if a website does a cross-site request to <code>www.company-cdn.com</code>, Edge would not block storage access even if the domain were in the Trust Protection Lists. <em>Unless, of course, <code>www.company-cdn.com</code> would fall under the Fingerprinting or Cryptomining categories</em>.</p>
+</div>
+
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p>Third-party cookies are blocked from all domains listed in the Trust Protection Lists (considering the <strong>mitigations</strong> listed above).</p>
 <h2 id="first-party-cookies">First-party cookies</h2>
 <p>No restrictions.</p>
-<blockquote>
-<p>Note that domains in Cryptomining and Fingerprinting categories of the Trust Protection Lists have all resource loads blocked, and thus resources that would have been downloaded from these sources cannot make use of first-party cookies.</p>
-</blockquote>
+
+<div class="notices info" ><p>Note that domains in Cryptomining and Fingerprinting categories of the Trust Protection Lists have all resource loads blocked, and thus resources that would have been downloaded from these sources cannot make use of first-party cookies.</p>
+</div>
+
 <h2 id="other-third-party-storage">Other third-party storage</h2>
 <p>All other third-party browser storage is blocked from domains listed in the Trust Protection Lists (considering the <strong>mitigations</strong> listed above).</p>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>No restrictions.</p>
-<blockquote>
-<p>Note that domains in Cryptomining and Fingerprinting categories of the Trust Protection Lists have all resource loads blocked, and thus resources that would have been downloaded from these sources cannot make use of other first-party storage.</p>
-</blockquote>
+
+<div class="notices info" ><p>Note that domains in Cryptomining and Fingerprinting categories of the Trust Protection Lists have all resource loads blocked, and thus resources that would have been downloaded from these sources cannot make use of other first-party storage.</p>
+</div>
+
 <h2 id="referrer">Referrer</h2>
 <p>Default browser policy (<code>no-referrer-when-downgrade</code>).</p>
 

@@ -908,27 +908,37 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <li><strong>Fingerprinting</strong> - third-party requests blocked <a href="#other">conditionally</a></li>
 <li><strong>Social</strong> - third-party cookies blocked</li>
 </ul>
+
+<div class="notices note" ><p><strong>Example</strong>: If the browser sends a request to <code>www.facebook.com</code> (a known tracker), no cookies would be sent with the request.</p>
+</div>
+
 <p>Tracking Content blocking (enabled in <strong>Private windows</strong> by default) will not just strip cookies but actually <strong>block</strong> all resource requests to domains listed in Disconnect.me.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p>Third-party cookies are blocked for classified domains.</p>
 <h2 id="first-party-cookies">First-party cookies</h2>
 <p>No restrictions.</p>
-<blockquote>
-<p>Note that domains in the Cryptomining category have all incoming requests blocked by Firefox, and thus scripts loaded from these domains will not be able to interact with first-party cookies. Similarly, domains that are both in the Fingerprinting and some other tracking category have incoming requests blocked and the downstream impact is the same.</p>
-</blockquote>
+
+<div class="notices info" ><p>Note that domains in the Cryptomining category have all incoming requests blocked by Firefox, and thus scripts loaded from these domains will not be able to interact with first-party cookies. Similarly, domains that are both in the Fingerprinting and some other tracking category have incoming requests blocked and the downstream impact is the same.</p>
+</div>
+
 <h2 id="other-third-party-storage">Other third-party storage</h2>
 <p>For classified domains, <code>localStorage</code> and <code>IndexedDB</code> are restricted.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: JavaScript running in an iframe, which loads content from a known tracking domain, tries to write to <code>localStorage</code> within that iframe. Firefox blocks this activity, because <code>localStorage</code> is disabled in third-party context if the domain is classified as a known tracking domain.</p>
+</div>
+
 <p><code>sessionStorage</code> is not restricted.</p>
 <p>No restrictions for other domains.</p>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>No restrictions.</p>
-<blockquote>
-<p>Note that domains in the Cryptomining category have all incoming requests blocked by Firefox, and thus scripts loaded from these domains will not be able to interact with other first-party storage. Similarly, domains that are both in the Fingerprinting and some other tracking category have incoming requests blocked and the downstream impact is the same.</p>
-</blockquote>
+
+<div class="notices info" ><p>Note that domains in the Cryptomining category have all incoming requests blocked by Firefox, and thus scripts loaded from these domains will not be able to interact with other first-party storage. Similarly, domains that are both in the Fingerprinting and some other tracking category have incoming requests blocked and the downstream impact is the same.</p>
+</div>
+
 <h2 id="referrer">Referrer</h2>
 <p>Default browser policy (<code>no-referrer-when-downgrade</code>).</p>
 <h2 id="other">Other</h2>
-<p>If the domain is in the Fingerprinting category of Disconnect.me <strong>and</strong> in one of the tracking categories (Advertising, Analytics, or Social), all third-party requests to the domain are blocked.</p>
+<p>If the domain is in the Fingerprinting category of Disconnect.me <strong>and</strong> in one of the tracking categories (Advertising, Analytics, or Social), all third-party <strong>requests</strong> to the domain are blocked.</p>
 
 
 
