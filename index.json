@@ -46,7 +46,7 @@
 	"title": "Chrome",
 	"tags": [],
 	"description": "",
-	"content": "Current status The Chrome browser doesn't currently have mechanisms designed specifically for tracking protection.\n Classification of \u0026ldquo;known trackers\u0026rdquo; Chrome does not classify classify trackers or domains for the purposes of tracking protection.\nThird-party cookies Chrome does not restrict the use of third-party cookies.\nFirst-party cookies Chrome does not restrict the use of first-party cookies.\nOther third-party storage Chrome does not restrict the use of other browser storage in third-party context.\nOther first-party storage Chrome does not restrict the use of other browser storage in first-party context.\nReferrer Chrome uses the default referrer policy of no-referrer-when-downgrade.\n"
+	"content": "Current status The Chrome browser doesn't currently have mechanisms designed specifically for tracking protection.\n The privacy-sandbox Chromium project promises initiatives related to tracking prevention, and Chrome has publicly stated intention to making third-party cookies obsolete by 2022.\nClassification of \u0026ldquo;known trackers\u0026rdquo; Chrome does not classify classify trackers or domains for the purposes of tracking protection.\nThird-party cookies Chrome does not restrict the use of third-party cookies.\nFirst-party cookies Chrome does not restrict the use of first-party cookies.\nOther third-party storage Chrome does not restrict the use of other browser storage in third-party context.\nOther first-party storage Chrome does not restrict the use of other browser storage in first-party context.\nReferrer Chrome uses the default referrer policy of no-referrer-when-downgrade.\n"
 },
 {
 	"uri": "https://www.cookiestatus.com/cliqz/",
