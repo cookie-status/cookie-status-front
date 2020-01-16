@@ -925,7 +925,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p><strong>B</strong> means that all resources are blocked for domains falling under the given category.</p>
 <p>To prevent storage access and resource blocking from breaking user experience, Edge has introduced some <strong>mitigations</strong> to how cross-site tracking prevention works.</p>
 <h3 id="same-org-mitigation">Same-org mitigation</h3>
-<p>If two domain sare owned and operated by the same company, Edge introduces a mitigation where tracking prevention is relaxed when one such domain requests resources from the other.</p>
+<p>If two domains are owned and operated by the same company, Edge introduces a mitigation where tracking prevention is relaxed when one such domain requests resources from the other.</p>
 
 <div class="notices info" ><p><strong>Example</strong>: <code>www.company-domain.com</code> and <code>www.company-cdn.com</code> are different domains, but they are registered by the same company, and Edge recognizes them as belonging to the same organization. Thus, even if Edge's Trust Protection Lists have identified <code>www.company-cdn.com</code> as a tracking domain, access to it from <code>www.company-domain.com</code> would not be restricted.</p>
 </div>
