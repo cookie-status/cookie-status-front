@@ -939,8 +939,9 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <p>If there is <strong>no user interaction</strong> with the first-party site, this type of storage is expired within few seconds.</p>
 <h2 id="referrer">Referrer</h2>
-<p>Safari downgrades referrers from <strong>all</strong> cross-site requests to their <strong>origin</strong>. Thus a request originating from <code>https://www.domain.com/page/page.html</code> would show up as <code>https://www.domain.com</code> in the <code>referer</code> header and in the <code>document.referrer</code> property of the landing page.</p>
-<p>Furthermore, if the referring domain is a known tracker, and if the <em>referring page</em> has query parameters (<code>?key=value</code>) or fragments (<code>#somevalue</code>), the referrer is downgraded to <strong>effective top-level domain plus one part</strong> (eTLD+1). Thus a request originating from <code>https://sub.classified.domain.com/page?userId=abcd1234</code> would end up as <code>https://domain.com</code> in the <code>referer</code>header and in the <code>document.referrer</code> property of the landing page.</p>
+<p>Safari downgrades referrers for <strong>all</strong> non-navigational cross-site requests to their <strong>origin</strong>. Thus if a page on <code>https://www.domain.com/page/page.html</code> tried to load an image from <code>https://images.imagecdn.com</code>, the <code>referer</code> header would show <code>https://www.domain.com</code> rather than the full referrer.</p>
+<p>Furthermore, if the referring domain is a known tracker, and if the <em>referring page</em> has query parameters (<code>?key=value</code>) or fragments (<code>#somevalue</code>), the <code>document.referrer</code> property is downgraded to <strong>effective top-level domain plus one part</strong> (eTLD+1). Thus a request originating from <code>https://sub.classified.domain.com/page?userId=abcd1234</code> would end up as <code>https://domain.com</code> in the <code>document.referrer</code> property of the landing page.</p>
+<p>For navigational requests, <code>no-referrer-when-downgrade</code> applies.</p>
 
 
 
