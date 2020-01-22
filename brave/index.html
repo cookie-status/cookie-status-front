@@ -944,17 +944,17 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </div>
 
 <h2 id="referrer">Referrer</h2>
-<p>Cross-origin referrers are <strong>spoofed</strong> in non-navigational HTTP requests.</p>
+<p>Cross-site referrers are <strong>spoofed</strong> in non-navigational HTTP requests.</p>
 
 <div class="notices note" ><p><strong>Example</strong>: If the page on <code>https://domain.com/page</code> requests a resource from <code>https://anotherdomain.com/image.jpg</code>, the <code>referer</code> header in the HTTP requests will be set to the <strong>referred-to</strong> origin (<code>https://anotherdomain.com/</code>) rather than the <strong>referred-from</strong> origin (<code>https://domain.com/</code>) as is the typical behavior.</p>
 </div>
 
-<p>For top-level navigation, cross-origin referrers are <strong>stripped</strong> entirely.</p>
+<p>For top-level navigation, cross-site referrers are <strong>stripped</strong> entirely.</p>
 
 <div class="notices note" ><p><strong>Example</strong>: When clicking a link from <code>https://domain.com/page</code> to <code>https://anotherdomain.com/another-page/</code>, the <code>referer</code> header is removed from the request. Similarly, the <code>document.referrer</code> will return an empty string once the user lands on <code>anotherdomain.com</code>.</p>
 </div>
 
-<p>For same-origin requests (both navigational and non-navigational), referrer has <strong>normal</strong> behavior.</p>
+<p>For same-site requests (both navigational and non-navigational), referrer has <strong>normal</strong> behavior.</p>
 <h2 id="other">Other</h2>
 <p>Brave <a href="https://github.com/brave/brave-browser/issues/4239">removes known tracker identifier parameters</a> from third-party request URL strings.</p>
 
