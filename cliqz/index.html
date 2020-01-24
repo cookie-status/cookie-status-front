@@ -880,11 +880,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 <tr>
 <td><strong>Latest update deployed in</strong></td>
-<td><a href="https://cliqz.com/en/magazine/cliqz-browser-release-notes-1-30-0">1.30.0</a></td>
+<td>1.32.1</td>
 </tr>
 <tr>
 <td><strong>Latest update includes</strong></td>
-<td>Cliqz&rsquo; own Anti-Tracking Mechanism deployed.</td>
+<td>All cross-origin referrers stripped to origin.</td>
 </tr>
 <tr>
 <td><strong>User controls</strong></td>
@@ -925,7 +925,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>No current restrictions.</p>
 <h2 id="referrer">Referrer</h2>
-<p>Default browser policy (<code>no-referrer-when-downgrade</code>).</p>
+<p>Cliqz strips all cross-origin referrers to origin only.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user clicks on a link from <code>https://www.company.com/page?userId=123</code> to <code>https://www.cookiestatus.com/</code>. The <code>referer</code> HTTP header and the <code>document.referrer</code> JavaScript object will show <code>https://www.company.com</code> as the referrer. All non-navigational HTTP requests will truncate the referrer in a similar fashion.</p>
+</div>
+
 <h2 id="other">Other</h2>
 <p>Cliqz automatically purges <em>potential user identifiers</em> from the URL, headers, and POST data of third-party requests.</p>
 <p>The model tokenizes all key-value pairs found, and then evaluates the values against a set of rules to determine if it's <em>safe</em> (should not be removed) or <em>unsafe</em> (should be removed).</p>
