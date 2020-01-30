@@ -821,7 +821,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
   <ul>
     <li><a href="#current-status">Current status</a></li>
     <li><a href="#classification-of-known-trackers">Classification of &ldquo;known trackers&rdquo;</a></li>
-    <li><a href="#third-party-cookies">Third-party cookies</a></li>
+    <li><a href="#third-party-cookies">Third-party cookies</a>
+      <ul>
+        <li><a href="#storage-access-api">Storage Access API</a></li>
+      </ul>
+    </li>
     <li><a href="#first-party-cookies">First-party cookies</a></li>
     <li><a href="#other-third-party-storage">Other third-party storage</a></li>
     <li><a href="#other-first-party-storage">Other first-party storage</a></li>
@@ -911,14 +915,45 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>To monitor the list of domains classified by your Safari instance, or to test ITP in action, you can utilize the <strong>ITP Debug Mode</strong>, with instructions for use found behind <a href="https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/">this link</a>.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p>Safari has a number of different approaches to blocking third-party cookie access.</p>
-<p>First, there's Safari's <strong>default cookie policy</strong>, which has been active since as early as 2003. The default policy prevents a third-party domain from setting cookies <strong>if that domain hasn't already been &ldquo;seeded&rdquo; with a cookie in first-party context</strong>.</p>
+<p>First, there's Safari's <strong>default cookie policy</strong>, which has been active since as early as 2003. The default policy prevents domains of a third-party site from setting cookies <strong>if the site hasn't already been &ldquo;seeded&rdquo; with a cookie in first-party context</strong>. This policy is always in place, and can not be circumvented with e.g. the Storage Access API (see below).</p>
 
-<div class="notices note" ><p><strong>Example</strong>: The user visits a website which sends a request to <code>www.third-party-domain.com</code>, which subsequently attempts to set a cookie in the HTTP response. Safari blocks this, as the user's browser has no cookies set on <code>www.third-party-domain.com</code> yet. If the user were to visit <code>www.third-party-comain.com</code> in first-party context (actually typing the URL in the browser omnibox), by setting a cookie in first-party context would relax this default cookie policy for this particular domain in future third-party requests.</p>
+<div class="notices note" ><p><strong>Example</strong>: The user visits a website which sends a request to <code>www.third-party-domain.com</code>, which subsequently attempts to set a cookie in the HTTP response. Safari blocks this, as the user's browser has no cookies set on <code>www.third-party-domain.com</code> yet. If the user were to visit <code>www.third-party-comain.com</code> in first-party context (actually typing the URL in the browser omnibox), by setting a cookie in first-party context would relax this default cookie policy for this particular site in future third-party requests.</p>
 </div>
 
-<p>Second, Safari blocks all third-party cookies if the user has not <strong>interacted with the site in first-party context first</strong>.</p>
+<p>Second, Safari blocks all third-party requests on a site from accessing cookies if the site has not received <strong>user interaction</strong> in the <strong>first-party context</strong> (i.e. with the URL in the address bar) in the last 30 days <em>of Safari use</em>.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user visits <code>www.site-example.com</code>. Until the user <em>interacts</em> with the site (click, tap, text input), no third-party domain will have access to its cookies. If the user interacts with the site, then third-party requests will have storage access for the next 30 days of Safari use (unless other policies block such access).</p>
+</div>
+
 <p>Finally, if the domain is classified as having <strong>cross-site tracking capabilities</strong>, third-party cookie access is blocked.</p>
-<p>If the browser wants to access cookies on domains classified by ITP, it needs to utilize the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API#Safari_implementation_differences">Storage Access API</a> to prompt the user whether it is OK to share data with the third-party domain.</p>
+<p>If the browser wants to access cookies on third-party domains classified by ITP, it needs to utilize the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API#Safari_implementation_differences">Storage Access API</a> to prompt the user whether it is OK to share data with the third-party domain.</p>
+<h3 id="storage-access-api">Storage Access API</h3>
+<p>Safari introduced the <a href="https://webkit.org/blog/8124/introducing-storage-access-api/">Storage Access API</a> in February 2018. With the Storage Access API, a website can ask the user's permission to access storage in an embedded cross-site resource which would otherwise have its cookie access restricted.</p>
+
+<div class="notices info" ><p>This will <strong>not</strong> allow access to cookies blocked by Safari's <strong>default cookie policy</strong>.</p>
+</div>
+
+<p>To be able to use the Storage Access API, the embedded site must have been interacted with in first-party context (URL in address bar) in the last 30 days of Safari use.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user is on <code>www.blog-site.com</code>, which loads a comment service in an <code>&lt;iframe&gt;</code> from <code>www.comment-service.com</code>. Since this is a cross-site resource load, ITP will not allow access to the site due to the site not having prior cookies set (Safari's default cookie policy), and because the user hasn't interacted with the site in first-party context in the last 30 days of Safari use.</p>
+</div>
+
+<figure class="left-align">
+    <img src="/images/content/storage-access-api.jpg"/> <figcaption>
+            <h4>Requesting storage access via the API</h4>
+        </figcaption>
+</figure>
+
+<p>If the user <em>has</em> interacted with the embedded site in first-party context in the last 30 days of Safari use, and the site has cookies set, the site can call the Storage Access API upon a user interaction in the embed (such as a click or tap), after which Safari will prompt the user if they want to allow the embedded site to access its storage.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user visits <code>www.comment-service.com</code>, and logs into the service. The service sets a cookie in first-party context to save the user's login state. Then, the user browses to <code>www.blog-site.com</code>, which embeds <code>www.comment-service.com</code> in an <code>&lt;iframe&gt;</code>. In the <code>&lt;iframe&gt;</code>, the user clicks a button which initiates a login state check on <code>www.comment-service.com</code>. This time, <code>www.comment-service.com</code> uses the Storage Access API, and the user is prompted if they want to allow <code>www.comment-service.com</code> to access its first-party storage. If the user allows it, the embedded site will have access to its cookies, even though it is running in a third-party context.</p>
+</div>
+
+<p>If the user doesn't interact with the site again in first-party context in 30 days of Safari use, Safari will clear all storage from the embedded site, and prevent any new storage from being set. This will continue until the user interacts with the site in first-party context again.</p>
+
+<div class="notices info" ><p>Note that <strong>successful use of the Storage Access API</strong> (either clicking &ldquo;Allow&rdquo; on the prompt, or interacting with the embed <em>after</em> having clicked &ldquo;Allow&rdquo; previously) is interpreted as interaction in first-party context, which means the 30 day timer is reset in such scenarios! This allows the embed to keep accessing its first-party storage even if the user doesn't visit the embedded site in first-party context.</p>
+</div>
+
 <h2 id="first-party-cookies">First-party cookies</h2>
 <p>For first-party cookies set with JavaScript's <code>document.cookie</code> API, maximum expiration is set to <strong>7 days</strong>.</p>
 <p>If the referring domain is a known tracker, and if the URL has query parameters (<code>?key=value</code>) or fragments (<code>#somevalue</code>), cookies set with JavaScript's <code>document.cookie</code> API have a maximum expiration of <strong>24 hours</strong>.</p>
