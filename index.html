@@ -924,14 +924,18 @@ Updated Safari with latest ITP changes.</p>
 </div>
 
 <h3 id="bubbling-under">Bubbling under</h3>
-<p><strong>Last updated</strong>: 25 March 2020</p>
+<p><strong>Last updated</strong>: 2 April 2020</p>
 <ul>
+<li>Brave: Add noise to Canvas, WebGL and AudioContext APIs to make fingerprinting more difficult (<a href="https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections">link to wiki page</a>).</li>
+<li>Brave: Cap all script-writable storage to a maximum lifetime (<a href="https://github.com/brave/brave-browser/issues/4438">link to issue</a>).</li>
+<li>Chrome: Deprecation of the User-Agent string (<a href="https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/-2JIRNMWJ7s/yHe4tQNLCgAJ">link to discussion</a>).</li>
+<li>Chrome: Scheme-bound cookies (<a href="https://github.com/mikewest/scheming-cookies">link to proposal</a>).</li>
+<li>Firefox: Remove browser storage on sites that set tracking cookies, if the site has not been interacted with in 30 days (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1599262">link to issue</a>).</li>
+<li>Safari: Exempt web applications from having their local browser data erased (<a href="https://trac.webkit.org/changeset/259440/webkit">link to changeset</a>).</li>
+<li>Safari: Enforce cookies to SameSite=Strict if passed in bounce trackers (<a href="https://trac.webkit.org/changeset/259275/webkit">link to changeset</a>).</li>
 <li>Safari: Remove the <a href="https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/">Temporary Compatibility Fix</a> which gives storage access to embedded popups in some contexts (e.g. login flows).</li>
-<li>Firefox: Remove browser storage on sites that set tracking cookies, if the site has not been interacted with in 30 days (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1599262">link to issue</a>)</li>
-<li>Brave: Add noise to Canvas, WebGL and AudioContext APIs to make fingerprinting more difficult (<a href="https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections">link to wiki page</a>)</li>
-<li>Brave: Cap all script-writable storage to a maximum lifetime (<a href="https://github.com/brave/brave-browser/issues/4438">link to issue</a>)</li>
-<li>Safari: <code>isLoggedIn</code> (<a href="https://lists.w3.org/Archives/Public/public-webappsec/2019Sep/0004.html">original explainer</a> and <a href="https://trac.webkit.org/changeset/250944/webkit">WebKit changeset for experimental feature</a>)</li>
-<li>Firefox, Edge, Chrome: <a href="https://www.chromestatus.com/feature/6251880185331712"><code>strict-origin-when-cross-origin</code> default referrer policy</a></li>
+<li>Safari: <code>isLoggedIn</code> (<a href="https://lists.w3.org/Archives/Public/public-webappsec/2019Sep/0004.html">original explainer</a> and <a href="https://trac.webkit.org/changeset/250944/webkit">WebKit changeset for experimental feature</a>).</li>
+<li>Firefox, Edge, Chrome: <a href="https://www.chromestatus.com/feature/6251880185331712"><code>strict-origin-when-cross-origin</code> default referrer policy</a>.</li>
 </ul>
 <h2 id="faq">FAQ</h2>
 <h3 id="1-why-does-this-resource-exist">1. Why does this resource exist?</h3>
