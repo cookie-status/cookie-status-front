@@ -38,11 +38,6 @@
   </url>
   
   <url>
-    <loc>https://www.cookiestatus.com/cliqz/</loc>
-    <lastmod>2019-11-21T15:32:10+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.cookiestatus.com/edge/</loc>
     <lastmod>2019-11-21T15:33:24+02:00</lastmod>
   </url>
@@ -55,6 +50,11 @@
   <url>
     <loc>https://www.cookiestatus.com/safari/</loc>
     <lastmod>2019-11-21T15:33:32+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.cookiestatus.com/cliqz/</loc>
+    <lastmod>2019-11-21T15:32:10+02:00</lastmod>
   </url>
   
   <url>
