@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.61.0" />
+    <meta name="generator" content="Hugo 0.74.2" />
     <meta name="description" content="Latest information and news about browser storage across the modern web browser landscape. Designed to provide information on ITP, ETP, and similar initiatives.">
 <meta name="author" content="Simo Ahava">
 
@@ -895,9 +895,9 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <ul>
 <li><strong>Identify and classify</strong> domains that utilize and distribute tracking mechanisms obstructive to (browsers&rsquo; interpretation of) web user privacy.</li>
 <li>Restrict <strong>storage access</strong> in <strong>third-party context</strong> for such scripts so that the trackers cannot build cross-site profiles of web users.</li>
-<li>In some cases, restrict storage access in <strong>first-party context</strong> where it's likely that it could be exploited for <strong>cross-site tracking</strong> purposes.</li>
+<li>In some cases, restrict storage access in <strong>first-party context</strong> where it&rsquo;s likely that it could be exploited for <strong>cross-site tracking</strong> purposes.</li>
 </ul>
-<p>In this introductory chapter, we'll gloss over some of the key terminology regarding tracking protection. You are then advised to visit the other pages of Cookie Status for more details.</p>
+<p>In this introductory chapter, we&rsquo;ll gloss over some of the key terminology regarding tracking protection. You are then advised to visit the other pages of Cookie Status for more details.</p>
 <ol>
 <li><a href="#cookies">Cookies</a></li>
 <li><a href="#first-party-and-third-party-context">First-party and third-party context</a></li>
@@ -905,12 +905,12 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <li><a href="#storage-access-restriction">Storage access restriction</a></li>
 </ol>
 <h2 id="cookies">Cookies</h2>
-<p><strong>Browser cookies</strong> are key-value pairs (e.g. <code>id=abcd1234</code>) of information stored on the user's computer. Websites set them in order to persist information from one page to the next. This is because the web is effectively <em>stateless</em> - only a very limited set of information is shared from one page to the next. By writing information into browser storage, that information persists even if the pages the user navigates from are unloaded and their storage purged.</p>
+<p><strong>Browser cookies</strong> are key-value pairs (e.g. <code>id=abcd1234</code>) of information stored on the user&rsquo;s computer. Websites set them in order to persist information from one page to the next. This is because the web is effectively <em>stateless</em> - only a very limited set of information is shared from one page to the next. By writing information into browser storage, that information persists even if the pages the user navigates from are unloaded and their storage purged.</p>
 
-<div class="notices info" ><p>Typical use cases for cookies include persisting a <strong>shopping cart</strong> from one page to the next on an ecommerce site, storing details about user's <strong>login status</strong>, and for setting an <strong>identifier</strong> for the user, so that their visits can be recognized in an analytics tool as originating from the same browser.</p>
+<div class="notices info" ><p>Typical use cases for cookies include persisting a <strong>shopping cart</strong> from one page to the next on an ecommerce site, storing details about user&rsquo;s <strong>login status</strong>, and for setting an <strong>identifier</strong> for the user, so that their visits can be recognized in an analytics tool as originating from the same browser.</p>
 </div>
 
-<p>Websites can <strong>write</strong> cookies on the user's computer, and they can <strong>read</strong> cookies from the user's computer. How effective this is depends on whether the user's browser allows cookie access in <strong>third-party context</strong>, and whether cookies in <strong>first-party context</strong> have restrictions as well.</p>
+<p>Websites can <strong>write</strong> cookies on the user&rsquo;s computer, and they can <strong>read</strong> cookies from the user&rsquo;s computer. How effective this is depends on whether the user&rsquo;s browser allows cookie access in <strong>third-party context</strong>, and whether cookies in <strong>first-party context</strong> have restrictions as well.</p>
 <figure class="left-align">
     <img src="/images/content/cookie-example.jpg"/> <figcaption>
             <h4>First-party cookies set on the current domain and on the eTLD&#43;1</h4>
@@ -939,7 +939,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cookies</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">cookie</span>;
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">cookies</span>); <span style="color:#75715e">// userId=abcd1234; logged-in=true
 </span></code></pre></div><p>If <code>document.cookie</code> is invoked in a third-party context, such as an <code>&lt;iframe&gt;</code> element embedding content from a third-party source, the string will be populated only if the web browser <strong>allows third-party cookies</strong>.</p>
-<p>Since the cookies are readily available for any JavaScript running on the page, a malicious vendor with a <strong>script running on the site</strong> could utilize the API to read and process the cookies stored on the user's company.</p>
+<p>Since the cookies are readily available for any JavaScript running on the page, a malicious vendor with a <strong>script running on the site</strong> could utilize the API to read and process the cookies stored on the user&rsquo;s company.</p>
 <h3 id="writing-cookies">Writing cookies</h3>
 <p>Similar to reading cookies, the HTTP protocol can be used to <strong>write</strong> cookies as well. The web server can return with an <strong>HTTP response</strong> including the <code>Set-Cookie</code> header.</p>
 <p>This header is an instruction to the browser to <strong>write</strong> the included cookie(s) on the domain specified in the header.</p>
@@ -954,10 +954,10 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript">document.<span style="color:#a6e22e">cookie</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;userId=abcd1234;domain=cookiestatus.com;path=/&#39;</span>;
 </code></pre></div><p>Web servers and JavaScript libraries can thus write cookies on the <strong>eTLD+1</strong>, which means they become automatically available to all subdomains of that host. Thus a script running on <strong>blog.ecommerce.cookiestatus.com</strong> can check if the user has an identifier written on <strong>cookiestatus.com</strong>, and utilize that. This can be abused for <strong>cross-site tracking purposes</strong>.</p>
 <h2 id="first-party-and-third-party-context">First-party and third-party context</h2>
-<p>It's common in the parlance of the web to talk about <strong>first-party cookies</strong> and <strong>third-party cookies</strong>. This is a bit of a misnomer. Cookies are pieces of information that are stored on the user's computer. There is no distinction between <em>first-party</em> and <em>third-party</em> in how these cookies are classified and stored on the computer.</p>
+<p>It&rsquo;s common in the parlance of the web to talk about <strong>first-party cookies</strong> and <strong>third-party cookies</strong>. This is a bit of a misnomer. Cookies are pieces of information that are stored on the user&rsquo;s computer. There is no distinction between <em>first-party</em> and <em>third-party</em> in how these cookies are classified and stored on the computer.</p>
 <p>What matters is the <strong>context</strong> of the access.</p>
 
-<div class="notices info" ><p>Nevertheless, to align with other discussions around the same topic, Cookie Status will use <em>first-party cookie</em>  and <em>third-party cookie</em> for clarity's sake.</p>
+<div class="notices info" ><p>Nevertheless, to align with other discussions around the same topic, Cookie Status will use <em>first-party cookie</em>  and <em>third-party cookie</em> for clarity&rsquo;s sake.</p>
 </div>
 
 <p><strong>First-party context</strong> means that the operation happens between domains within <strong>the same site</strong>, í.e. domains that share the <strong>eTLD+1</strong>. <strong>Third-party context</strong> means that the operation happens <strong>cross-site</strong>, i.e. between domains that do not share the <strong>eTLD+1</strong>.</p>
@@ -999,15 +999,16 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 </tbody>
 </table>
+
 </div>
 
 <p>In the <strong>first-party context</strong> scenarios above, the cookie read/write operations will work unless the browser blocks <em>all</em> cookies or has <strong>cookiestatus.com</strong> in a blacklist.</p>
 <p>In the <strong>third-party context</strong> scenarios, the cookie operations will work unless the browser blocks all third-party cookies, has <strong>vendor.com</strong> in the blacklist, or the possible <em>tracking protection mechanisms</em> have deemed <strong>vendor.com</strong> to be a <em>tracking domain</em>.</p>
 <p>Cookie access in a <strong>first-party context</strong> is rarely blocked, because many features of modern websites rely on state management in the browser (using cookies or other browser storage). However, some vendors are repurposing first-party cookies for <strong>cross-site tracking</strong>, which has led to browsers (especially Safari) to place restrictions on first-party storage as well.</p>
-<p>Accessing cookies in a <strong>third-party context</strong> is necessary for some benign features of the web, such as persisting user authentication across the domains of an organization (SSO), or for passing information about user's marketing consent from one part of the organization to another.</p>
-<p>However, cookie access in a third-party context can be abused as well, because it can be used for <strong>cross-site tracking</strong> without the user's consent or awareness.</p>
+<p>Accessing cookies in a <strong>third-party context</strong> is necessary for some benign features of the web, such as persisting user authentication across the domains of an organization (SSO), or for passing information about user&rsquo;s marketing consent from one part of the organization to another.</p>
+<p>However, cookie access in a third-party context can be abused as well, because it can be used for <strong>cross-site tracking</strong> without the user&rsquo;s consent or awareness.</p>
 <h2 id="cross-site-tracking">Cross-site tracking</h2>
-<p>A common thread in the rhetoric is that browsers want to quench <strong>cross-site tracking</strong>. Here's how <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">Safari describes it</a>:</p>
+<p>A common thread in the rhetoric is that browsers want to quench <strong>cross-site tracking</strong>. Here&rsquo;s how <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">Safari describes it</a>:</p>
 <blockquote>
 <p>Imagine a user who first browses example-products.com for a new gadget and later browses example-recipies.com for dinner ideas. If both these sites load resources from example-tracker.com and example-tracker.com has a cookie stored in the user’s browser, the owner of example-tracker.com has the ability to know that the user visited both the product website and the recipe website, what they did on those sites, what kind of web browser was used, et cetera. This is what’s called <em>cross-site tracking</em> and the cookie used by example-tracker.com is called a <em>third-party cookie</em>. In our testing we found popular websites with over 70 such trackers, all silently collecting data on users.</p>
 </blockquote>
@@ -1018,7 +1019,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
         </figcaption>
 </figure>
 
-<p>To continue the examples from the previous chapters, when the user's browser makes a request for <strong>image.imagestore.com</strong> while on the <strong>blog.ecommerce.cookiestatus.com</strong> website, the endpoint at <strong>image.imagestore.com</strong> will now know that the request originated from <strong>blog.ecommerce.cookiestatus.com</strong>, as this is included in the <code>origin</code> and <code>referer</code> [sic] headers.</p>
+<p>To continue the examples from the previous chapters, when the user&rsquo;s browser makes a request for <strong>image.imagestore.com</strong> while on the <strong>blog.ecommerce.cookiestatus.com</strong> website, the endpoint at <strong>image.imagestore.com</strong> will now know that the request originated from <strong>blog.ecommerce.cookiestatus.com</strong>, as this is included in the <code>origin</code> and <code>referer</code> [sic] headers.</p>
 <p>Thus the endpoint at <strong>image.imagestore.com</strong> could now check if the user has an identifier cookie set on that domain, and they can augment the profile for that identifier with knowledge that the user has visited <strong>blog.ecommerce.cookiestatus.com</strong>.</p>
 <p>If the user then visits another page on the internet that also communicates with <strong>image.imagestore.com</strong>, then that endpoint will be privy to yet another origin, and they can keep building the profile.</p>
 <p>This is the essence of cross-site tracking - using a consolidated and centralized store (e.g. a cookie) to collect information from different domains.</p>
@@ -1030,14 +1031,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <blockquote>
 <p>In order to help give users the private web browsing experience they expect and deserve, Firefox will strip cookies and block storage access from third-party tracking content, based on lists of tracking domains by <a href="https://disconnect.me/">Disconnect</a>.</p>
 </blockquote>
-<p>This approach of comparing the third-party domains against a curated list is utilized also by <strong>Microsoft Edge</strong>. Here's how they introduce <a href="https://blogs.windows.com/msedgedev/2019/06/27/tracking-prevention-microsoft-edge-preview/">Edge's tracking prevention</a>:</p>
+<p>This approach of comparing the third-party domains against a curated list is utilized also by <strong>Microsoft Edge</strong>. Here&rsquo;s how they introduce <a href="https://blogs.windows.com/msedgedev/2019/06/27/tracking-prevention-microsoft-edge-preview/">Edge&rsquo;s tracking prevention</a>:</p>
 <blockquote>
 <p>We’ve added a new component to Microsoft Edge, Trust Protection Lists**,** that contains the latest information on which organizations may be trying to track users on the web. This component allows us to be flexible with where we source details on what a tracker is and when we deliver updated lists to our users.</p>
 </blockquote>
 <p>The <strong>Brave</strong> browser, similarly, pulls in tracking domains from <a href="https://github.com/brave/adblock-rust/blob/master/src/filter_lists/default.rs">multiple sources</a>. Notably, Brave combines prescribed lists (from e.g. <a href="https://easylist.to/">EasyList</a> and <a href="https://github.com/gorhill/uBlock">uBlock Origin</a>) with a more dynamic list based on crawl data (<a href="https://github.com/brave/brave-browser/wiki/PageGraph">PageGraph</a>).</p>
 <p>With <strong>list-based protection</strong>, the browser maintains a list of domains against which each outgoing HTTP request from the site is pattern-matched. If there is a match between the request target and one of the domains in these lists, the request is <strong>blocked</strong>.</p>
 <p>This means that browsers can block both <strong>downloading script resources</strong> and <strong>HTTP requests to tracking endpoints</strong> (e.g. image pixels).</p>
-<p>By blocking the script download, browsers don't need to worry about further storage access restrictions, because the JavaScript from the vendor was never loaded and thus can't abuse the browser storage on the user's company.</p>
+<p>By blocking the script download, browsers don&rsquo;t need to worry about further storage access restrictions, because the JavaScript from the vendor was never loaded and thus can&rsquo;t abuse the browser storage on the user&rsquo;s company.</p>
 <p>By blocking the pixel and other HTTP endpoints, browsers ensure that in cases where the site is loading the JavaScript from a non-blocked source, the script will not be able to communicate with its endpoint.</p>
 <p>The biggest problems with list-based protection are:</p>
 <ul>
@@ -1047,11 +1048,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <li>Harm to <strong>other functionality</strong> (besides tracking) that these blocked libraries provide.</li>
 </ul>
 <h3 id="algorithmic-protection">Algorithmic protection</h3>
-<p>The <strong>Safari</strong> browser has opted for a different tact. Instead of a binary approach (blocked vs. not blocked) and a set list of domains, Safari's <a href="https://webkit.org/blog/category/privacy/">Intelligent Tracking Prevention</a> uses multiple methods to restrict the storage access for third parties that are <em>algorithmically</em> classified as having cross-site tracking capabilities. Here's how they describe the <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">classification process</a>:</p>
+<p>The <strong>Safari</strong> browser has opted for a different tact. Instead of a binary approach (blocked vs. not blocked) and a set list of domains, Safari&rsquo;s <a href="https://webkit.org/blog/category/privacy/">Intelligent Tracking Prevention</a> uses multiple methods to restrict the storage access for third parties that are <em>algorithmically</em> classified as having cross-site tracking capabilities. Here&rsquo;s how they describe the <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">classification process</a>:</p>
 <blockquote>
 <p>A machine learning model is used to classify which top privately-controlled domains have the ability to track the user cross-site, based on the collected statistics. Out of the various statistics collected, three vectors turned out to have strong signal for classification based on current tracking practices: subresource under number of unique domains, sub frame under number of unique domains, and number of unique domains redirected to. All data collection and classification happens on-device.</p>
 </blockquote>
-<p>However, Safari's approach <em>is</em> binary in a sense - you can either enable <strong>all</strong> cross-site tracking or <strong>none</strong>.</p>
+<p>However, Safari&rsquo;s approach <em>is</em> binary in a sense - you can either enable <strong>all</strong> cross-site tracking or <strong>none</strong>.</p>
 <figure class="left-align">
     <img src="/images/content/safari-settings.jpg"/> <figcaption>
             <h4>Safari privacy settings</h4>
@@ -1061,12 +1062,12 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p><strong>Cliqz</strong> has a similar tact. This is explained in detail in <a href="https://arxiv.org/abs/1804.08959">this research paper</a>, and in this <a href="https://whotracks.me/blog/how_cliqz_antitracking_protects_users.html">blog post</a>. Basically, they combine local and global evaluation of the data passed to and from the web browser to establish heuristical models for identifying potential tracker connections.</p>
 <p>Cliqz&rsquo; approach is two-fold. First, they <strong>purge</strong> identifiers from the HTTP requests that could be misused for tracking. Second, they <strong>block</strong> cookie access in third-party context, unless the user interacts with the third-party domain (e.g. in a widget).</p>
 <p>A <strong>global safe set</strong> is compiled from the actions Cliqz&rsquo; anti-tracking mechanism takes on each individual browser, and this <em>global</em> research data is used to fine-tune the <em>local</em> behavior of Cliqz&rsquo; tracking protections.</p>
-<p>The algorithmic approach is effective because it identifies potential tracking domains <strong>dynamically</strong> and without using a centralized list. This means that there's less overhead in pattern-matching the HTTP requests as the list of domains for the browser would only include those the browser has actually communicated with.</p>
+<p>The algorithmic approach is effective because it identifies potential tracking domains <strong>dynamically</strong> and without using a centralized list. This means that there&rsquo;s less overhead in pattern-matching the HTTP requests as the list of domains for the browser would only include those the browser has actually communicated with.</p>
 <p>The algorithm also ensures that locally hosted tracking domains and reverse proxies would also be under scrutiny (unless served in a same-site context).</p>
 <p>The main problems with this approach are:</p>
 <ul>
 <li><strong>False positives</strong>, where the algorithm classifies domains that serve no cross-site tracking purpose, or purges identifiers that are not used for tracking.</li>
-<li>There is also some <strong>reaction lag</strong>, because the algorithm would require enough data to classify each new domain. It's thus possible some communication with a tracking domain would be permitted before access is restricted.</li>
+<li>There is also some <strong>reaction lag</strong>, because the algorithm would require enough data to classify each new domain. It&rsquo;s thus possible some communication with a tracking domain would be permitted before access is restricted.</li>
 <li><strong>Lack of predictability</strong>, which is not necessarily a problem or a bad thing, but a list-based approach allows for community oversight of the domains that have been blacklisted.</li>
 </ul>
 

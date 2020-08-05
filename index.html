@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.61.0" />
+    <meta name="generator" content="Hugo 0.74.2" />
     <meta name="description" content="Latest information and news about browser storage across the modern web browser landscape. Designed to provide information on ITP, ETP, and similar initiatives.">
 <meta name="author" content="Simo Ahava">
 
@@ -798,12 +798,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <h2 id="current-status">Current status</h2>
 
-<div class="notices note" ><p>Changes added in the <strong>latest release</strong> of each browser are indicated with <span style="background: yellow;">yellow highlight</span>. You can <strong>click</strong> the <a class="fa fa-info-circle" rel="footnote"></a> icon to be redirected to the respective section in each browser's own &ldquo;Current Status&rdquo; page.</p>
+<div class="notices note" ><p>Changes added in the <strong>latest release</strong> of each browser are indicated with <span style="background: yellow;">yellow highlight</span>. You can <strong>click</strong> the <a class="fa fa-info-circle" rel="footnote"></a> icon to be redirected to the respective section in each browser&rsquo;s own &ldquo;Current Status&rdquo; page.</p>
 </div>
 
-<p><strong>Last updated</strong>: 13 July 2020<br>
-Note about all iOS browsers now having WebKit's tracking preventions on by default.<br>
-Move Cliqz to last in the list, note about sunset.</p>
+<p><strong>Last updated</strong>: 5 August 2020<br>
+Add details about bounce tracking protection in Firefox 79.</p>
 <p><a title="Suggest an edit" href="https://github.com/cookie-status/cookie-status-dev/issues/new?labels=content&title=%5BContent%20issue%5D%20Current%20Status" target="_blank"><i class="fa fa-edit"></i> Suggest an edit</a></p>
 <p><a href="#" id="fullscreen">Toggle full screen</a></p>
 <div id="cs" style="overflow-x:auto;">
@@ -879,7 +878,7 @@ Move Cliqz to last in the list, note about sunset.</p>
 <td><p><a href="/brave/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 7 days.</p><p><a href="/brave/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Otherwise maximum expiry set to 6 months.</p></td>
 <td><a href="/chrome/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/edge/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
-<td><a href="/firefox/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
+<td><a href="/firefox/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</span></td>
 <td><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 7 days.</p><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 24 hours on pages with URL decoration (query parameters or fragments) when referring domain is a known tracker.</p></td>
 <td><p><a href="/cliqz/#first-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Cookies set on tracker domains with infrequent first-party interaction expire in 7 days. Otherwise expiration set to 30 days after last visit to site.</p><p><a href="/cliqz/#first-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Cookies set with <code>document.cookie</code> have a maximum expiration of 7 days.</p></td>
 </tr>
@@ -897,7 +896,7 @@ Move Cliqz to last in the list, note about sunset.</p>
 <td><a href="/brave/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/chrome/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/edge/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
-<td><a href="/firefox/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
+<td><a href="/firefox/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</span></td>
 <td><a href="/safari/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> Restricted to 7 days since last interaction (click, tap, text input) with the site.</td>
 <td><a href="/cliqz/#other-first-party-storage" rel="footnote" class="fa fa-info-circle"></a> No restrictions.</td>
 </tr>
@@ -916,7 +915,7 @@ Move Cliqz to last in the list, note about sunset.</p>
 <td>n/a</td>
 <td>n/a</td>
 <td><a href="/firefox/#other" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Automatically block requests to tracking domains that are also listed in the Fingerprinting category of the Disconnect.me list.</span></td>
-<td><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Detect delays in bounce trackers and treat them as regular bounces.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Extend WebKit's tracking protections to all browsers running on iOS 14 and newer. These protections can only be disabled by the user.</span></p></td>
+<td><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Detect delays in bounce trackers and treat them as regular bounces.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Extend WebKit&rsquo;s tracking protections to all browsers running on iOS 14 and newer. These protections can only be disabled by the user.</span></p></td>
 <td><p><a href="/cliqz/#other" rel="footnote" class="fa fa-info-circle"></a> Algorithmically identify and purge unique user identifiers from requests to third-party domains.</p> <p><a href="/cliqz/" rel="footnote" class="fa fa-info-circle"></a> <span class="new">The Cliqz project has been <a href="https://cliqz.com/announcement.html">shut down</a>.</span></p></td>
 </tr>
 </tbody>
@@ -925,7 +924,7 @@ Move Cliqz to last in the list, note about sunset.</p>
 </div>
 
 <h3 id="bubbling-under">Bubbling under</h3>
-<p><strong>Last updated</strong>: 13 July 2020</p>
+<p><strong>Last updated</strong>: 5 August 2020</p>
 <ul>
 <li>Brave: Add noise to Canvas, WebGL and AudioContext APIs to make fingerprinting more difficult (<a href="https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections">link to wiki page</a>).</li>
 <li>Brave: Cap all script-writable storage to a maximum lifetime (<a href="https://github.com/brave/brave-browser/issues/4438">link to issue</a>).</li>
@@ -934,20 +933,21 @@ Move Cliqz to last in the list, note about sunset.</p>
 <li>Safari: Exempt web applications from having their local browser data erased (<a href="https://trac.webkit.org/changeset/259440/webkit">link to changeset</a>).</li>
 <li>Safari: Enforce cookies to SameSite=Strict if passed in bounce trackers (<a href="https://trac.webkit.org/changeset/259275/webkit">link to changeset</a>).</li>
 <li>Safari: Remove the <a href="https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/">Temporary Compatibility Fix</a> which gives storage access to embedded popups in some contexts (e.g. login flows).</li>
-<li>Safari: <code>isLoggedIn</code> (<a href="https://github.com/privacycg/proposals/issues/16">entry in the Privacy Community Group</a> and <a href="https://github.com/WebKit/explainers/blob/main/IsLoggedIn/README.md">latest explainer</a>).</li>
-<li>Firefox, Edge, Chrome: <a href="https://www.chromestatus.com/feature/6251880185331712"><code>strict-origin-when-cross-origin</code> default referrer policy</a>.</li>
+<li>Safari: <code>isLoggedIn</code> (<a href="https://github.com/privacycg/is-logged-in">work item in the Privacy Community Group</a>.</li>
+<li>Firefox, Edge: <code>strict-origin-when-cross-origin</code> default referrer policy.</li>
+<li>Chrome 85: <a href="https://www.chromestatus.com/feature/6251880185331712"><code>strict-origin-when-cross-origin</code> default referrer policy</a>.</li>
 </ul>
 <h2 id="faq">FAQ</h2>
 <h3 id="1-why-does-this-resource-exist">1. Why does this resource exist?</h3>
 <p>Web browsers are going through fairly momentous shifts in order to better respond to the increasing number of data breaches and cases of data misuse by third parties.</p>
 <p>Unfortunately, each browser (and the underlying browser engine) seems to have their own interpretation of how to best tackle the problem, which leads to a diverse set of features across the browser landscape.</p>
-<p>What's worse, the information about how these tracking protection mechanisms are deployed is all over the place: in release notes, in developer documentation, in Twitter threads, in working groups, in feature drafts, in bug patches, etc.</p>
+<p>What&rsquo;s worse, the information about how these tracking protection mechanisms are deployed is all over the place: in release notes, in developer documentation, in Twitter threads, in working groups, in feature drafts, in bug patches, etc.</p>
 <p>The purpose of the <strong>Cookie Status</strong> resource is to (attempt to) collect this information in one place for easy access and perusal.</p>
 <p>There is no commercial agenda behind this project. In fact, there is no agenda other than knowledge transfer.</p>
 <h3 id="2-why-only-these-browsers">2. Why only these browsers?</h3>
 <p>Just to kick things off. Hopefully the open-source nature of this project will invite others to contribute details about browsers that are doing significant work with regard to user privacy.</p>
 <h3 id="3-what-cookies--browser-storage-does-cookie-status-set-and-why">3. What cookies / browser storage does Cookie Status set and why?</h3>
-<p>Cookie Status doesn't use browser cookies, <code>localStorage</code>, or <code>IndexedDB</code>.</p>
+<p>Cookie Status doesn&rsquo;t use browser cookies, <code>localStorage</code>, or <code>IndexedDB</code>.</p>
 <p><code>sessionStorage</code> is used to add some functionality to navigation (marking visited pages, highlighting search terms).</p>
 <p>Nothing in browser storage is sent to any third parties at any time.</p>
 <p>If you see anything contrary to the above, please raise <a href="https://github.com/cookie-status/cookie-status-dev/issues">an issue</a> about this.</p>

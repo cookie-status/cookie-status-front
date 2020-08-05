@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.61.0" />
+    <meta name="generator" content="Hugo 0.74.2" />
     <meta name="description" content="Latest information and news about browser storage across the modern web browser landscape. Designed to provide information on ITP, ETP, and similar initiatives.">
 <meta name="author" content="Simo Ahava">
 
@@ -906,16 +906,16 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <li><a href="https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt">uBlock Origin Unbreak</a></li>
 <li><a href="https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt">uBlock Origin Filters</a></li>
 <li><a href="https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt">uBlock Origin Filters - Privacy</a></li>
-<li><a href="https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt">Brave's own Unbreak list</a></li>
-<li><a href="https://raw.githubusercontent.com/brave/adblock-lists/master/coin-miners.txt">Brave's own cryptominer list</a></li>
-<li><a href="https://raw.githubusercontent.com/brave/adblock-lists/master/brave-disconnect.txt">Brave's fork of Disconnect.me</a></li>
+<li><a href="https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt">Brave&rsquo;s own Unbreak list</a></li>
+<li><a href="https://raw.githubusercontent.com/brave/adblock-lists/master/coin-miners.txt">Brave&rsquo;s own cryptominer list</a></li>
+<li><a href="https://raw.githubusercontent.com/brave/adblock-lists/master/brave-disconnect.txt">Brave&rsquo;s fork of Disconnect.me</a></li>
 </ul>
 <p>Brave matches each outgoing request from the web browser against these lists (using various methods for achieving <a href="https://brave.com/improved-ad-blocker-performance/">optimized performance</a>), and if a match is made, the request is <strong>blocked</strong>.</p>
 
 <div class="notices note" ><p><strong>Example</strong>: The user visits a site that tries to load the Google Analytics JavaScript library from <code>https://www.google-analytics.com/analytics.js</code>. This URL (and the entire domain, in fact), is listed in the <a href="https://easylist.to/easylist/easyprivacy.txt">EasyPrivacy list</a>. Thus Brave blocks the request, preventing the browser from downloading the library and executing the Google Analytics tracking code in the web browser.</p>
 </div>
 
-<p>By blocking requests upstream, it means that if the request initiated a resource download (such as a JavaScript library), this resource is never downloaded and thus the code is not executed in the user's browser. If the request initiated a pixel call (such as a GET for an image), it means the pixel call will be aborted before it is received by the endpoint.</p>
+<p>By blocking requests upstream, it means that if the request initiated a resource download (such as a JavaScript library), this resource is never downloaded and thus the code is not executed in the user&rsquo;s browser. If the request initiated a pixel call (such as a GET for an image), it means the pixel call will be aborted before it is received by the endpoint.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p><strong>All</strong> third-party cookies are blocked by default.</p>
 <figure class="left-align">
@@ -925,7 +925,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </figure>
 
 <h2 id="first-party-cookies">First-party cookies</h2>
-<p>For cookies set with JavaScript's <code>document.cookie</code>, expiration is set to a maximum of <strong>7 days</strong>.</p>
+<p>For cookies set with JavaScript&rsquo;s <code>document.cookie</code>, expiration is set to a maximum of <strong>7 days</strong>.</p>
 
 <div class="notices note" ><p><strong>Example</strong>: The user visits a page that is running an A/B testing tool which stores the experiment details into a cookie named <code>__exp</code>. This cookie is set with <strong>JavaScript</strong>. Even though setting the cookie works, and the user is assigned to an experiment group successfully, if the user takes more than <strong>7 days</strong> to revisit the site, the cookie will have been expired and the user would potentially get assigned to a new, different group upon their next visit.</p>
 </div>
@@ -934,13 +934,13 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h2 id="other-third-party-storage">Other third-party storage</h2>
 <p>No restrictions.</p>
 
-<div class="notices info" ><p>Note that since Brave <em>blocks</em> resources found in their <a href="#classification-of-known-trackers">classification lists</a>, it has the downstream effect of blocking storage access from these vendors who now can't execute their JavaScript in the user's browser, or respond to the blocked HTTP requests.</p>
+<div class="notices info" ><p>Note that since Brave <em>blocks</em> resources found in their <a href="#classification-of-known-trackers">classification lists</a>, it has the downstream effect of blocking storage access from these vendors who now can&rsquo;t execute their JavaScript in the user&rsquo;s browser, or respond to the blocked HTTP requests.</p>
 </div>
 
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>No restrictions.</p>
 
-<div class="notices info" ><p>Note that since Brave <em>blocks</em> resources found in their <a href="#classification-of-known-trackers">classification lists</a>, it has the downstream effect of blocking storage access from these vendors who now can't execute their JavaScript in the user's browser, or respond to the blocked HTTP requests.</p>
+<div class="notices info" ><p>Note that since Brave <em>blocks</em> resources found in their <a href="#classification-of-known-trackers">classification lists</a>, it has the downstream effect of blocking storage access from these vendors who now can&rsquo;t execute their JavaScript in the user&rsquo;s browser, or respond to the blocked HTTP requests.</p>
 </div>
 
 <h2 id="referrer">Referrer</h2>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.61.0" />
+    <meta name="generator" content="Hugo 0.74.2" />
     <meta name="description" content="Latest information and news about browser storage across the modern web browser landscape. Designed to provide information on ITP, ETP, and similar initiatives.">
 <meta name="author" content="Simo Ahava">
 
@@ -904,7 +904,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <h2 id="classification-of-known-trackers">Classification of &ldquo;known trackers&rdquo;</h2>
 <p>Cliqz uses an algorithmic classification model for identifying trackers with cross-site tracking capabilities.</p>
-<p>This model is run both <strong>locally</strong> (in the user's browser) and <strong>globally</strong> (derived from a global database, periodically updated with data from local contexts).</p>
+<p>This model is run both <strong>locally</strong> (in the user&rsquo;s browser) and <strong>globally</strong> (derived from a global database, periodically updated with data from local contexts).</p>
 <p>To understand this better, read this research paper:</p>
 <p><a href="https://arxiv.org/abs/1804.08959">WhoTracks .Me: Shedding light on the opaque world of online tracking</a></p>
 <p>You can also browse the <a href="https://whotracks.me/">whotracks.me</a> service to learn about the status of the global tracker database Cliqz uses.</p>
@@ -920,7 +920,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>How first-party cookies expire is determined by a) whether the domain the cookies are set on is a classified domain, and b) how frequently the classified domain is visited in first-party context.</p>
 <p>If the domain is <strong>not</strong> a classified domain, first-party cookies have a maximum expiration of <strong>7 days</strong> (if set without the <code>HttpOnly</code> flag) or <strong>30 days</strong> (if set with the <code>HttpOnly</code> flag).</p>
 
-<div class="notices note" ><p><strong>Example</strong>: A JavaScript SDK (e.g. an analytics) tool writes a cookie in the user's browser, assigning them with an anonymous, randomly generated client identifier. The purpose of this identifier is to assign multiple visits by the same browser to the same &ldquo;user&rdquo;. If the user visits the site within 7 days of the previous visit, the cookie will persist in the browser, and the analytics platform will be able to identify the browser as one that has previously visited the site. If the visits happen more than 7 days apart, the user will always be a &ldquo;new user&rdquo; to the analytics platform.</p>
+<div class="notices note" ><p><strong>Example</strong>: A JavaScript SDK (e.g. an analytics) tool writes a cookie in the user&rsquo;s browser, assigning them with an anonymous, randomly generated client identifier. The purpose of this identifier is to assign multiple visits by the same browser to the same &ldquo;user&rdquo;. If the user visits the site within 7 days of the previous visit, the cookie will persist in the browser, and the analytics platform will be able to identify the browser as one that has previously visited the site. If the visits happen more than 7 days apart, the user will always be a &ldquo;new user&rdquo; to the analytics platform.</p>
 </div>
 
 <p>If the domain <strong>is</strong> a classified domain, then <em>infrequent</em> visits to the domain impose a maximum expiration of <strong>7 days</strong> to the first-party cookie. If the domain is visited frequently, the maximum expiration is set to <strong>30 days</strong> (with the <code>HttpOnly</code> limitation same as above).</p>
@@ -936,10 +936,10 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <h2 id="other">Other</h2>
 <p>Cliqz automatically purges <em>potential user identifiers</em> from the URL, headers, and POST data of third-party requests.</p>
-<p>The model tokenizes all key-value pairs found, and then evaluates the values against a set of rules to determine if it's <em>safe</em> (should not be removed) or <em>unsafe</em> (should be removed).</p>
+<p>The model tokenizes all key-value pairs found, and then evaluates the values against a set of rules to determine if it&rsquo;s <em>safe</em> (should not be removed) or <em>unsafe</em> (should be removed).</p>
 <p>This evaluation is done locally first, and then the values are compared against a <strong>global safe set</strong> (derived from data collected from global Cliqz usage). If the value is flagged as <em>unsafe</em> and does not have a match in the global set, it is purged from the request.</p>
 
-<div class="notices note" ><p><strong>Example</strong>: If the browser sends a request to a third-party resource using something like <code>?userId=abcd-1234-efgh-5678</code> in the request URL, it's possible that this parameter will be stripped from the outgoing request so that the service receiving the request will not be able to access the data.</p>
+<div class="notices note" ><p><strong>Example</strong>: If the browser sends a request to a third-party resource using something like <code>?userId=abcd-1234-efgh-5678</code> in the request URL, it&rsquo;s possible that this parameter will be stripped from the outgoing request so that the service receiving the request will not be able to access the data.</p>
 </div>
 
 <p><a href="https://whotracks.me/blog/how_cliqz_antitracking_protects_users.html">This article</a> has an excellent overview of how this process works (beginning with chapter titled <strong>Unsafe Data Removal</strong>).</p>

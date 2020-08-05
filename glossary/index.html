@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.61.0" />
+    <meta name="generator" content="Hugo 0.74.2" />
     <meta name="description" content="Latest information and news about browser storage across the modern web browser landscape. Designed to provide information on ITP, ETP, and similar initiatives.">
 <meta name="author" content="Simo Ahava">
 
@@ -917,11 +917,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Each organization can have their own interpretation of what a <em>conversion</em> is, but typically it is something that has a measurable impact on the business bottom line.</p>
 <hr>
 <h2 id="cookie">Cookie</h2>
-<p>A key-value pair (e.g. <code>userStatus=logged-in</code>) stored in the user's computer. Cookies are keyed to the domain on which they were set. Accessing cookies in same-site requests occurs in <strong>first-party context</strong>, and such cookies are termed <strong>first-party cookies</strong>. Cross-origin access happens in <strong>third-party context</strong> and these cookies are called <strong>third-party cookies</strong>.</p>
+<p>A key-value pair (e.g. <code>userStatus=logged-in</code>) stored in the user&rsquo;s computer. Cookies are keyed to the domain on which they were set. Accessing cookies in same-site requests occurs in <strong>first-party context</strong>, and such cookies are termed <strong>first-party cookies</strong>. Cross-origin access happens in <strong>third-party context</strong> and these cookies are called <strong>third-party cookies</strong>.</p>
 <hr>
 <h2 id="cookie-matching--syncing">Cookie matching / syncing</h2>
-<p>Data management platforms (DMP) and demand-side platforms (DSP) can exchange user information in their own data stores, mapping each platform's own list of users to other lists by utilizing shared keys in <strong>third-party storage</strong>.</p>
-<p>This way a DMP can build a comprehensive graph of a user's cross-site navigation on the web without actually having their own data collection architecture present on all the websites.</p>
+<p>Data management platforms (DMP) and demand-side platforms (DSP) can exchange user information in their own data stores, mapping each platform&rsquo;s own list of users to other lists by utilizing shared keys in <strong>third-party storage</strong>.</p>
+<p>This way a DMP can build a comprehensive graph of a user&rsquo;s cross-site navigation on the web without actually having their own data collection architecture present on all the websites.</p>
 <hr>
 <h2 id="cross-origin">Cross-origin</h2>
 <p>&ldquo;Origin&rdquo; is the protocol (e.g. <code>https</code>), hostname (e.g. <code>www.domain.com</code>) and port (e.g. <code>4097</code>) of the URL. If the origin of the site where the request was sent from differs from the origin of the site the request is sent to, the request is considered to be <em>cross-origin</em>.</p>
@@ -932,7 +932,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </ul>
 <hr>
 <h2 id="cross-site">Cross-site</h2>
-<p>Cross-site is a <em>type</em> of <strong>cross-origin</strong> communication, but it's more rigid as it requires that the source and target of the request do not share the <a href="#etld1">effective top-level domain plus one part</a> (eTLD +1).</p>
+<p>Cross-site is a <em>type</em> of <strong>cross-origin</strong> communication, but it&rsquo;s more rigid as it requires that the source and target of the request do not share the <a href="#etld1">effective top-level domain plus one part</a> (eTLD +1).</p>
 <p>For example:</p>
 <ul>
 <li>A request from <code>https://www.domain.com/page.html</code> to <code>https://images.domain.com/images/image.jpg</code> is <strong>cross-origin</strong> and <strong>same-site</strong>, as the eTLD+1 (<code>domain.com</code>) is shared by the source and target.</li>
@@ -940,7 +940,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </ul>
 <hr>
 <h2 id="cross-site-tracking">Cross-site tracking</h2>
-<p>Cross-site tracking refers to a tracking domain harvesting data from user's navigation and actions on other, unrelated sites. This is typically done by storing an identifier in a cookie on the tracking domain, and communicating with the tracking domain in a <strong>third-party context</strong>.</p>
+<p>Cross-site tracking refers to a tracking domain harvesting data from user&rsquo;s navigation and actions on other, unrelated sites. This is typically done by storing an identifier in a cookie on the tracking domain, and communicating with the tracking domain in a <strong>third-party context</strong>.</p>
 <p>Cross-site tracking happens covertly, and the user typically has no knowledge of all the data that has been collected from them while browsing the web.</p>
 <hr>
 <h2 id="domain-hierarchy">Domain hierarchy</h2>
@@ -954,14 +954,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h2 id="etld1">eTLD+1</h2>
 <p><strong>Effective top-level domain</strong> plus <strong>one part</strong>. eTLD would comprise the top-level domain (e.g. <code>.com</code> and <code>.uk</code>) and sometimes a second-level of hierarchy (e.g. <code>.co</code> in <code>.co.uk</code> or <code>.com</code> in <code>.com.au</code>). Thus eTLD is the same thing as the <a href="https://publicsuffix.org/">Public Suffix</a>.</p>
 <p>The &ldquo;one part&rdquo; is then the next level in the domain hierarchy, i.e. the domain name the site would have acquired to map to their servers.</p>
-<p>The eTLD+1 term is used in particular by Safari's Intelligent Tracking Prevention documentation to refer to the highest domain name the browser has read/write storage access to.</p>
+<p>The eTLD+1 term is used in particular by Safari&rsquo;s Intelligent Tracking Prevention documentation to refer to the highest domain name the browser has read/write storage access to.</p>
 <hr>
 <h2 id="first-party">First-party</h2>
 <p>In the context of <strong>storage access</strong>, first-party references the domain the user is currently on. Browser storage is typically completely restricted to the first-party.</p>
 <p>Cookie access is a bit different, as the browser can access cookies in a first-party context on the domain they are on <em>and</em> on any domain higher up in the domain hierarchy (all the way to eTLD+1).</p>
 <hr>
 <h2 id="intelligent-tracking-prevention-itp">Intelligent Tracking Prevention (ITP)</h2>
-<p>The name of the Safari browser's tracking protection mechanism and related tools.</p>
+<p>The name of the Safari browser&rsquo;s tracking protection mechanism and related tools.</p>
 <p>Due to its wide-spread use (especially on mobile devices), its algorithmic evaluation of tracking domains, and its impact on first-party storage, ITP has been a big disruption on AdTech and analytics industries.</p>
 <hr>
 <h2 id="link-decoration">Link decoration</h2>
@@ -973,7 +973,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>PageGraph builds a representation of things like node changes, network requests, and script execution, so that this research could be used to, for example, optimize the privacy-preserving feature restrictions of the browser that produced the graph.</p>
 <hr>
 <h2 id="quantum">Quantum</h2>
-<p>The browser engine used by the latest versions of the Firefox browser. It's an improved / redesigned iteration of Firefox's original <strong>Gecko</strong> engine.</p>
+<p>The browser engine used by the latest versions of the Firefox browser. It&rsquo;s an improved / redesigned iteration of Firefox&rsquo;s original <strong>Gecko</strong> engine.</p>
 <hr>
 <h2 id="referrer">Referrer</h2>
 <p>When the web browser issues a request to a web server, that request often includes the <code>referer </code> [sic] header to indicate the URL the request originated from.</p>
@@ -991,7 +991,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h2 id="third-party">Third-party</h2>
 <p>In the context of <strong>storage access</strong>, third-party means that the browser is trying to access storage that is not on the current domain.</p>
 <p>For example, while on <code>web.domain.com</code> if the browser makes a request for an image on <code>image.imagestore.com</code>, the request would have access to cookies written on <code>image.imagestore.com</code> only if the browser did not block third-party cookies. Similarly, if the response from <code>image.imagestore.com</code> tries to write a cookie with a <code>Set-Cookie</code> header, this would only work if the browser allowed third-party cookies.</p>
-<p>If the web browser loaded another domain's content in an <code>&lt;iframe&gt;</code> element, then any storage access (using e.g. <code>document.cookie</code> or <code>localStorage</code>) within that <code>&lt;iframe&gt;</code> would happen in a third-party context.</p>
+<p>If the web browser loaded another domain&rsquo;s content in an <code>&lt;iframe&gt;</code> element, then any storage access (using e.g. <code>document.cookie</code> or <code>localStorage</code>) within that <code>&lt;iframe&gt;</code> would happen in a third-party context.</p>
 <hr>
 <h2 id="webkit">WebKit</h2>
 <p>A browser engine developed by Apple and used as the engine for the Safari browser and <strong>all</strong> the iOS browsers.</p>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.61.0" />
+    <meta name="generator" content="Hugo 0.74.2" />
     <meta name="description" content="Latest information and news about browser storage across the modern web browser landscape. Designed to provide information on ITP, ETP, and similar initiatives.">
 <meta name="author" content="Simo Ahava">
 
@@ -892,7 +892,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 <tr>
 <td><strong>User controls</strong></td>
-<td>ITP <strong>doesn't let users control</strong> how it works. Users can simply toggle ITP off by unchecking &ldquo;Prevent cross-site tracking&rdquo; in Safari's Security preferences.</td>
+<td>ITP <strong>doesn&rsquo;t let users control</strong> how it works. Users can simply toggle ITP off by unchecking &ldquo;Prevent cross-site tracking&rdquo; in Safari&rsquo;s Security preferences.</td>
 </tr>
 </tbody>
 </table>
@@ -902,7 +902,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
         </figcaption>
 </figure>
 
-<p>For a comprehensive overview of all WebKit's tracking preventions, see <a href="https://webkit.org/tracking-prevention/">this document</a>.</p>
+<p>For a comprehensive overview of all WebKit&rsquo;s tracking preventions, see <a href="https://webkit.org/tracking-prevention/">this document</a>.</p>
 <h2 id="classification-of-known-trackers">Classification of &ldquo;known trackers&rdquo;</h2>
 <p>Safari classifies domains capable of cross-site tracking using an <strong>algorithm</strong> that runs on-device. Thus each Safari user has a potentially different list of domains that are blocked from having access to browser storage.</p>
 <p>The algorithm is superficially described in <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">this blog post</a>:</p>
@@ -911,17 +911,17 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </blockquote>
 <p>If a domain is classified by Safari as having cross-site tracking capabilities, it will have several restrictions placed upon it, listed below.</p>
 
-<div class="notices note" ><p><strong>Example</strong>: A website loads an iframe from <code>www.iframe-domain.com</code>. This is the first time the user's browser has loaded content from this domain in a frame. ITP does not yet react to this, as it's a single occurrence. Later, the user visits multiple different websites, all loading data from the same domain into an iframe. At this point, ITP classifies the domain as having cross-site capabilities, and the restrictions listed on this page will be put into effect.</p>
+<div class="notices note" ><p><strong>Example</strong>: A website loads an iframe from <code>www.iframe-domain.com</code>. This is the first time the user&rsquo;s browser has loaded content from this domain in a frame. ITP does not yet react to this, as it&rsquo;s a single occurrence. Later, the user visits multiple different websites, all loading data from the same domain into an iframe. At this point, ITP classifies the domain as having cross-site capabilities, and the restrictions listed on this page will be put into effect.</p>
 </div>
 
 <p>To monitor the list of domains classified by your Safari instance, or to test ITP in action, you can utilize the <strong>ITP Debug Mode</strong>, with instructions for use found behind <a href="https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/">this link</a>.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p>Safari blocks <strong>all</strong> access to cookies in third-party context.</p>
 <h3 id="storage-access-api">Storage Access API</h3>
-<p>Safari introduced the <a href="https://webkit.org/blog/8124/introducing-storage-access-api/">Storage Access API</a> in February 2018. With the Storage Access API, a website can ask the user's permission to access storage in an embedded cross-site resource which would otherwise have its cookie access restricted.</p>
+<p>Safari introduced the <a href="https://webkit.org/blog/8124/introducing-storage-access-api/">Storage Access API</a> in February 2018. With the Storage Access API, a website can ask the user&rsquo;s permission to access storage in an embedded cross-site resource which would otherwise have its cookie access restricted.</p>
 <p>To be able to use the Storage Access API, the embedded site must have been interacted with in first-party context (URL in address bar) in the last 30 days of Safari use.</p>
 
-<div class="notices note" ><p><strong>Example</strong>: The user is on <code>www.blog-site.com</code>, which loads a comment service in an <code>&lt;iframe&gt;</code> from <code>www.comment-service.com</code>. Since this is a cross-site resource load, ITP will not allow access to the site due to the site not having prior cookies set (Safari's default cookie policy), and because the user hasn't interacted with the site in first-party context in the last 30 days of Safari use.</p>
+<div class="notices note" ><p><strong>Example</strong>: The user is on <code>www.blog-site.com</code>, which loads a comment service in an <code>&lt;iframe&gt;</code> from <code>www.comment-service.com</code>. Since this is a cross-site resource load, ITP will not allow access to the site due to the site not having prior cookies set (Safari&rsquo;s default cookie policy), and because the user hasn&rsquo;t interacted with the site in first-party context in the last 30 days of Safari use.</p>
 </div>
 
 <figure class="left-align">
@@ -932,17 +932,17 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <p>If the user <em>has</em> interacted with the embedded site in first-party context in the last 30 days of Safari use, and the site has cookies set, the site can call the Storage Access API upon a user interaction in the embed (such as a click or tap), after which Safari will prompt the user if they want to allow the embedded site to access its storage.</p>
 
-<div class="notices note" ><p><strong>Example</strong>: The user visits <code>www.comment-service.com</code>, and logs into the service. The service sets a cookie in first-party context to save the user's login state. Then, the user browses to <code>www.blog-site.com</code>, which embeds <code>www.comment-service.com</code> in an <code>&lt;iframe&gt;</code>. In the <code>&lt;iframe&gt;</code>, the user clicks a button which initiates a login state check on <code>www.comment-service.com</code>. This time, <code>www.comment-service.com</code> uses the Storage Access API, and the user is prompted if they want to allow <code>www.comment-service.com</code> to access its first-party storage. If the user allows it, the embedded site will have access to its cookies, even though it is running in a third-party context.</p>
+<div class="notices note" ><p><strong>Example</strong>: The user visits <code>www.comment-service.com</code>, and logs into the service. The service sets a cookie in first-party context to save the user&rsquo;s login state. Then, the user browses to <code>www.blog-site.com</code>, which embeds <code>www.comment-service.com</code> in an <code>&lt;iframe&gt;</code>. In the <code>&lt;iframe&gt;</code>, the user clicks a button which initiates a login state check on <code>www.comment-service.com</code>. This time, <code>www.comment-service.com</code> uses the Storage Access API, and the user is prompted if they want to allow <code>www.comment-service.com</code> to access its first-party storage. If the user allows it, the embedded site will have access to its cookies, even though it is running in a third-party context.</p>
 </div>
 
-<p>If the user doesn't interact with the site again in first-party context in 30 days of Safari use, Safari will clear all storage from the embedded site, and prevent any new storage from being set. This will continue until the user interacts with the site in first-party context again.</p>
+<p>If the user doesn&rsquo;t interact with the site again in first-party context in 30 days of Safari use, Safari will clear all storage from the embedded site, and prevent any new storage from being set. This will continue until the user interacts with the site in first-party context again.</p>
 
-<div class="notices info" ><p>Note that <strong>successful use of the Storage Access API</strong> (either clicking &ldquo;Allow&rdquo; on the prompt, or interacting with the embed <em>after</em> having clicked &ldquo;Allow&rdquo; previously) is interpreted as interaction in first-party context, which means the 30 day timer is reset in such scenarios! This allows the embed to keep accessing its first-party storage even if the user doesn't visit the embedded site in first-party context.</p>
+<div class="notices info" ><p>Note that <strong>successful use of the Storage Access API</strong> (either clicking &ldquo;Allow&rdquo; on the prompt, or interacting with the embed <em>after</em> having clicked &ldquo;Allow&rdquo; previously) is interpreted as interaction in first-party context, which means the 30 day timer is reset in such scenarios! This allows the embed to keep accessing its first-party storage even if the user doesn&rsquo;t visit the embedded site in first-party context.</p>
 </div>
 
 <h2 id="first-party-cookies">First-party cookies</h2>
-<p>For first-party cookies set with JavaScript's <code>document.cookie</code> API, maximum expiration is set to <strong>7 days</strong>.</p>
-<p>If the referring domain is a known tracker, and if the URL has query parameters (<code>?key=value</code>) or fragments (<code>#somevalue</code>), cookies set with JavaScript's <code>document.cookie</code> API have a maximum expiration of <strong>24 hours</strong>.</p>
+<p>For first-party cookies set with JavaScript&rsquo;s <code>document.cookie</code> API, maximum expiration is set to <strong>7 days</strong>.</p>
+<p>If the referring domain is a known tracker, and if the URL has query parameters (<code>?key=value</code>) or fragments (<code>#somevalue</code>), cookies set with JavaScript&rsquo;s <code>document.cookie</code> API have a maximum expiration of <strong>24 hours</strong>.</p>
 
 <div class="notices note" ><p><strong>Example</strong>: The user follows a link from <code>www.facebook.com</code> (a known tracking domain), and lands on the website. Facebook appends an <code>?fbclid=123123123123</code> parameter to the URL. Because the referring URL is on a classified domain, and because the landing page has a query parameter, ITP sets a maximum expiration of <strong>24 hours</strong> to any cookies set with JavaScript while on that landing page.</p>
 </div>
@@ -962,7 +962,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h2 id="other">Other</h2>
 <p>Safari also protects against <strong>first-party bounce tracking</strong>. Bounce tracking happens when instead of navigating the user directly to the target domain, the user is redirected through intermediate domains which can set cookies and build a profile of the user. Intelligent Tracking Prevention detects when domains are used solely for bounce tracking and clears all website data that might have been saved on them.</p>
 <p>Similarly, Safari protects against <strong>tracker collusion</strong>, where multiple tracking domains in a redirect chain can feed information to each other to build a comprehensive profile of the user. If one domain in this chain is classified as having cross-site tracking capabilities, then all domains in the redirect chain will be classified as well.</p>
-<p>With <strong>Safari 14</strong>, WebKit's <a href="https://webkit.org/tracking-prevention/">tracking preventions</a> are extended to <strong>all</strong> browsers running on the iOS platform. There is no way for the browser or any app using the browser to toggle these protections off. Only the user can opt-out of cross-site tracking protections.</p>
+<p>With <strong>Safari 14</strong>, WebKit&rsquo;s <a href="https://webkit.org/tracking-prevention/">tracking preventions</a> are extended to <strong>all</strong> browsers running on the iOS platform. There is no way for the browser or any app using the browser to toggle these protections off. Only the user can opt-out of cross-site tracking protections.</p>
 
 
 
