@@ -801,8 +801,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p>Changes added in the <strong>latest release</strong> of each browser are indicated with <span style="background: yellow;">yellow highlight</span>. You can <strong>click</strong> the <a class="fa fa-info-circle" rel="footnote"></a> icon to be redirected to the respective section in each browser&rsquo;s own &ldquo;Current Status&rdquo; page.</p>
 </div>
 
-<p><strong>Last updated</strong>: 5 August 2020<br>
-Add details about bounce tracking protection in Firefox 79.</p>
+<p><strong>Last updated</strong>: 11 September 2020<br>
+Added Chrome 85 new referrer policy.</p>
 <p><a title="Suggest an edit" href="https://github.com/cookie-status/cookie-status-dev/issues/new?labels=content&title=%5BContent%20issue%5D%20Current%20Status" target="_blank"><i class="fa fa-edit"></i> Suggest an edit</a></p>
 <p><a href="#" id="fullscreen">Toggle full screen</a></p>
 <div id="cs" style="overflow-x:auto;">
@@ -903,7 +903,7 @@ Add details about bounce tracking protection in Firefox 79.</p>
 <tr>
 <td align="right"><strong>Referrer</strong></td>
 <td><p><a href="/brave/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Cross-site referrers are spoofed (set to the referred-to rather than the referred-from origin) in non-navigational HTTP requests.</p><p><a href="/brave/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Cross-site referrers are stripped in navigational HTTP requests.</p><p><a href="/brave/#referrer" rel="footnote" class="fa fa-info-circle"></a> Same-site navigation preserves the referrer.</p></td>
-<td><a href="/chrome/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Default browser policy (<code>no-referrer-when-downgrade</code>)</td>
+<td><a href="/chrome/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Default browser policy (<code>strict-origin-when-cross-origin</code>)</span></td>
 <td><a href="/edge/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Default browser policy (<code>no-referrer-when-downgrade</code>)</td>
 <td><a href="/firefox/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Default browser policy (<code>no-referrer-when-downgrade</code>)</td>
 <td><p><a href="/safari/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Downgrade cross-site <code>document.referrer</code> to origin.</p><p><a href="/safari/#referrer" rel="footnote" class="fa fa-info-circle"></a> Downgrade all cross-site request headers to origin.</p><p><a href="/safari/#referrer" rel="footnote"  class="fa fa-info-circle"></a> For referrers that are known trackers, where the referring page also has URL decoration (query parameters or fragments), <code>document.referrer</code> is downgraded to eTLD+1.</p></td>
@@ -924,11 +924,10 @@ Add details about bounce tracking protection in Firefox 79.</p>
 </div>
 
 <h3 id="bubbling-under">Bubbling under</h3>
-<p><strong>Last updated</strong>: 8 August 2020</p>
+<p><strong>Last updated</strong>: 11 September 2020</p>
 <ul>
 <li>Safari: Detect same-site subresource requests that CNAME to cross-site origins, and limit expiration of cookies set in HTTP response to 7 days (<a href="https://bugs.webkit.org/show_bug.cgi?id=215201">link to WebKit bug</a>).</li>
 <li>Safari: <code>isLoggedIn</code> (<a href="https://github.com/privacycg/is-logged-in">work item in the Privacy Community Group</a>).</li>
-<li>Chrome 85: <a href="https://www.chromestatus.com/feature/6251880185331712"><code>strict-origin-when-cross-origin</code> default referrer policy</a>.</li>
 <li>Brave: Add noise to Canvas, WebGL and AudioContext APIs to make fingerprinting more difficult (<a href="https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections">link to wiki page</a>).</li>
 <li>Brave: Cap all script-writable storage to a maximum lifetime (<a href="https://github.com/brave/brave-browser/issues/4438">link to issue</a>).</li>
 <li>Chrome: Deprecation of the User-Agent string (<a href="https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/-2JIRNMWJ7s/yHe4tQNLCgAJ">link to discussion</a>).</li>
