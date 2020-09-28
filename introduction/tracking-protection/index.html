@@ -1052,6 +1052,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <blockquote>
 <p>A machine learning model is used to classify which top privately-controlled domains have the ability to track the user cross-site, based on the collected statistics. Out of the various statistics collected, three vectors turned out to have strong signal for classification based on current tracking practices: subresource under number of unique domains, sub frame under number of unique domains, and number of unique domains redirected to. All data collection and classification happens on-device.</p>
 </blockquote>
+<p>Note that in early 2020, WebKit&rsquo;s tracking protections were extended to <a href="/safari/#third-party-cookies">block <strong>all</strong> third-party cookies without exception</a>. Thus the algorithmic classification no longer applies to how third-party storage is accessed, but it is still used for other tracking-related protections (such as <a href="https://www.cookiestatus.com/safari/#referrer">downgrading the referrer</a>).</p>
 <p>However, Safari&rsquo;s approach <em>is</em> binary in a sense - you can either enable <strong>all</strong> cross-site tracking or <strong>none</strong>.</p>
 <figure class="left-align">
     <img src="/images/content/safari-settings.jpg"/> <figcaption>

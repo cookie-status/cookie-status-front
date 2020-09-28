@@ -897,11 +897,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </figure>
 
 <p>On browsers like these, using their default tracking protection settings, websites could still continue to operate efficiently with third-party cookies.</p>
-<p>However, <strong>Safari</strong>, in introducing <a href="/safari/intelligent-tracking-prevention/">Intelligent Tracking Prevention</a>, can block cookies in a third-party context for domains that don&rsquo;t actually participate in cross-site tracking. Since Safari <strong>algorithmically</strong> classifies domains on a browser-by-browser basis, it&rsquo;s entirely possible that a regular domain owned by the organization would get classified and thus have its cookies blocked when accessed in a third-party context.</p>
-
-<div class="notices info" ><p>Safari describes the classifier <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">like this</a>: <strong>Out of the various statistics collected, three vectors turned out to have strong signal for classification based on current tracking practices: subresource under number of unique domains, sub frame under number of unique domains, and number of unique domains redirected to.</strong></p>
-</div>
-
+<p>Browsers like <strong>Safari</strong> and <strong>Brave</strong> block <em>all</em> third-party cookie access. This means that both benign (e.g. SSO flows) and cross-site tracking scenarios are neutered. Safari offers the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a> as a way for sites to establish consent from the browser user for allowing access to third-party storage.</p>
 <p>Because of this, websites that require third-party cookies should utilize the Storage Access API to get user&rsquo;s consent to access first-party storage for a classified domain.</p>
 <figure class="left-align">
     <img src="/images/content/storage-access-api.jpg"/> <figcaption>
@@ -941,7 +937,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Second, Brave modifies the referrer header when making cross origin requests. Brave &ldquo;lies&rdquo; on these requests, and says the request was being issued from the same domain being requested, instead of the true, cross-domain origin.</p>
 </blockquote>
 <h2 id="advertising-and-marketing-technologies">Advertising and marketing technologies</h2>
-<p>For AdTech vendors relying on storage access in third-party context, there are some tough times ahead. With Safari, Edge, and Firefox blocking third-party cookies for known trackers, it doesn&rsquo;t take much for a vendor to be blacklisted or classified as a tracker, leading to severely handicapped tracking capabilities.</p>
+<p>For AdTech vendors relying on storage access in third-party context, there are some tough times ahead. With Safari, Edge, and Firefox blocking third-party cookies for known trackers, it doesn&rsquo;t take much for a vendor to be blocklisted or classified as a tracker, leading to severely handicapped tracking capabilities.</p>
 <p>Vendors are becoming more <strong>outspoken</strong> in their attempts to work around browser restrictions. <a href="https://medium.com/nextdns/cname-cloaking-the-dangerous-disguise-of-third-party-trackers-195205dc522a">Some companies are approaching site owners</a> with instructions on how to setup CNAME redirects and reverse proxies to avoid ad blockers from preventing data collection. The ethical nature of such approaches is questionable at best.</p>
 <p>Even advertising that takes place in a <strong>first-party context</strong> (such as Google&rsquo;s <a href="https://support.google.com/google-ads/answer/1722047?hl=en">search ads</a>) is being hampered by browsers&rsquo; efforts. Safari&rsquo;s <strong>Intelligent Tracking Prevention</strong> <a href="https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/">reduces the maximum expiration for cookies and browser storage</a> if the user navigates to the site from an ad click, and if the source of the navigation is a known tracker (e.g. Facebook or Google). Thus the site&rsquo;s capability to attribute a conversion taking place in the near future to the ad click is compromised.</p>
 <p>In short, for vendors requiring browser storage access in <strong>third-party context</strong>, these broad impacts can be observed:</p>
