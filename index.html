@@ -901,6 +901,15 @@ Updated Firefox and Edge Referrer policy.</p>
 <td><a href="/cliqz/#other-first-party-storage" rel="footnote" class="fa fa-info-circle"></a> No restrictions.</td>
 </tr>
 <tr>
+<td align="right"><strong>CNAME cloaking</strong></td>
+<td><a href="/brave/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
+<td><a href="/chrome/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
+<td><a href="/edge/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
+<td><a href="/firefox/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
+<td><a href="/safari/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
+<td><a href="/cliqz/#cname-cloaking" rel="footnote" class="fa fa-info-circle"></a> No restrictions.</td>
+</tr>
+<tr>
 <td align="right"><strong>Referrer</strong></td>
 <td><p><a href="/brave/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Cross-site referrers are spoofed (set to the referred-to rather than the referred-from origin) in non-navigational HTTP requests.</p><p><a href="/brave/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Cross-site referrers are stripped in navigational HTTP requests.</p><p><a href="/brave/#referrer" rel="footnote" class="fa fa-info-circle"></a> Same-site navigation preserves the referrer.</p></td>
 <td><a href="/chrome/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Default browser policy (<code>strict-origin-when-cross-origin</code>)</span></td>
@@ -924,19 +933,20 @@ Updated Firefox and Edge Referrer policy.</p>
 </div>
 
 <h3 id="bubbling-under">Bubbling under</h3>
-<p><strong>Last updated</strong>: 11 September 2020</p>
+<p><strong>Last updated</strong>: 28 October 2020</p>
 <ul>
-<li>Safari: Detect same-site subresource requests that CNAME to cross-site origins, and limit expiration of cookies set in HTTP response to 7 days (<a href="https://bugs.webkit.org/show_bug.cgi?id=215201">link to WebKit bug</a>).</li>
-<li>Safari: <code>isLoggedIn</code> (<a href="https://github.com/privacycg/is-logged-in">work item in the Privacy Community Group</a>).</li>
+<li>Brave: Block requests to domains that have a CNAME redirect to a known tracker (<a href="https://brave.com/privacy-updates-6/">link to blog post</a>).</li>
 <li>Brave: Add noise to Canvas, WebGL and AudioContext APIs to make fingerprinting more difficult (<a href="https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections">link to wiki page</a>).</li>
 <li>Brave: Cap all script-writable storage to a maximum lifetime (<a href="https://github.com/brave/brave-browser/issues/4438">link to issue</a>).</li>
 <li>Chrome: Deprecation of the User-Agent string (<a href="https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/-2JIRNMWJ7s/yHe4tQNLCgAJ">link to discussion</a>).</li>
 <li>Chrome: Scheme-bound cookies (<a href="https://github.com/mikewest/scheming-cookies">link to proposal</a>).</li>
 <li>Chrome: Deprecation of cookies in third-party contexts (<a href="https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html">link to blog post</a>).</li>
+<li>Firefox, Edge: <code>strict-origin-when-cross-origin</code> default referrer policy.</li>
+<li>Safari: Detect same-site subresource requests that CNAME to cross-site origins, and limit expiration of cookies set in HTTP response to 7 days (<a href="https://bugs.webkit.org/show_bug.cgi?id=215201">link to WebKit bug</a>).</li>
+<li>Safari: <code>isLoggedIn</code> (<a href="https://github.com/privacycg/is-logged-in">work item in the Privacy Community Group</a>).</li>
 <li>Safari: Exempt web applications from having their local browser data erased (<a href="https://trac.webkit.org/changeset/259440/webkit">link to changeset</a>).</li>
 <li>Safari: Enforce cookies to SameSite=Strict if passed in bounce trackers (<a href="https://trac.webkit.org/changeset/259275/webkit">link to changeset</a>).</li>
 <li>Safari: Remove the <a href="https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/">Temporary Compatibility Fix</a> which gives storage access to embedded popups in some contexts (e.g. login flows).</li>
-<li>Firefox, Edge: <code>strict-origin-when-cross-origin</code> default referrer policy.</li>
 </ul>
 <h2 id="faq">FAQ</h2>
 <h3 id="1-why-does-this-resource-exist">1. Why does this resource exist?</h3>

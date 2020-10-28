@@ -825,6 +825,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <li><a href="#first-party-cookies">First-party cookies</a></li>
     <li><a href="#other-third-party-storage">Other third-party storage</a></li>
     <li><a href="#other-first-party-storage">Other first-party storage</a></li>
+    <li><a href="#cname-cloaking">CNAME cloaking</a></li>
     <li><a href="#referrer">Referrer</a></li>
   </ul>
 </nav>
@@ -876,6 +877,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Chrome does not restrict the use of other browser storage in third-party context.</p>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>Chrome does not restrict the use of other browser storage in first-party context.</p>
+<h2 id="cname-cloaking">CNAME cloaking</h2>
+<p>No protections against CNAME cloaking.</p>
 <h2 id="referrer">Referrer</h2>
 <p>Chrome 85 sets the default referrer policy to <code>strict-origin-when-cross-origin</code>. This means that for cross-origin requests (e.g. <code>sub.domain.com</code> to <code>othersub.domain.com</code>, or <code>sub.domain.com</code> to <code>sub.otherdomain.com</code>) the <code>referer</code> HTTP header and <code>document.referrer</code> JavaScript API are truncated to show just the <strong>origin</strong> of the website making the request. Thus a page such as <code>https://www.domain.com/some-page?param=value</code> would show up just as <code>https://www.domain.com</code> in the referrer records.</p>
 

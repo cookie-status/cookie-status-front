@@ -826,6 +826,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <li><a href="#other-third-party-storage">Other third-party storage</a></li>
     <li><a href="#other-first-party-storage">Other first-party storage</a></li>
     <li><a href="#referrer">Referrer</a></li>
+    <li><a href="#cname-cloaking">CNAME cloaking</a></li>
     <li><a href="#other">Other</a></li>
   </ul>
 </nav>
@@ -934,6 +935,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p><strong>Example</strong>: The user clicks on a link from <code>https://www.company.com/page?userId=123</code> to <code>https://www.cookiestatus.com/</code>. The <code>referer</code> HTTP header and the <code>document.referrer</code> JavaScript object will show <code>https://www.company.com</code> as the referrer. All non-navigational HTTP requests will truncate the referrer in a similar fashion.</p>
 </div>
 
+<h2 id="cname-cloaking">CNAME cloaking</h2>
+<p>No protections against CNAME cloaking.</p>
 <h2 id="other">Other</h2>
 <p>Cliqz automatically purges <em>potential user identifiers</em> from the URL, headers, and POST data of third-party requests.</p>
 <p>The model tokenizes all key-value pairs found, and then evaluates the values against a set of rules to determine if it&rsquo;s <em>safe</em> (should not be removed) or <em>unsafe</em> (should be removed).</p>

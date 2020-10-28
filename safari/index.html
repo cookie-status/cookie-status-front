@@ -829,6 +829,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <li><a href="#first-party-cookies">First-party cookies</a></li>
     <li><a href="#other-third-party-storage">Other third-party storage</a></li>
     <li><a href="#other-first-party-storage">Other first-party storage</a></li>
+    <li><a href="#cname-cloaking">CNAME cloaking</a></li>
     <li><a href="#referrer">Referrer</a></li>
     <li><a href="#other">Other</a></li>
   </ul>
@@ -954,6 +955,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p><code>sessionStorage</code> has no restrictions.</p>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>All script-writable storage is expired in <strong>7 days</strong> since last interaction with the site (click, tap, or text input).</p>
+<h2 id="cname-cloaking">CNAME cloaking</h2>
+<p>No protections against CNAME cloaking.</p>
 <h2 id="referrer">Referrer</h2>
 <p>Safari downgrades <code>document.referrer</code> to <strong>origin</strong> in cross-site navigation.</p>
 <p>Safari downgrades the referrer in cross-site request headers to <strong>origin</strong>. Thus if a page on <code>https://www.domain.com/page/page.html</code> tried to load an image from <code>https://images.imagecdn.com</code>, the <code>referer</code> header would show <code>https://www.domain.com</code> rather than the full referrer.</p>

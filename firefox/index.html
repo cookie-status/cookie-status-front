@@ -825,6 +825,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
     <li><a href="#first-party-cookies">First-party cookies</a></li>
     <li><a href="#other-third-party-storage">Other third-party storage</a></li>
     <li><a href="#other-first-party-storage">Other first-party storage</a></li>
+    <li><a href="#cname-cloaking">CNAME cloaking</a></li>
     <li><a href="#referrer">Referrer</a></li>
     <li><a href="#other">Other</a></li>
   </ul>
@@ -936,6 +937,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices info" ><p>Note that domains in the Cryptomining category have all incoming requests blocked by Firefox, and thus scripts loaded from these domains will not be able to interact with other first-party storage. Similarly, domains that are both in the Fingerprinting and some other tracking category have incoming requests blocked and the downstream impact is the same.</p>
 </div>
 
+<h2 id="cname-cloaking">CNAME cloaking</h2>
+<p>No protections against CNAME cloaking.</p>
 <h2 id="referrer">Referrer</h2>
 <p>HTTP requests to known tracking domains are sent with the referrer policy of <code>strict-origin-with-cross-origin</code>. Other requests use <code>no-referrer-when-downgrade</code>.</p>
 <h2 id="other">Other</h2>
