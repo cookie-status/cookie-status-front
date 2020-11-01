@@ -959,7 +959,16 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <p>For same-site requests (both navigational and non-navigational), referrer has <strong>normal</strong> behavior.</p>
 <h2 id="other">Other</h2>
-<p>Brave <a href="https://github.com/brave/brave-browser/issues/4239">removes known tracker identifier parameters</a> (<code>fbclid</code>, <code>gclid</code>, <code>msclkid</code>, <code>mc_eid</code>) from URL strings. On top-level navigation (e.g. landing on a page with such parameters in the URL), the parameters are stripped out in a 307 internal redirect. On non-navigational HTTP requests, the parameter is stripped from the request URL.</p>
+<p>Brave <a href="https://github.com/brave/brave-browser/issues/4239">removes known tracker identifier parameters</a> from URL strings. On top-level navigation (e.g. landing on a page with such parameters in the URL), the parameters are stripped out in a 307 internal redirect. On non-navigational HTTP requests, the parameter is stripped from the request URL.</p>
+<p>Here is the list of parameters that are stripped:</p>
+<ul>
+<li><code>fbclid</code> (Facebook)</li>
+<li><code>gclid</code> (Google)</li>
+<li><code>msclkid</code> (Microsoft)</li>
+<li><code>mc_eid</code> (Mailchimp)</li>
+<li><code>yclid</code> (Yandex/Yahoo)</li>
+<li><code>_hsenc</code>, <code>__hssc</code>, <code>__hstc</code>, <code>__hsfp</code>, <code>hsCtaTracking</code> (HubSpot)</li>
+</ul>
 
 <div class="notices note" ><p><strong>Example</strong>: If the user types <code>https://www.domain.com/?fbclid=1.2.3.4</code> in the omnibox and presses enter, Brave strips the parameter in an internal redirect. Similarly, if the browser makes a request to <code>https://www.domain.com/tracking-pixel.gif?mc_eid=23456</code>, Brave strips the parameter out of the request before it hits the target server.</p>
 </div>
