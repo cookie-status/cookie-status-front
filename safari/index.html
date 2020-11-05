@@ -956,7 +956,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>All script-writable storage is expired in <strong>7 days</strong> since last interaction with the site (click, tap, or text input).</p>
 <h2 id="cname-cloaking">CNAME cloaking</h2>
-<p>No protections against CNAME cloaking.</p>
+<p>On iOS 14.2 browsers, if a subdomain has a CNAME alias to a cross-site origin, then any cookies set with <code>Set-Cookie</code> HTTP response headers will be restricted to a maximum 7 day expiration.</p>
+
+<div class="notices note" ><p><strong>Example:</strong> A site on <code>https://domain.example</code> uses the subdomain <code>https://tracker.domain.example</code> to set cookies in order to avoid WebKit&rsquo;s restrictions on <a href="#first-party-cookies">script-writable first-party storage</a>. However, <code>https://tracker.domain.example/</code> has a CNAME alias to <code>https://domain.cloud.endpoint</code>, where the web server handling this logic resides. With all iOS 14.2 browsers (and soon with desktop Safari as well), any cookies set with HTTP responses from <code>https://tracker.domain.example</code> will now be restricted to an expiration of maximum 7 days.</p>
+</div>
+
 <h2 id="referrer">Referrer</h2>
 <p>Safari downgrades <code>document.referrer</code> to <strong>origin</strong> in cross-site navigation.</p>
 <p>Safari downgrades the referrer in cross-site request headers to <strong>origin</strong>. Thus if a page on <code>https://www.domain.com/page/page.html</code> tried to load an image from <code>https://images.imagecdn.com</code>, the <code>referer</code> header would show <code>https://www.domain.com</code> rather than the full referrer.</p>
