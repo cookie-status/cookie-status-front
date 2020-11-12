@@ -885,11 +885,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 <tr>
 <td><strong>Latest update</strong></td>
-<td><a href="https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/">Documented 24 Mar 2020</a></td>
+<td><a href="https://webkit.org/blog/11338/cname-cloaking-and-bounce-tracking-defense/">Documented 12 Nov 2020</a></td>
 </tr>
 <tr>
 <td><strong>Latest update includes</strong></td>
-<td><ul><li><strong><em>All</em> third-party cookie access is blocked.</li><li></strong>All script-writable storage is expired in 7 days since last interaction with the site.<strong></li><li></strong>All cross-site request headers and <code>document.referrer</code> are downgraded to origin.**</li></ul></td>
+<td><strong>CNAME cloaking mitigation</strong> is released. Cookies set with HTTP response headers in a subdomain that maps to a cross-site origin using a CNAME alias are restricted to 7 days expiration.</td>
 </tr>
 <tr>
 <td><strong>User controls</strong></td>
@@ -956,9 +956,10 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>All script-writable storage is expired in <strong>7 days</strong> since last interaction with the site (click, tap, or text input).</p>
 <h2 id="cname-cloaking">CNAME cloaking</h2>
-<p>On iOS 14.2 browsers, if a subdomain has a CNAME alias to a cross-site origin, then any cookies set with <code>Set-Cookie</code> HTTP response headers will be restricted to a maximum 7 day expiration.</p>
+<p><strong>This applies to Safari 14 released with Big Sur and to all major iOS and iPadOS 14.2+ browser apps.</strong></p>
+<p>If a subdomain has a CNAME alias to a cross-site origin, then any cookies set with <code>Set-Cookie</code> HTTP response headers will be restricted to a maximum 7 day expiration.</p>
 
-<div class="notices note" ><p><strong>Example:</strong> A site on <code>https://domain.example</code> uses the subdomain <code>https://tracker.domain.example</code> to set cookies in order to avoid WebKit&rsquo;s restrictions on <a href="#first-party-cookies">script-writable first-party storage</a>. However, <code>https://tracker.domain.example/</code> has a CNAME alias to <code>https://domain.cloud.endpoint</code>, where the web server handling this logic resides. With all iOS 14.2 browsers (and soon with desktop Safari as well), any cookies set with HTTP responses from <code>https://tracker.domain.example</code> will now be restricted to an expiration of maximum 7 days.</p>
+<div class="notices note" ><p><strong>Example:</strong> A site on <code>https://domain.example</code> uses the subdomain <code>https://tracker.domain.example</code> to set cookies in order to avoid WebKit&rsquo;s restrictions on <a href="#first-party-cookies">script-writable first-party storage</a>. However, <code>https://tracker.domain.example/</code> has a CNAME alias to <code>https://domain.cloud.endpoint</code>, where the web server handling this logic resides. On desktop Safari (on Big Sur) and all major iOS and iPadOS browsers, any cookies set with HTTP responses from <code>https://tracker.domain.example</code> will now be restricted to an expiration of maximum 7 days.</p>
 </div>
 
 <h2 id="referrer">Referrer</h2>
