@@ -881,11 +881,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 <tr>
 <td><strong>Latest update deployed in</strong></td>
-<td><a href="https://community.brave.com/t/release-channel-v1-7-92/118997">v1.7.92</a></td>
+<td><a href="https://community.brave.com/t/release-channel-1-17-73/181476">v1.17.73</a></td>
 </tr>
 <tr>
 <td><strong>Latest update includes</strong></td>
-<td><a href="https://github.com/brave/brave-browser/issues/5614">Randomize HTML canvas fingerprint per first-party domain</a></td>
+<td><a href="https://github.com/brave/brave-browser/issues/11712">Block network requests to tracking domains even if redirected via CNAME record</a></td>
 </tr>
 <tr>
 <td><strong>User controls</strong></td>
@@ -945,7 +945,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </div>
 
 <h2 id="cname-cloaking">CNAME cloaking</h2>
-<p>No protections against CNAME cloaking.</p>
+<p>Brave Shields blocks network requests to domains in Brave&rsquo;s blocklists. With version 1.17.73, Brave now also resolves the DNS of any given domain and identifies if there are <a href="https://medium.com/nextdns/cname-cloaking-the-dangerous-disguise-of-third-party-trackers-195205dc522a"><strong>CNAME records</strong></a> pointing to domains that are in the <a href="/brave/#classification-of-known-trackers">blocklists</a>, and blocks these as a result, too.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The web page sends a pixel request to <code>https://measure.example</code>. This domain is <strong>not</strong> in Brave&rsquo;s blocklist, so Brave would normally allow the network request to complete. However, <code>measure.example</code> is a CNAME record which actually points to <code>track.everything</code>, which <strong>is</strong> in Brave&rsquo;s blocklist. As the domain the CNAME points to is in Brave&rsquo;s blocklist, Brave blocks the initial request to <code>https://measure.example</code> as a consequence.</p>
+</div>
+
 <h2 id="referrer">Referrer</h2>
 <p>Cross-site referrers are <strong>spoofed</strong> in non-navigational HTTP requests.</p>
 
