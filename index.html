@@ -801,8 +801,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p>Changes added in the <strong>latest release</strong> of each browser are indicated with <span style="background: yellow;">yellow highlight</span>. You can <strong>click</strong> the <a class="fa fa-info-circle" rel="footnote"></a> icon to be redirected to the respective section in each browser&rsquo;s own &ldquo;Current Status&rdquo; page.</p>
 </div>
 
-<p><strong>Last updated</strong>: 2 December 2020<br>
-Updated Brave with details about CNAME ad blocking in 1.17.</p>
+<p><strong>Last updated</strong>: 3 December 2020<br>
+Updated Safari with details about purging all site data from classified domains if no meaningful interaction recorded in the last 30 days.</p>
 <p><a title="Suggest an edit" href="https://github.com/cookie-status/cookie-status-dev/issues/new?labels=content&title=%5BContent%20issue%5D%20Current%20Status" target="_blank"><i class="fa fa-edit"></i> Suggest an edit</a></p>
 <p><a href="#" id="fullscreen">Toggle full screen</a></p>
 <div id="cs" style="overflow-x:auto;">
@@ -906,7 +906,7 @@ Updated Brave with details about CNAME ad blocking in 1.17.</p>
 <td><a href="/chrome/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/edge/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/firefox/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
-<td><a href="/safari/#cname-cloaking" rel="footnote" class="fa fa-info-circle"></a> <span class="new">On Safari 14 (requires Big Sur) and on all major iOS and iPadOS 14.2+ browser apps, expiration of cookies set with <code>Set-Cookie</code> HTTP response headers is 7 days at most, if the response originates from a subdomain that has a CNAME alias to a cross-site origin.</span></td>
+<td><a href="/safari/#cname-cloaking" rel="footnote" class="fa fa-info-circle"></a> On Safari 14 (requires Big Sur) and on all major iOS and iPadOS 14.2+ browser apps, expiration of cookies set with <code>Set-Cookie</code> HTTP response headers is 7 days at most, if the response originates from a subdomain that has a CNAME alias to a cross-site origin.</td>
 <td><a href="/cliqz/#cname-cloaking" rel="footnote" class="fa fa-info-circle"></a> No restrictions.</td>
 </tr>
 <tr>
@@ -924,7 +924,7 @@ Updated Brave with details about CNAME ad blocking in 1.17.</p>
 <td>n/a</td>
 <td>n/a</td>
 <td><a href="/firefox/#other" rel="footnote" class="fa fa-info-circle"></a> Automatically block requests to tracking domains that are also listed in the Fingerprinting category of the Disconnect.me list.</td>
-<td><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Detect delays in bounce trackers and treat them as regular bounces.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Extend WebKit&rsquo;s tracking protections to all browsers running on iOS 14 and newer. These protections can only be disabled by the user.</p></td>
+<td><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Detect delays in bounce trackers and treat them as regular bounces.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Extend WebKit&rsquo;s tracking protections to all browsers running on iOS 14 and newer. These protections can only be disabled by the user.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Purge all site data from classified domains if no user interaction (or Storage Access API grant) in first-party context has been recorded in the last 30 days.</span></p></td>
 <td><p><a href="/cliqz/#other" rel="footnote" class="fa fa-info-circle"></a> Algorithmically identify and purge unique user identifiers from requests to third-party domains.</p> <p><a href="/cliqz/" rel="footnote" class="fa fa-info-circle"></a> <span class="new">The Cliqz project has been <a href="https://cliqz.com/announcement.html">shut down</a>.</span></p></td>
 </tr>
 </tbody>
@@ -943,7 +943,6 @@ Updated Brave with details about CNAME ad blocking in 1.17.</p>
 <li>Firefox, Edge: <code>strict-origin-when-cross-origin</code> default referrer policy.</li>
 <li>Safari: <code>isLoggedIn</code> (<a href="https://github.com/privacycg/is-logged-in">work item in the Privacy Community Group</a>).</li>
 <li>Safari: Exempt web applications from having their local browser data erased (<a href="https://trac.webkit.org/changeset/259440/webkit">link to changeset</a>).</li>
-<li>Safari: Enforce cookies to SameSite=Strict if passed in bounce trackers (<a href="https://trac.webkit.org/changeset/259275/webkit">link to changeset</a>).</li>
 <li>Safari: Remove the <a href="https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/">Temporary Compatibility Fix</a> which gives storage access to embedded popups in some contexts (e.g. login flows).</li>
 </ul>
 <h2 id="faq">FAQ</h2>
