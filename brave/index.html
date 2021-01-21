@@ -881,11 +881,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 <tr>
 <td><strong>Latest update deployed in</strong></td>
-<td><a href="https://community.brave.com/t/release-channel-1-17-73/181476">v1.17.73</a></td>
+<td><a href="https://community.brave.com/t/release-channel-1-19-86/197535">v1.19.86</a></td>
 </tr>
 <tr>
 <td><strong>Latest update includes</strong></td>
-<td><a href="https://github.com/brave/brave-browser/issues/11712">Block network requests to tracking domains even if redirected via CNAME record</a></td>
+<td><a href="https://github.com/brave/brave-browser/issues/13464">Strip referrer to <code>strict-origin-when-cross-origin</code> or stricter</a></td>
 </tr>
 <tr>
 <td><strong>User controls</strong></td>
@@ -956,9 +956,9 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p><strong>Example</strong>: If the page on <code>https://domain.com/page</code> requests a resource from <code>https://anotherdomain.com/image.jpg</code>, the <code>referer</code> header in the HTTP requests will be set to the <strong>referred-to</strong> origin (<code>https://anotherdomain.com/</code>) rather than the <strong>referred-from</strong> origin (<code>https://domain.com/</code>) as is the typical behavior.</p>
 </div>
 
-<p>For top-level navigation, cross-site referrers are <strong>stripped</strong> entirely.</p>
+<p>For top-level navigation, cross-site referrers default to <code>strict-origin-when-cross-origin</code> unless the site requires an even stricter policy..</p>
 
-<div class="notices note" ><p><strong>Example</strong>: When clicking a link from <code>https://domain.com/page</code> to <code>https://anotherdomain.com/another-page/</code>, the <code>referer</code> header is removed from the request. Similarly, the <code>document.referrer</code> will return an empty string once the user lands on <code>anotherdomain.com</code>.</p>
+<div class="notices note" ><p><strong>Example</strong>: When clicking a link from <code>https://domain.com/page</code> to <code>https://anotherdomain.com/another-page/</code>, the <code>referer</code> header is set to <code>https://domain.com</code>. Similarly, the <code>document.referrer</code> will be set to <code>https://domain.com</code> once the user lands on <code>anotherdomain.com</code>.</p>
 </div>
 
 <p>For same-site requests (both navigational and non-navigational), referrer has <strong>normal</strong> behavior.</p>

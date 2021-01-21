@@ -801,8 +801,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p>Changes added in the <strong>latest release</strong> of each browser are indicated with <span style="background: yellow;">yellow highlight</span>. You can <strong>click</strong> the <a class="fa fa-info-circle" rel="footnote"></a> icon to be redirected to the respective section in each browser&rsquo;s own &ldquo;Current Status&rdquo; page.</p>
 </div>
 
-<p><strong>Last updated</strong>: 3 December 2020<br>
-Updated Safari with details about purging all site data from classified domains if no meaningful interaction recorded in the last 30 days.</p>
+<p><strong>Last updated</strong>: 21 January 2021<br>
+Updated Brave with less strict referrer policy (now defaults to <code>strict-origin-when-cross-origin</code> instead of removing cross-site referrer altogether)..</p>
 <p><a title="Suggest an edit" href="https://github.com/cookie-status/cookie-status-dev/issues/new?labels=content&title=%5BContent%20issue%5D%20Current%20Status" target="_blank"><i class="fa fa-edit"></i> Suggest an edit</a></p>
 <p><a href="#" id="fullscreen">Toggle full screen</a></p>
 <div id="cs" style="overflow-x:auto;">
@@ -902,7 +902,7 @@ Updated Safari with details about purging all site data from classified domains 
 </tr>
 <tr>
 <td align="right"><strong>CNAME cloaking</strong></td>
-<td><a href="/brave/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Brave blocks any network requests where either the requested URL or that URL&rsquo;s CNAME record matches any rules in Brave&rsquo;s blocklists.</span></td>
+<td><a href="/brave/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> Brave blocks any network requests where either the requested URL or that URL&rsquo;s CNAME record matches any rules in Brave&rsquo;s blocklists.</td>
 <td><a href="/chrome/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/edge/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/firefox/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
@@ -911,7 +911,7 @@ Updated Safari with details about purging all site data from classified domains 
 </tr>
 <tr>
 <td align="right"><strong>Referrer</strong></td>
-<td><p><a href="/brave/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Cross-site referrers are spoofed (set to the referred-to rather than the referred-from origin) in non-navigational HTTP requests.</p><p><a href="/brave/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Cross-site referrers are stripped in navigational HTTP requests.</p><p><a href="/brave/#referrer" rel="footnote" class="fa fa-info-circle"></a> Same-site navigation preserves the referrer.</p></td>
+<td><p><a href="/brave/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Cross-site referrers are spoofed (set to the referred-to rather than the referred-from origin) in non-navigational HTTP requests.</p><p><a href="/brave/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <span class="new"><code>strict-origin-when-cross-origin</code> or stricter referrer policy in cross-site navigational requests.</span></p><p><a href="/brave/#referrer" rel="footnote" class="fa fa-info-circle"></a> Same-site navigation preserves the referrer.</p></td>
 <td><a href="/chrome/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Default browser policy (<code>strict-origin-when-cross-origin</code>)</span></td>
 <td><a href="/edge/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Default browser policy (<code>strict-origin-when-cross-origin</code>)</span></td>
 <td><a href="/firefox/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <code>strict-origin-when-cross-origin</code> for requests to known tracker domains, otherwise <code>no-referrer-when-downgrade</code>.</td>
