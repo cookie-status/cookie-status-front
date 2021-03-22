@@ -801,8 +801,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p>Changes added in the <strong>latest release</strong> of each browser are indicated with <span style="background: yellow;">yellow highlight</span>. You can <strong>click</strong> the <a class="fa fa-info-circle" rel="footnote"></a> icon to be redirected to the respective section in each browser&rsquo;s own &ldquo;Current Status&rdquo; page.</p>
 </div>
 
-<p><strong>Last updated</strong>: 12 March 2021<br>
-Updated Brave with ephemeral site storage details.</p>
+<p><strong>Last updated</strong>: 22 March 2021<br>
+Updated Firefox with new default referrer policy.</p>
 <p><a title="Suggest an edit" href="https://github.com/cookie-status/cookie-status-dev/issues/new?labels=content&title=%5BContent%20issue%5D%20Current%20Status" target="_blank"><i class="fa fa-edit"></i> Suggest an edit</a></p>
 <p><a href="#" id="fullscreen">Toggle full screen</a></p>
 <div id="cs" style="overflow-x:auto;">
@@ -878,7 +878,7 @@ Updated Brave with ephemeral site storage details.</p>
 <td><p><a href="/brave/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 7 days.</p><p><a href="/brave/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Otherwise maximum expiry set to 6 months.</p></td>
 <td><a href="/chrome/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/edge/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
-<td><a href="/firefox/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</span></td>
+<td><a href="/firefox/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</td>
 <td><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 7 days.</p><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 24 hours on pages with URL decoration (query parameters or fragments) when referring domain is a known tracker.</p></td>
 <td><p><a href="/cliqz/#first-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Cookies set on tracker domains with infrequent first-party interaction expire in 7 days. Otherwise expiration set to 30 days after last visit to site.</p><p><a href="/cliqz/#first-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Cookies set with <code>document.cookie</code> have a maximum expiration of 7 days.</p></td>
 </tr>
@@ -896,7 +896,7 @@ Updated Brave with ephemeral site storage details.</p>
 <td><a href="/brave/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/chrome/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/edge/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
-<td><a href="/firefox/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</span></td>
+<td><a href="/firefox/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</td>
 <td><a href="/safari/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> Restricted to 7 days since last interaction (click, tap, text input) with the site.</td>
 <td><a href="/cliqz/#other-first-party-storage" rel="footnote" class="fa fa-info-circle"></a> No restrictions.</td>
 </tr>
@@ -914,7 +914,7 @@ Updated Brave with ephemeral site storage details.</p>
 <td><p><a href="/brave/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Cross-site referrers are spoofed (set to the referred-to rather than the referred-from origin) in non-navigational HTTP requests.</p><p><a href="/brave/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <code>strict-origin-when-cross-origin</code> or stricter referrer policy in cross-site navigational requests.</p><p><a href="/brave/#referrer" rel="footnote" class="fa fa-info-circle"></a> Same-site navigation preserves the referrer.</p></td>
 <td><a href="/chrome/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Default browser policy (<code>strict-origin-when-cross-origin</code>)</span></td>
 <td><a href="/edge/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Default browser policy (<code>strict-origin-when-cross-origin</code>)</span></td>
-<td><a href="/firefox/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <code>strict-origin-when-cross-origin</code> for requests to known tracker domains, otherwise <code>no-referrer-when-downgrade</code>.</td>
+<td><a href="/firefox/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Default browser policy (<code>strict-origin-when-cross-origin</code>)</span></td>
 <td><p><a href="/safari/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Downgrade cross-site <code>document.referrer</code> to origin.</p><p><a href="/safari/#referrer" rel="footnote" class="fa fa-info-circle"></a> Downgrade all cross-site request headers to origin.</p><p><a href="/safari/#referrer" rel="footnote"  class="fa fa-info-circle"></a> For referrers that are known trackers, where the referring page also has URL decoration (query parameters or fragments), <code>document.referrer</code> is downgraded to eTLD+1.</p></td>
 <td><a href="/cliqz/#referrer" rel="footnote" class="fa fa-info-circle"></a> Strip all cross-origin referrers to origin.</td>
 </tr>

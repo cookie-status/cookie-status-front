@@ -881,11 +881,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 <tr>
 <td><strong>Latest update deployed in</strong></td>
-<td><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1599262">79.0</a></td>
+<td><a href="https://wiki.mozilla.org/Releases/Firefox_87">87.0</a></td>
 </tr>
 <tr>
 <td><strong>Latest update includes</strong></td>
-<td>Clear all site data if origin is a known tracker and hasn&rsquo;t been interacted with in 45 days.</td>
+<td>Default referrer policy set to <code>strict-origin-when-cross-origin</code>.</td>
 </tr>
 <tr>
 <td><strong>User controls</strong></td>
@@ -940,7 +940,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h2 id="cname-cloaking">CNAME cloaking</h2>
 <p>No protections against CNAME cloaking.</p>
 <h2 id="referrer">Referrer</h2>
-<p>HTTP requests to known tracking domains are sent with the referrer policy of <code>strict-origin-with-cross-origin</code>. Other requests use <code>no-referrer-when-downgrade</code>.</p>
+<p>The default referrer policy is <code>strict-origin-when-cross-origin</code>.</p>
 <h2 id="other">Other</h2>
 <p>If the domain is in the Fingerprinting category of Disconnect.me <strong>and</strong> in one of the tracking categories (Advertising, Analytics, or Social), all third-party <strong>requests</strong> to the domain are blocked.</p>
 
