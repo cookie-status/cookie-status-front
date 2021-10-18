@@ -885,11 +885,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 <tr>
 <td><strong>Latest update</strong></td>
-<td><a href="https://webkit.org/blog/11338/cname-cloaking-and-bounce-tracking-defense/">Documented 12 Nov 2020</a></td>
+<td><a href="https://developer.apple.com/documentation/safari-release-notes/safari-15-release-notes">Safari 15</a></td>
 </tr>
 <tr>
 <td><strong>Latest update includes</strong></td>
-<td><strong>CNAME cloaking mitigation</strong> is released. Cookies set with HTTP response headers in a subdomain that maps to a cross-site origin using a CNAME alias are restricted to 7 days expiration.</td>
+<td>Safari hides the user&rsquo;s IP address in requests to known trackers.</td>
 </tr>
 <tr>
 <td><strong>User controls</strong></td>
@@ -905,7 +905,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <p>For a comprehensive overview of all WebKit&rsquo;s tracking preventions, see <a href="https://webkit.org/tracking-prevention/">this document</a>.</p>
 <h2 id="classification-of-known-trackers">Classification of &ldquo;known trackers&rdquo;</h2>
-<p>Safari classifies domains capable of cross-site tracking using an <strong>algorithm</strong> that runs on-device. Thus each Safari user has a potentially different list of domains that are blocked from having access to browser storage.</p>
+<p>Since introducing the <strong>Privacy Report</strong> in <strong>Safari 14</strong>, Safari has been using the <a href="https://github.com/duckduckgo/tracker-radar">Tracker Radar</a> to classify origins as &ldquo;known trackers&rdquo;. This is mainly used to provide content for the Privacy Report, and has no real functional value. However, Safari&rsquo;s <a href="#other">IP obfuscation</a>, released in Safari 15, utilizes these &ldquo;known trackers&rdquo; to determine in which requests the user&rsquo;s IP address should be obfuscated.</p>
+<p>Other than the above, Safari classifies domains capable of cross-site tracking using an <strong>algorithm</strong> that runs on-device. Thus each Safari user has a potentially different list of domains that are blocked from having access to browser storage.</p>
 <p>The algorithm is superficially described in <a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">this blog post</a>:</p>
 <blockquote>
 <p>A machine learning model is used to classify which top privately-controlled domains have the ability to track the user cross-site, based on the collected statistics. Out of the various statistics collected, three vectors turned out to have strong signal for classification based on current tracking practices: <strong>subresource under number of unique domains</strong>, <strong>sub frame under number of unique domains</strong>, and <strong>number of unique domains redirected to</strong>. All data collection and classification happens on-device.</p>
@@ -972,6 +973,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Similarly, Safari protects against <strong>tracker collusion</strong>, where multiple tracking domains in a redirect chain can feed information to each other to build a comprehensive profile of the user. If one domain in this chain is classified as having cross-site tracking capabilities, then all domains in the redirect chain will be classified as well.</p>
 <p>With <strong>Safari 14</strong>, WebKit&rsquo;s <a href="https://webkit.org/tracking-prevention/">tracking preventions</a> are extended to <strong>all</strong> browsers running on the iOS platform. There is no way for the browser or any app using the browser to toggle these protections off. Only the user can opt-out of cross-site tracking protections.</p>
 <p>WebKit browsers also delete <strong>all site data</strong> (script-writable storage, all cookies) if the site domain has been classified by ITP and if there has been no meaningful interaction with the site in first-party context in the last 30 days. Granted access through Storage Access API resets the timer as well.</p>
+<p>Wigh <strong>Safari 15</strong>, the browser hides the user&rsquo;s actual IP address in requests sent to origins that are listed in DuckDuckGo&rsquo;s <a href="https://github.com/duckduckgo/tracker-radar">Tracker Radar</a> list.</p>
 <p>On macOS Safari, the version number in the User Agent string is frozen to <code>10_15_7</code> to fix compatibility issues with upgrading to macOS version 11+ (Big Sur). This has obvious privacy implications as well, as the platform version is no longer useful for fingerprinting purposes.</p>
 <p>
 <div class="notices info" ><p>Sample User Agent string when running Safari 14.1 on macOS 11.3.1:<br/>
