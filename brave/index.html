@@ -955,12 +955,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </div>
 
 <h2 id="referrer">Referrer</h2>
-<p>Cross-site referrers are <strong>spoofed</strong> in non-navigational HTTP requests.</p>
-
-<div class="notices note" ><p><strong>Example</strong>: If the page on <code>https://domain.com/page</code> requests a resource from <code>https://anotherdomain.com/image.jpg</code>, the <code>referer</code> header in the HTTP requests will be set to the <strong>referred-to</strong> origin (<code>https://anotherdomain.com/</code>) rather than the <strong>referred-from</strong> origin (<code>https://domain.com/</code>) as is the typical behavior.</p>
-</div>
-
-<p>For top-level navigation, cross-site referrers default to <code>strict-origin-when-cross-origin</code> unless the site requires an even stricter policy..</p>
+<p>For cross-origin subresource and navigational HTTP requests, Brave defaults to the <code>strict-origin-when-cross-origin</code> Referrer Policy. Brave prevents the policy from ever being more relaxed than this, so even if a policy of e.g. <code>unsafe-url</code> is used, cross-origin requests would still have the referrer set to just the origin of the referring page.</p>
 
 <div class="notices note" ><p><strong>Example</strong>: When clicking a link from <code>https://domain.com/page</code> to <code>https://anotherdomain.com/another-page/</code>, the <code>referer</code> header is set to <code>https://domain.com</code>. Similarly, the <code>document.referrer</code> will be set to <code>https://domain.com</code> once the user lands on <code>anotherdomain.com</code>.</p>
 </div>
