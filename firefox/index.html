@@ -881,11 +881,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 <tr>
 <td><strong>Latest update deployed in</strong></td>
-<td><a href="https://wiki.mozilla.org/Releases/Firefox_87">87.0</a></td>
+<td><a href="https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/">June 14, 2022</a></td>
 </tr>
 <tr>
 <td><strong>Latest update includes</strong></td>
-<td>Default referrer policy set to <code>strict-origin-when-cross-origin</code>.</td>
+<td>Total Cookie Protection rolled out to all users.</td>
 </tr>
 <tr>
 <td><strong>User controls</strong></td>
@@ -917,6 +917,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Firefox deletes all stored site data (incl. cookies, browser storage) if the site is a known tracker and hasn&rsquo;t been interacted with in the last 30 days.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p>Third-party cookies are blocked for classified domains.</p>
+<p>With <a href="https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/">Total Cookie Protection</a>, Firefox <strong>partitions</strong> storage between the site and the third-party embedded on the site.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: If <code>siteA.com</code> tries to load a resource from <code>siteB.com</code>, the latter will have access (assuming it is not on the list of known trackers) to its cookies. However, these cookies are stored in a special <strong>partition</strong> keyed between <code>siteA.com</code> and <code>siteB.com</code>. If a second site, such as <code>siteC.com</code> loads a resource from <code>siteB.com</code>, the cookies the latter will have access to will not be the same as those available when embedded via <code>siteA.com</code>.</p>
+</div>
+
 <h2 id="first-party-cookies">First-party cookies</h2>
 <p>All storage is cleared (more or less) daily from origins that are known trackers and that haven&rsquo;t received a top-level user interaction (including scroll) within the last 45 days. More details can be found <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection">here</a>.</p>
 
@@ -930,7 +935,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </div>
 
 <p><code>sessionStorage</code> is not restricted.</p>
-<p>No restrictions for other domains.</p>
+<p>With Total Cookie Protection, all browser storage is <strong>partitioned</strong> in third-party context. See the example <a href="#third-party-cookies">above</a> for more information.</p>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>All storage is cleared (more or less) daily from origins that are known trackers and that haven&rsquo;t received a top-level user interaction (including scroll) within the last 45 days. More details can be found <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection">here</a>.</p>
 
