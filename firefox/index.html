@@ -945,7 +945,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h2 id="cname-cloaking">CNAME cloaking</h2>
 <p>No protections against CNAME cloaking.</p>
 <h2 id="referrer">Referrer</h2>
-<p>The default referrer policy is <code>strict-origin-when-cross-origin</code>.</p>
+<p>The default referrer policy is <code>strict-origin-when-cross-origin</code>. More relaxed policies are not permitted.</p>
 <p>If the referring URL has a tracking parameter (e.g. <code>fbclid</code>), the <code>document.referrer</code> string is truncated to eTLD+1.</p>
 
 <div class="notices note" ><p><strong>Example</strong>: If the user browses from <code>https://www.my.domain/purchase-page?fbclid=12345</code> to <code>https://www.my.domain/home-page/</code>, the <code>document.referrer</code> string will show just <code>https://my.domain/</code>.</p>
