@@ -884,14 +884,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><a href="https://developer.apple.com/documentation/safari_release_notes/safari_13_release_notes">Safari 13</a> in <strong>iOS 13</strong>, <strong>macOS Catalina, Mojave, and High Sierra</strong></td>
 </tr>
 <tr>
-<td><strong>Latest update</strong></td>
-<td><a href="https://developer.apple.com/documentation/safari-release-notes/safari-15-release-notes">Safari 15</a></td>
-</tr>
-<tr>
-<td><strong>Latest update includes</strong></td>
-<td>Safari hides the user&rsquo;s IP address in requests to known trackers.</td>
-</tr>
-<tr>
 <td><strong>User controls</strong></td>
 <td>ITP <strong>doesn&rsquo;t let users control</strong> how it works. Users can simply toggle ITP off by unchecking &ldquo;Prevent cross-site tracking&rdquo; in Safari&rsquo;s Security preferences.</td>
 </tr>
@@ -943,21 +935,32 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </div>
 
 <h2 id="first-party-cookies">First-party cookies</h2>
-<p>For first-party cookies set with JavaScript&rsquo;s <code>document.cookie</code> API, maximum expiration is set to <strong>7 days</strong>.</p>
+<p>Safari deletes <strong>all script-writable storage</strong> on websites if the site has not been <strong>interacted with</strong> (click, tap, keyboard input) in first-party context in the last <strong>7 days of browser use</strong>. This includes cookies set with <code>document.cookie</code>.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user visits <code>www.domain.com</code>, where JavaScript is used to set a cookie that expires in 365 days. Over the next 100 days, the user uses the browser 6 times in total, but does not visit <code>www.domain.com</code> or interact with the site. If the user uses the browser one more time without interacting with <code>www.domain.com</code>, the cookie will be deleted even if its expiration date is not met.</p>
+</div>
+
 <p>If the referring domain is a known tracker, and if the URL has query parameters (<code>?key=value</code>) or fragments (<code>#somevalue</code>), cookies set with JavaScript&rsquo;s <code>document.cookie</code> API have a maximum expiration of <strong>24 hours</strong>.</p>
 
 <div class="notices note" ><p><strong>Example</strong>: The user follows a link from <code>www.facebook.com</code> (a known tracking domain), and lands on the website. Facebook appends an <code>?fbclid=123123123123</code> parameter to the URL. Because the referring URL is on a classified domain, and because the landing page has a query parameter, ITP sets a maximum expiration of <strong>24 hours</strong> to any cookies set with JavaScript while on that landing page.</p>
 </div>
 
-<p>First-party cookies set with the <code>Set-Cookie</code> HTTP response header are not impacted by ITP, and have no restrictions placed on their expiration.</p>
+<p>First-party cookies set with the <code>Set-Cookie</code> HTTP response header are not impacted by ITP, and have no restrictions placed on their expiration, unless they meet the criterion for [CNAME cloaking (see below)](#cname-cloaking]..</p>
 <h2 id="other-third-party-storage">Other third-party storage</h2>
 <p><code>localStorage</code> is partitioned, so that access is keyed to the combination of the source and target domains. Thus <code>www.domain.com</code> has a different <code>localStorage</code> store in third-party context when accessed from <code>www.domain1.com</code> and from <code>www.domain2.com</code>. This partitioned store is also cleared between application launches.</p>
 <p><code>IndexedDB</code> is restricted.</p>
 <p><code>sessionStorage</code> has no restrictions.</p>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
-<p>All script-writable storage is expired in <strong>7 days</strong> since last interaction with the site (click, tap, or text input).</p>
+<p>All script-writable storage is deleted in <strong>7 days of browser use</strong> since last interaction with the site (click, tap, or text input). This includes these mechanisms:</p>
+<ul>
+<li>Cookies set with <code>document.cookie</code> (see <a href="#first-party-cookies">above</a>).</li>
+<li>IndexedDB</li>
+<li>LocalStorage</li>
+<li>Media Keys</li>
+<li>SessionStorage</li>
+<li>Service Worker registrations and cache</li>
+</ul>
 <h2 id="cname-cloaking">CNAME cloaking</h2>
-<p><strong>This applies to Safari 14 released with Big Sur and to all major iOS and iPadOS 14.2+ browser apps.</strong></p>
 <p>If a subdomain has a CNAME alias to a cross-site origin, then any cookies set with <code>Set-Cookie</code> HTTP response headers will be restricted to a maximum 7 day expiration.</p>
 
 <div class="notices note" ><p><strong>Example:</strong> A site on <code>https://domain.example</code> uses the subdomain <code>https://tracker.domain.example</code> to set cookies in order to avoid WebKit&rsquo;s restrictions on <a href="#first-party-cookies">script-writable first-party storage</a>. However, <code>https://tracker.domain.example/</code> has a CNAME alias to <code>https://domain.cloud.endpoint</code>, where the web server handling this logic resides. On desktop Safari (on Big Sur) and all major iOS and iPadOS browsers, any cookies set with HTTP responses from <code>https://tracker.domain.example</code> will now be restricted to an expiration of maximum 7 days.</p>
