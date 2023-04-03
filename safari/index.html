@@ -962,8 +962,13 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </ul>
 <h2 id="cname-cloaking">CNAME cloaking</h2>
 <p>If a subdomain has a CNAME alias to a cross-site origin, then any cookies set with <code>Set-Cookie</code> HTTP response headers will be restricted to a maximum 7 day expiration.</p>
+<p>If a subdomain is set with A/AAAA records that resolve to an IP address where the <strong>first half</strong> of the address does <strong>not</strong> match the first half of the IP address for the website the user is currently browsing, then any cookies set with <code>Set-Cookie</code> HTTP repsonse headers will be restricted to a maximum 7 day expiration.</p>
 
 <div class="notices note" ><p><strong>Example:</strong> A site on <code>https://domain.example</code> uses the subdomain <code>https://tracker.domain.example</code> to set cookies in order to avoid WebKit&rsquo;s restrictions on <a href="#first-party-cookies">script-writable first-party storage</a>. However, <code>https://tracker.domain.example/</code> has a CNAME alias to <code>https://domain.cloud.endpoint</code>, where the web server handling this logic resides. On desktop Safari (on Big Sur) and all major iOS and iPadOS browsers, any cookies set with HTTP responses from <code>https://tracker.domain.example</code> will now be restricted to an expiration of maximum 7 days.</p>
+</div>
+
+
+<div class="notices note" ><p><strong>Example:</strong> The user is browisng <code>https://domain.example</code> which resolves to an IP address of <code>100.100.100.100</code>. The website makes a request to <code>https://tracker.domain.example</code> which resolves to an IP address of <code>200.200.200.200</code>. On the Safari browser, any cookies set with HTTP responses from <code>https://tracker.domain.example</code> will be restricted to an expiration of maximum 7 days.</p>
 </div>
 
 <h2 id="referrer">Referrer</h2>

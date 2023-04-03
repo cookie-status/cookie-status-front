@@ -801,8 +801,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p>Changes added in the <strong>latest release</strong> of each browser are indicated with <span style="background: yellow;">yellow highlight</span>. You can <strong>click</strong> the <a class="fa fa-info-circle" rel="footnote"></a> icon to be redirected to the respective section in each browser&rsquo;s own &ldquo;Current Status&rdquo; page.</p>
 </div>
 
-<p><strong>Last updated</strong>: 13 Nov 2022<br>
-Updated Safari/WebKit&rsquo;s first-party cookie storage protections..</p>
+<p><strong>Last updated</strong>: 3 Apr 2023<br>
+Safari sets the cookie lifetime of HTTP response cookies to a maximum of 7 days when the server sending the response is behind a third-party IP address.</p>
 <p><a title="Suggest an edit" href="https://github.com/cookie-status/cookie-status-dev/issues/new?labels=content&title=%5BContent%20issue%5D%20Current%20Status" target="_blank"><i class="fa fa-edit"></i> Suggest an edit</a></p>
 <p><a href="#" id="fullscreen">Toggle full screen</a></p>
 <div id="cs" style="overflow-x:auto;">
@@ -879,7 +879,7 @@ Updated Safari/WebKit&rsquo;s first-party cookie storage protections..</p>
 <td><a href="/chrome/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Cookies restricted to a maximum lifetime of 400 days.</span></td>
 <td><a href="/edge/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/firefox/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</td>
-<td><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">For cookies set with <code>document.cookie</code>, deletion happens after 7 days of browser use without user interaction on the site.</span></p><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 24 hours on pages with URL decoration (query parameters or fragments) when referring domain is a known tracker.</p></td>
+<td><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, deletion happens after 7 days of browser use without user interaction on the site.</p><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 24 hours on pages with URL decoration (query parameters or fragments) when referring domain is a known tracker.</p></td>
 <td><p><a href="/cliqz/#first-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Cookies set on tracker domains with infrequent first-party interaction expire in 7 days. Otherwise expiration set to 30 days after last visit to site.</p><p><a href="/cliqz/#first-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Cookies set with <code>document.cookie</code> have a maximum expiration of 7 days.</p></td>
 </tr>
 <tr>
@@ -897,7 +897,7 @@ Updated Safari/WebKit&rsquo;s first-party cookie storage protections..</p>
 <td><a href="/chrome/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/edge/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/firefox/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</td>
-<td><a href="/safari/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">All script-writable storage is deleted after 7 days of browser use without interaction (click, tap, text input) with the site.</span></td>
+<td><a href="/safari/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> All script-writable storage is deleted after 7 days of browser use without interaction (click, tap, text input) with the site.</td>
 <td><a href="/cliqz/#other-first-party-storage" rel="footnote" class="fa fa-info-circle"></a> No restrictions.</td>
 </tr>
 <tr>
@@ -906,7 +906,7 @@ Updated Safari/WebKit&rsquo;s first-party cookie storage protections..</p>
 <td><a href="/chrome/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/edge/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/firefox/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
-<td><a href="/safari/#cname-cloaking" rel="footnote" class="fa fa-info-circle"></a> On Safari 14 (requires Big Sur) and on all major iOS and iPadOS 14.2+ browser apps, expiration of cookies set with <code>Set-Cookie</code> HTTP response headers is 7 days at most, if the response originates from a subdomain that has a CNAME alias to a cross-site origin.</td>
+<td><a href="/safari/#cname-cloaking" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Expiration of cookies set with <code>Set-Cookie</code> HTTP response headers is 7 days at most, if the response originates from a subdomain that has a CNAME alias to a cross-site origin, or if the subdomain is configured with A/AAAA records where the first half of the IP address does not match the first half of the IP address of the website the user is currently browsing.</span></td>
 <td><a href="/cliqz/#cname-cloaking" rel="footnote" class="fa fa-info-circle"></a> No restrictions.</td>
 </tr>
 <tr>
