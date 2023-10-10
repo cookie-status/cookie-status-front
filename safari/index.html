@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.74.2" />
+    <meta name="generator" content="Hugo 0.118.2">
     <meta name="description" content="Latest information and news about browser storage across the modern web browser landscape. Designed to provide information on ITP, ETP, and similar initiatives.">
 <meta name="author" content="Simo Ahava">
 
@@ -704,7 +704,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/safari/" title="Safari" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -889,8 +889,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 </tbody>
 </table>
-<figure class="left-align">
-    <img src="/images/content/safari-privacy-control.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/safari-privacy-control.jpg"/><figcaption>
             <h4>Privacy controls in Safari</h4>
         </figcaption>
 </figure>
@@ -918,8 +917,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p><strong>Example</strong>: The user is on <code>www.blog-site.com</code>, which loads a comment service in an <code>&lt;iframe&gt;</code> from <code>www.comment-service.com</code>. Since this is a cross-site resource load, ITP will not allow access to the site due to the site not having prior cookies set (Safari&rsquo;s default cookie policy), and because the user hasn&rsquo;t interacted with the site in first-party context in the last 30 days of Safari use.</p>
 </div>
 
-<figure class="left-align">
-    <img src="/images/content/storage-access-api.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/storage-access-api.jpg"/><figcaption>
             <h4>Requesting storage access via the API</h4>
         </figcaption>
 </figure>
@@ -948,8 +946,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>First-party cookies set with the <code>Set-Cookie</code> HTTP response header are not impacted by ITP, and have no restrictions placed on their expiration, unless they meet the criterion for [CNAME cloaking (see below)](#cname-cloaking]..</p>
 <h2 id="other-third-party-storage">Other third-party storage</h2>
 <p><code>localStorage</code> is partitioned, so that access is keyed to the combination of the source and target domains. Thus <code>www.domain.com</code> has a different <code>localStorage</code> store in third-party context when accessed from <code>www.domain1.com</code> and from <code>www.domain2.com</code>. This partitioned store is also cleared between application launches.</p>
+<p><code>sessionStorage</code> is partitioned in a similar way (<a href="https://github.com/firebase/firebase-js-sdk/issues/6716#issuecomment-1416793915">source</a>).</p>
 <p><code>IndexedDB</code> is restricted.</p>
-<p><code>sessionStorage</code> has no restrictions.</p>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>All script-writable storage is deleted in <strong>7 days of browser use</strong> since last interaction with the site (click, tap, or text input). This includes these mechanisms:</p>
 <ul>

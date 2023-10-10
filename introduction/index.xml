@@ -6,11 +6,7 @@
     <description>Recent content in Introduction on Current Status Of Browser Tracking Prevention | cookiestatus.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Nov 2019 13:57:26 +0200</lastBuildDate>
-    
-	<atom:link href="https://www.cookiestatus.com/introduction/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 19 Nov 2019 13:57:26 +0200</lastBuildDate><atom:link href="https://www.cookiestatus.com/introduction/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tracking protection</title>
       <link>https://www.cookiestatus.com/introduction/tracking-protection/</link>
@@ -19,7 +15,7 @@
       <guid>https://www.cookiestatus.com/introduction/tracking-protection/</guid>
       <description>Tracking protection, and similar measures, seek to protect the user from covert data collection and exploitation by scripts and applications created for such purposes.
 In short, tracking protection, tracking prevention, anti-tracking, cookie blocking, content blocking, etc. are designed to:
- Identify and classify domains that utilize and distribute tracking mechanisms obstructive to (browsers&amp;rsquo; interpretation of) web user privacy. Restrict storage access in third-party context for such scripts so that the trackers cannot build cross-site profiles of web users.</description>
+Identify and classify domains that utilize and distribute tracking mechanisms obstructive to (browsers&amp;rsquo; interpretation of) web user privacy. Restrict storage access in third-party context for such scripts so that the trackers cannot build cross-site profiles of web users.</description>
     </item>
     
     <item>

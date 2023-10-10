@@ -6,11 +6,7 @@
     <description>Recent content in Cookie Status on Current Status Of Browser Tracking Prevention | cookiestatus.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2020 07:00:26 +0200</lastBuildDate>
-    
-	<atom:link href="https://www.cookiestatus.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 05 Aug 2020 07:00:26 +0200</lastBuildDate><atom:link href="https://www.cookiestatus.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tracking protection</title>
       <link>https://www.cookiestatus.com/introduction/tracking-protection/</link>
@@ -19,7 +15,7 @@
       <guid>https://www.cookiestatus.com/introduction/tracking-protection/</guid>
       <description>Tracking protection, and similar measures, seek to protect the user from covert data collection and exploitation by scripts and applications created for such purposes.
 In short, tracking protection, tracking prevention, anti-tracking, cookie blocking, content blocking, etc. are designed to:
- Identify and classify domains that utilize and distribute tracking mechanisms obstructive to (browsers&amp;rsquo; interpretation of) web user privacy. Restrict storage access in third-party context for such scripts so that the trackers cannot build cross-site profiles of web users.</description>
+Identify and classify domains that utilize and distribute tracking mechanisms obstructive to (browsers&amp;rsquo; interpretation of) web user privacy. Restrict storage access in third-party context for such scripts so that the trackers cannot build cross-site profiles of web users.</description>
     </item>
     
     <item>
@@ -51,7 +47,7 @@ Websites use cookies and other browser storage for a plethora of things, such as
       <guid>https://www.cookiestatus.com/glossary/</guid>
       <description>This is a glossary of terms used in the website.
 AdTech Term used to describe advertising technologies and the companies and vendors working in AdTech. Many AdTech vendors utilize cross-site tracking to exploit user data in browser storage.
- Analytics Industry, vendors, tools, platforms, and methodologies grouped together by the pursuit of empirical data for measuring things like web performance, user behavior and advertising efforts.
+Analytics Industry, vendors, tools, platforms, and methodologies grouped together by the pursuit of empirical data for measuring things like web performance, user behavior and advertising efforts.
 Often focuses on data collection in a first-party context, but especially in AdTech, analytics tools are used for collecting and analyzing data in third-party context as well.</description>
     </item>
     

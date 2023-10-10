@@ -1,73 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://www.cookiestatus.com/</loc>
     <lastmod>2020-08-05T07:00:26+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/introduction/</loc>
     <lastmod>2019-11-19T13:57:26+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/brave/</loc>
     <lastmod>2019-11-21T15:32:10+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/introduction/tracking-protection/</loc>
     <lastmod>2019-11-21T15:28:47+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/introduction/summary-of-exploits/</loc>
     <lastmod>2019-11-28T13:12:55+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/introduction/impact/</loc>
     <lastmod>2019-11-21T15:29:14+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/chrome/</loc>
     <lastmod>2019-11-21T15:32:10+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/edge/</loc>
     <lastmod>2019-11-21T15:33:24+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/firefox/</loc>
     <lastmod>2019-11-21T15:33:28+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/safari/</loc>
     <lastmod>2019-11-21T15:33:32+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/cliqz/</loc>
     <lastmod>2019-11-21T15:32:10+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/glossary/</loc>
     <lastmod>2019-12-02T11:57:51+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.cookiestatus.com/tags/</loc>
   </url>
-  
 </urlset>

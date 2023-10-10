@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.74.2" />
+    <meta name="generator" content="Hugo 0.118.2">
     <meta name="description" content="Latest information and news about browser storage across the modern web browser landscape. Designed to provide information on ITP, ETP, and similar initiatives.">
 <meta name="author" content="Simo Ahava">
 
@@ -911,8 +911,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </div>
 
 <p>Websites can <strong>write</strong> cookies on the user&rsquo;s computer, and they can <strong>read</strong> cookies from the user&rsquo;s computer. How effective this is depends on whether the user&rsquo;s browser allows cookie access in <strong>third-party context</strong>, and whether cookies in <strong>first-party context</strong> have restrictions as well.</p>
-<figure class="left-align">
-    <img src="/images/content/cookie-example.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/cookie-example.jpg"/><figcaption>
             <h4>First-party cookies set on the current domain and on the eTLD&#43;1</h4>
         </figcaption>
 </figure>
@@ -926,8 +925,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </div>
 
 <p>This is what a sample HTTP request would look like with the <code>cookie</code> header in place:</p>
-<figure class="left-align">
-    <img src="/images/content/cookie-header.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/cookie-header.jpg"/><figcaption>
             <h4>Sample cookie header with all cookies available on the target domain</h4>
         </figcaption>
 </figure>
@@ -936,23 +934,22 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Because the <code>cookie</code> header is part of the HTTP request, it means that the <strong>web server</strong> hosting the resource will be able to read this header and use this information at will.</p>
 <p>The browser can read cookies with <strong>JavaScript</strong> as well.</p>
 <p>While the user is browsing a website, that website can use JavaScript to read the cookies written on the current domain and all the domains up to the eTLD+1.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cookies</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">cookie</span>;
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">cookies</span>); <span style="color:#75715e">// userId=abcd1234; logged-in=true
-</span></code></pre></div><p>If <code>document.cookie</code> is invoked in a third-party context, such as an <code>&lt;iframe&gt;</code> element embedding content from a third-party source, the string will be populated only if the web browser <strong>allows third-party cookies</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cookies</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">cookie</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">cookies</span>); <span style="color:#75715e">// userId=abcd1234; logged-in=true
+</span></span></span></code></pre></div><p>If <code>document.cookie</code> is invoked in a third-party context, such as an <code>&lt;iframe&gt;</code> element embedding content from a third-party source, the string will be populated only if the web browser <strong>allows third-party cookies</strong>.</p>
 <p>Since the cookies are readily available for any JavaScript running on the page, a malicious vendor with a <strong>script running on the site</strong> could utilize the API to read and process the cookies stored on the user&rsquo;s company.</p>
 <h3 id="writing-cookies">Writing cookies</h3>
 <p>Similar to reading cookies, the HTTP protocol can be used to <strong>write</strong> cookies as well. The web server can return with an <strong>HTTP response</strong> including the <code>Set-Cookie</code> header.</p>
 <p>This header is an instruction to the browser to <strong>write</strong> the included cookie(s) on the domain specified in the header.</p>
-<figure class="left-align">
-    <img src="/images/content/set-cookie.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/set-cookie.jpg"/><figcaption>
             <h4>Sample Set-Cookie header with instructions on which domain to write the cookie</h4>
         </figcaption>
 </figure>
 
 <p>Using <strong>JavaScript</strong>, the <code>document.cookie</code> API can be used to <strong>write</strong> cookies, too.</p>
-<p>While on the <a href="http://www.cookiestatus.com">www.cookiestatus.com</a> domain, the following command would write a <code>userId</code> cookie on cookiestatus.com.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript">document.<span style="color:#a6e22e">cookie</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;userId=abcd1234;domain=cookiestatus.com;path=/&#39;</span>;
-</code></pre></div><p>Web servers and JavaScript libraries can thus write cookies on the <strong>eTLD+1</strong>, which means they become automatically available to all subdomains of that host. Thus a script running on <strong>blog.ecommerce.cookiestatus.com</strong> can check if the user has an identifier written on <strong>cookiestatus.com</strong>, and utilize that. This can be abused for <strong>cross-site tracking purposes</strong>.</p>
+<p>While on the <a href="https://www.cookiestatus.com">www.cookiestatus.com</a> domain, the following command would write a <code>userId</code> cookie on cookiestatus.com.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span>document.<span style="color:#a6e22e">cookie</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;userId=abcd1234;domain=cookiestatus.com;path=/&#39;</span>;
+</span></span></code></pre></div><p>Web servers and JavaScript libraries can thus write cookies on the <strong>eTLD+1</strong>, which means they become automatically available to all subdomains of that host. Thus a script running on <strong>blog.ecommerce.cookiestatus.com</strong> can check if the user has an identifier written on <strong>cookiestatus.com</strong>, and utilize that. This can be abused for <strong>cross-site tracking purposes</strong>.</p>
 <h2 id="first-party-and-third-party-context">First-party and third-party context</h2>
 <p>It&rsquo;s common in the parlance of the web to talk about <strong>first-party cookies</strong> and <strong>third-party cookies</strong>. This is a bit of a misnomer. Cookies are pieces of information that are stored on the user&rsquo;s computer. There is no distinction between <em>first-party</em> and <em>third-party</em> in how these cookies are classified and stored on the computer.</p>
 <p>What matters is the <strong>context</strong> of the access.</p>
@@ -961,7 +958,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </div>
 
 <p><strong>First-party context</strong> means that the operation happens between domains within <strong>the same site</strong>, í.e. domains that share the <strong>eTLD+1</strong>. <strong>Third-party context</strong> means that the operation happens <strong>cross-site</strong>, i.e. between domains that do not share the <strong>eTLD+1</strong>.</p>
-<p>Here are some examples. Consider the user to be on the domain <strong><a href="http://www.cookiestatus.com">www.cookiestatus.com</a></strong>.</p>
+<p>Here are some examples. Consider the user to be on the domain <strong><a href="https://www.cookiestatus.com">www.cookiestatus.com</a></strong>.</p>
 <div id="" style="overflow-x:auto;">
   <table>
 <thead>
@@ -989,7 +986,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td>The browser runs <code>document.cookie</code> on the page in the top frame (the main window).</td>
 <td>First-party context</td>
 <td>cookiestatus.com</td>
-<td>The command can be used to read and write cookies on <strong><a href="http://www.cookiestatus.com">www.cookiestatus.com</a></strong> and <strong>cookiestatus.com</strong>.</td>
+<td>The command can be used to read and write cookies on <strong><a href="https://www.cookiestatus.com">www.cookiestatus.com</a></strong> and <strong>cookiestatus.com</strong>.</td>
 </tr>
 <tr>
 <td>The browser loads a page from <strong>booking.vendor.com</strong> in an <code>&lt;iframe&gt;</code> and runs <code>document.cookie</code> on that page.</td>
@@ -1013,8 +1010,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Imagine a user who first browses example-products.com for a new gadget and later browses example-recipies.com for dinner ideas. If both these sites load resources from example-tracker.com and example-tracker.com has a cookie stored in the user’s browser, the owner of example-tracker.com has the ability to know that the user visited both the product website and the recipe website, what they did on those sites, what kind of web browser was used, et cetera. This is what’s called <em>cross-site tracking</em> and the cookie used by example-tracker.com is called a <em>third-party cookie</em>. In our testing we found popular websites with over 70 such trackers, all silently collecting data on users.</p>
 </blockquote>
 <p>In essence, <strong>cross-site tracking</strong> utilizes centralized tracking domains for scripts to communicate with from the sites the user actually visits. These tracking domains leverage third parties&rsquo; access to <em>browser storage</em> (mainly cookies) to build profiles of all the sites the user has visited.</p>
-<figure class="left-align">
-    <img src="/images/content/cross-site-tracking.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/cross-site-tracking.jpg"/><figcaption>
             <h4>Cross-site tracking</h4>
         </figcaption>
 </figure>
@@ -1054,8 +1050,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </blockquote>
 <p>Note that in early 2020, WebKit&rsquo;s tracking protections were extended to <a href="/safari/#third-party-cookies">block <strong>all</strong> third-party cookies without exception</a>. Thus the algorithmic classification no longer applies to how third-party storage is accessed, but it is still used for other tracking-related protections (such as <a href="https://www.cookiestatus.com/safari/#referrer">downgrading the referrer</a>).</p>
 <p>However, Safari&rsquo;s approach <em>is</em> binary in a sense - you can either enable <strong>all</strong> cross-site tracking or <strong>none</strong>.</p>
-<figure class="left-align">
-    <img src="/images/content/safari-settings.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/safari-settings.jpg"/><figcaption>
             <h4>Safari privacy settings</h4>
         </figcaption>
 </figure>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.74.2" />
+    <meta name="generator" content="Hugo 0.118.2">
     <meta name="description" content="Latest information and news about browser storage across the modern web browser landscape. Designed to provide information on ITP, ETP, and similar initiatives.">
 <meta name="author" content="Simo Ahava">
 
@@ -890,8 +890,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Websites regularly utilize cookies in both <strong>first-party</strong> and <strong>third-party context</strong> for persisting user authentication, for storing <strong>marketing consent</strong>, for identifying active <strong>sessions</strong>, and for operating with <code>&lt;iframe&gt;</code> elements that embed content from other sites.</p>
 <h3 id="cookies-in-third-party-context">Cookies in third-party context</h3>
 <p>Because browsers like <a href="/edge/">Edge</a> and <a href="/firefox/">Firefox</a> use lists (Trust Protection Lists and Disconnect.me, respectively) to collect information about <em>known trackers</em>, it&rsquo;s unlikely that any regular website would get their domain blacklisted. It would require that domain to participate in a tracking scheme, and for some public push to get the domain classified as a tracking domain.</p>
-<figure class="left-align shadow">
-    <img src="/images/content/disconnect-me-list.jpg"/> <figcaption>
+<figure class="left-align shadow"><img src="/images/content/disconnect-me-list.jpg"/><figcaption>
             <h4>Beginning of the Disconnect.me entity list</h4>
         </figcaption>
 </figure>
@@ -899,8 +898,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>On browsers like these, using their default tracking protection settings, websites could still continue to operate efficiently with third-party cookies.</p>
 <p>Browsers like <strong>Safari</strong> and <strong>Brave</strong> block <em>all</em> third-party cookie access. This means that both benign (e.g. SSO flows) and cross-site tracking scenarios are neutered. Safari offers the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a> as a way for sites to establish consent from the browser user for allowing access to third-party storage.</p>
 <p>Because of this, websites that require third-party cookies should utilize the Storage Access API to get user&rsquo;s consent to access first-party storage for a classified domain.</p>
-<figure class="left-align">
-    <img src="/images/content/storage-access-api.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/storage-access-api.jpg"/><figcaption>
             <h4>Requesting storage access via the API</h4>
         </figcaption>
 </figure>
@@ -922,8 +920,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h3 id="referrer-downgrade">Referrer downgrade</h3>
 <p>With <strong>cross-origin</strong> requests, browsers are moving to a stricter default policy of <a href="https://www.chromestatus.com/feature/6251880185331712">stripping the referrer to its origin</a>, thus removing all path, query, and fragment identifiers from it.</p>
 <p>Safari is taking an even stricter stance, stripping <a href="https://bugs.webkit.org/show_bug.cgi?id=201353">all cross-origin referrers</a> to their origin, but also downgrading referrers to eTLD+1 (so <code>www.mysite.com/path</code> becomes <code>mysite.com</code>) when the navigation source is a classified domain with URL decoration.</p>
-<figure class="left-align">
-    <img src="/images/content/safari-referrer-downgrade.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/safari-referrer-downgrade.jpg"/><figcaption>
             <h4>Navigation from www.gtmtools.com (a classified domain) becomes a referrer string that&#39;s stripped to eTLD&#43;1</h4>
         </figcaption>
 </figure>
@@ -963,8 +960,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Digital analytics is an industry that measures, among other things, the <strong>effectiveness</strong> and <strong>return on investment</strong> of advertising.</p>
 <p>There are analytics ventures that rely on <strong>cross-site tracking</strong> to analyze how uses are navigating across the websites of the internet, though much of this analytics is often done in addition to the primary focus of targeted advertising.</p>
 <p>However, there is an industry of <strong>first-party analytics</strong>, where the focus is on users who browse the website (or websites) of the organization, providing data and information about user behavior. This data can then be used to improve the user experience of the site, to build more effective campaigns, and to attribute <em>conversions</em> to different channels.</p>
-<figure class="left-align">
-    <img src="/images/content/google-analytics.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/google-analytics.jpg"/><figcaption>
             <h4>Google Analytics is the most popular web analytics platform in use</h4>
         </figcaption>
 </figure>
@@ -974,8 +970,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Web analytics tools such as <strong>Google Analytics</strong> drop a first-party cookie when the user first visits a website. This cookie is typically given a long expiration, such as two years, and the cookie expiration is reset each time a Google Analytics script runs on the page.</p>
 <p>The cookie value is random and unique - by default Google Analytics uses a random number and the timestamp of when the cookie was set (e.g. <code>GA1.2.123456789.1575363021</code>), but sometimes the identifier is just a <a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cid">UUID</a>.</p>
 <p>Google Analytics uses this cookie to identify that the separate hits coming from a user&rsquo;s browser belong, in fact, to the same browser.</p>
-<figure class="left-align">
-    <img src="/images/content/itp-impact.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/itp-impact.jpg"/><figcaption>
             <h4>ITP impact on first-party analytics</h4>
         </figcaption>
 </figure>
@@ -990,8 +985,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <h2 id="user-experience-optimization">User experience optimization</h2>
 <p>Here, <em>user experience optimization</em> covers the broad topics of <strong>conversion (rate) optimization</strong> and <strong>content personalization</strong>. The purpose of such efforts is to dynamically alter what the user might see on a website, based on random distribution to different variants, or based on targeting algorithms that choose the most suitable variant or content for the user.</p>
 <p>For experimentation and data collection, it&rsquo;s important that the user&rsquo;s experience on the site be <strong>consistent</strong>. Being exposed to a different variant of the site with every page load can lead to confusion and introduce friction, especially in ecommerce contexts.</p>
-<figure class="left-align">
-    <img src="/images/content/optimizely-storage.jpg"/> <figcaption>
+<figure class="left-align"><img src="/images/content/optimizely-storage.jpg"/><figcaption>
             <h4>Storage specification on the Optimizely platform https://bit.ly/2YdKmVG</h4>
         </figcaption>
 </figure>
