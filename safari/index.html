@@ -943,7 +943,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p><strong>Example</strong>: The user follows a link from <code>www.facebook.com</code> (a known tracking domain), and lands on the website. Facebook appends an <code>?fbclid=123123123123</code> parameter to the URL. Because the referring URL is on a classified domain, and because the landing page has a query parameter, ITP sets a maximum expiration of <strong>24 hours</strong> to any cookies set with JavaScript while on that landing page.</p>
 </div>
 
-<p>First-party cookies set with the <code>Set-Cookie</code> HTTP response header are not impacted by ITP, and have no restrictions placed on their expiration, unless they meet the criterion for [CNAME cloaking (see below)](#cname-cloaking]..</p>
+<p>First-party cookies set with the <code>Set-Cookie</code> HTTP response header are not impacted by ITP, and have no restrictions placed on their expiration, unless they meet the criterion for <a href="#cname-cloaking">CNAME cloaking (see below)</a>..</p>
 <h2 id="other-third-party-storage">Other third-party storage</h2>
 <p><code>localStorage</code> is partitioned, so that access is keyed to the combination of the source and target domains. Thus <code>www.domain.com</code> has a different <code>localStorage</code> store in third-party context when accessed from <code>www.domain1.com</code> and from <code>www.domain2.com</code>. This partitioned store is also cleared between application launches.</p>
 <p><code>sessionStorage</code> is partitioned in a similar way (<a href="https://github.com/firebase/firebase-js-sdk/issues/6716#issuecomment-1416793915">source</a>).</p>
