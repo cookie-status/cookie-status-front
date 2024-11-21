@@ -805,7 +805,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <code>sessionStorage</code> is partitioned on Safari.</p>
 <p><a title="Suggest an edit" href="https://github.com/cookie-status/cookie-status-dev/issues/new?labels=content&title=%5BContent%20issue%5D%20Current%20Status" target="_blank"><i class="fa fa-edit"></i> Suggest an edit</a></p>
 <p><a href="#" id="fullscreen">Toggle full screen</a></p>
-<div id="cs" style="overflow-x:auto;">
+<div id="cs">
   <table>
 <thead>
 <tr>
@@ -815,7 +815,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <th><a href="/edge/">Edge</a></th>
 <th><a href="/firefox/">Firefox</a></th>
 <th><a href="/safari/">Safari</a></th>
-<th><a href="/cliqz/">Cliqz</a></th>
 </tr>
 </thead>
 <tbody>
@@ -826,7 +825,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><a href="https://blogs.windows.com/msedgedev/2019/06/27/tracking-prevention-microsoft-edge-preview/">Tracking prevention</a></td>
 <td><a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop">Enhanced Tracking Protection</a> (ETP)</td>
 <td><a href="https://webkit.org/blog/7675/intelligent-tracking-prevention/">Intelligent Tracking Prevention</a> (ITP)</td>
-<td>Anti-Tracking</td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Deployed in</strong></td>
@@ -835,7 +833,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><a href="https://www.microsoftedgeinsider.com/en-us/welcome/update?channel=beta&amp;version=78.0.276.8">78.0.276.8</a></td>
 <td><a href="https://www.mozilla.org/en-US/firefox/69.0/releasenotes/">69.0</a></td>
 <td><a href="https://en.wikipedia.org/wiki/Safari_version_history#Safari_11">Safari 11</a></td>
-<td><a href="https://cliqz.com/en/magazine/cliqz-browser-release-notes-1-30-0">1.30.0</a></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Latest release</strong></td>
@@ -844,7 +841,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><a href="https://www.microsoftedgeinsider.com/en-us/whats-new">Link</a></td>
 <td><a href="https://www.mozilla.org/en-US/firefox/releases/">Link</a></td>
 <td><a href="https://developer.apple.com/documentation/safari_release_notes">Link</a></td>
-<td><a href="https://cliqz.com/en/download">Link</a></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Default protection mode</strong></td>
@@ -853,7 +849,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td>Balanced</td>
 <td>Standard</td>
 <td>ITP enabled</td>
-<td>Default Anti-Tracking settings</td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Classification of &ldquo;known trackers&rdquo;</strong></td>
@@ -862,7 +857,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><a href="/edge/#classification-of-known-trackers" rel="footnote" class="fa fa-info-circle"></a> Trust Protection Lists (with engagement and organization mitigation)</td>
 <td><a href="/firefox/#classification-of-known-trackers" rel="footnote" class="fa fa-info-circle"></a> Disconnect.me</td>
 <td><a href="/safari/#classification-of-known-trackers" rel="footnote" class="fa fa-info-circle"></a> Algorithmic</td>
-<td><a href="/cliqz/#classification-of-known-trackers" rel="footnote" class="fa fa-info-circle"></a> Algorithmic</td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Cookies in 3rd party context</strong></td>
@@ -871,7 +865,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><a href="/edge/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Access restricted for known trackers.</td>
 <td><p><a href="/firefox/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Access restricted for known trackers.</p><p><a href="/firefox/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Cookies are partitioned between the site and the third-party. Cookies are not shared across sites.</span></p></td>
 <td><p><a href="/safari/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> All access restricted, except with Storage Access API.</p></td>
-<td><p><a href="/cliqz/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Access restricted for known trackers, with mitigations for user interaction and critical flows (e.g. some oAuth implementations).</p><p><a href="/cliqz/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Cookies set on tracker origins without first-party interaction expire in 1 hour.</p></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Cookies in 1st party context</strong></td>
@@ -880,7 +873,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><a href="/edge/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/firefox/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</td>
 <td><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, deletion happens after 7 days of browser use without user interaction on the site.</p><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 24 hours on pages with URL decoration (query parameters or fragments) when referring domain is a known tracker.</p></td>
-<td><p><a href="/cliqz/#first-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Cookies set on tracker domains with infrequent first-party interaction expire in 7 days. Otherwise expiration set to 30 days after last visit to site.</p><p><a href="/cliqz/#first-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Cookies set with <code>document.cookie</code> have a maximum expiration of 7 days.</p></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Other browser storage in 3rd party context</strong></td>
@@ -889,7 +881,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><p><a href="/edge/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> Access restricted for known trackers.</p><p><a href="/edge/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions for other domains.</p></td>
 <td><p><a href="/firefox/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>localStorage</code> and <code>IndexedDB</code> restricted for known trackers.</p><p><a href="/firefox/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>sessionStorage</code> is not restricted.</span></p><p><a href="/firefox/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Storage is partitioned between the site and the third-party. Storage is not shared across sites.</span></p></td>
 <td><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>localStorage</code> is partitioned and reset between application launches.</p><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>IndexedDB</code> is restricted.</p><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <span class="new"><code>sessionStorage</code> is partitioned.</span></p></td>
-<td><a href="/cliqz/#other-third-party-storage" rel="footnote" class="fa fa-info-circle"></a> No restrictions.</td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Other browser storage in 1st party context</strong></td>
@@ -898,7 +889,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><a href="/edge/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/firefox/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</td>
 <td><a href="/safari/#other-first-party-storage" rel="footnote"  class="fa fa-info-circle"></a> All script-writable storage is deleted after 7 days of browser use without interaction (click, tap, text input) with the site.</td>
-<td><a href="/cliqz/#other-first-party-storage" rel="footnote" class="fa fa-info-circle"></a> No restrictions.</td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>CNAME cloaking</strong></td>
@@ -907,7 +897,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><a href="/edge/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/firefox/#cname-cloaking" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/safari/#cname-cloaking" rel="footnote" class="fa fa-info-circle"></a> Expiration of cookies set with <code>Set-Cookie</code> HTTP response headers is 7 days at most, if the response originates from a subdomain that has a CNAME alias to a cross-site origin, or if the subdomain is configured with A/AAAA records where the first half of the IP address does not match the first half of the IP address of the website the user is currently browsing.</td>
-<td><a href="/cliqz/#cname-cloaking" rel="footnote" class="fa fa-info-circle"></a> No restrictions.</td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Referrer</strong></td>
@@ -916,7 +905,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><a href="/edge/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Default browser policy (<code>strict-origin-when-cross-origin</code>)</td>
 <td><p><a href="/firefox/#referrer" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Default browser policy (<code>strict-origin-when-cross-origin</code> or stricter)</span></p><p><a href="/firefox/#referrer" rel="footnote" class="fa fa-info-circle"></a> If the referring URL has a tracking parameter (e.g. <code>fbclid</code>), <code>document.referrer</code> string is truncated to eTLD+1.</p></td>
 <td><p><a href="/safari/#referrer" rel="footnote"  class="fa fa-info-circle"></a> Downgrade cross-site <code>document.referrer</code> to origin.</p><p><a href="/safari/#referrer" rel="footnote" class="fa fa-info-circle"></a> Downgrade all cross-site request headers to origin.</p><p><a href="/safari/#referrer" rel="footnote"  class="fa fa-info-circle"></a> For referrers that are known trackers, where the referring page also has URL decoration (query parameters or fragments), <code>document.referrer</code> is downgraded to eTLD+1.</p><p><a href="/safari/#referrer" rel="footnote" class="fa fa-info-circle"></a> Default browser policy (<code>strict-origin-when-cross-origin</code>)</p></td>
-<td><a href="/cliqz/#referrer" rel="footnote" class="fa fa-info-circle"></a> Strip all cross-origin referrers to origin.</td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Other</strong></td>
@@ -925,7 +913,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <td><p><a href="/edge/#other" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Freeze Mac OS X version to 10_15_7 in the User Agent string.</span></p></td>
 <td><p><a href="/firefox/#other" rel="footnote" class="fa fa-info-circle"></a> Automatically block requests to tracking domains that are also listed in the Fingerprinting category of the Disconnect.me list.</p><p><a href="/firefox/#other" rel="footnote" class="fa fa-info-circle"></a> Freeze Mac OS X version to 10_15 in the User Agent string.</p></td>
 <td><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Detect delays in bounce trackers and treat them as regular bounces.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Extend WebKit&rsquo;s tracking protections to all browsers running on iOS 14 and newer. These protections can only be disabled by the user.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Purge all site data from classified domains if no user interaction (or Storage Access API grant) in first-party context has been recorded in the last 30 days.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Freeze Mac OS X version to 10_15_7 in the User Agent string.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Safari hides the user&rsquo;s IP address in requests sent to known trackers.</p></td>
-<td><p><a href="/cliqz/#other" rel="footnote" class="fa fa-info-circle"></a> Algorithmically identify and purge unique user identifiers from requests to third-party domains.</p> <p><a href="/cliqz/" rel="footnote" class="fa fa-info-circle"></a> <span class="new">The Cliqz project has been <a href="https://cliqz.com/announcement.html">shut down</a>.</span></p></td>
 </tr>
 </tbody>
 </table>
