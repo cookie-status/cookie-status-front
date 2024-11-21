@@ -868,15 +868,14 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Chrome does not classify classify trackers or domains for the purposes of tracking protection.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p>Chrome restricts the maximum lifetime of cookies to 400 days.</p>
-<p>Chrome <strong>partitions</strong> storage between the site and a cross-site origin receiving requests from the site.</p>
-
-<div class="notices note" ><p><strong>Example</strong>: If <code>siteA.com</code> tries to load a resource from <code>siteB.com</code>, the latter will have access to its cookies. However, these cookies are stored in a special <strong>partition</strong> keyed between <code>siteA.com</code> and <code>siteB.com</code>. If a second site, such as <code>siteC.com</code> loads a resource from <code>siteB.com</code>, the cookies the latter will have access to will not be the same as those available when embedded via <code>siteA.com</code>.</p>
-</div>
-
 <h2 id="first-party-cookies">First-party cookies</h2>
 <p>Chrome restricts the maximum lifetime of cookies to 400 days. Other than that, Chrome does not restrict the use of first-party cookies.</p>
 <h2 id="other-third-party-storage">Other third-party storage</h2>
 <p>Chrome <strong>partitions</strong> storage in embedded frames that load content from a cross-site origin.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: If <code>siteA.com</code> tries to load an iframe from <code>siteB.com</code>, the latter will have access to its storage (<code>localStorage</code>, for example). However, these storage mechanisms are <strong>partitioned</strong> between <code>siteA.com</code> and <code>siteB.com</code>. If a second site, such as <code>siteC.com</code> loads a frame from <code>siteB.com</code>, the storage the latter will have access to will not be the same as that available when embedded via <code>siteA.com</code>.</p>
+</div>
+
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>Chrome does not restrict the use of other browser storage in first-party context.</p>
 <h2 id="cname-cloaking">CNAME cloaking</h2>
