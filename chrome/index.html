@@ -863,19 +863,20 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 
 	<h2 id="current-status">Current status</h2>
-
-<div class="notices warning" ><p>The Chrome browser doesn&rsquo;t currently have mechanisms designed specifically for tracking protection.</p>
-</div>
-
-<p>The <a href="https://www.chromium.org/Home/chromium-privacy/privacy-sandbox">privacy-sandbox</a> Chromium project promises initiatives related to tracking prevention, and Chrome has publicly stated intention to <a href="https://blog.google/products/chrome/update-testing-privacy-sandbox-web/">making third-party cookies obsolete by 2024</a>.</p>
+<p>Chrome&rsquo;s initiative for browser tracking protections (among other things) is called <a href="https://www.privacysandbox.com/">Privacy Sandbox</a>. While Chrome&rsquo;s pledge to remove third-party cookies has been <a href="https://privacysandbox.com/news/privacy-sandbox-update/">put on hold</a>, the project includes many other interesting features, such as <strong>storage partitioning</strong> (see below).</p>
 <h2 id="classification-of-known-trackers">Classification of &ldquo;known trackers&rdquo;</h2>
 <p>Chrome does not classify classify trackers or domains for the purposes of tracking protection.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
-<p>Chrome restricts the maximum lifetime of cookies to 400 days. Other than that, Chrome does not restrict the use of third-party cookies.</p>
+<p>Chrome restricts the maximum lifetime of cookies to 400 days.</p>
+<p>Chrome <strong>partitions</strong> storage between the site and a cross-site origin receiving requests from the site.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: If <code>siteA.com</code> tries to load a resource from <code>siteB.com</code>, the latter will have access to its cookies. However, these cookies are stored in a special <strong>partition</strong> keyed between <code>siteA.com</code> and <code>siteB.com</code>. If a second site, such as <code>siteC.com</code> loads a resource from <code>siteB.com</code>, the cookies the latter will have access to will not be the same as those available when embedded via <code>siteA.com</code>.</p>
+</div>
+
 <h2 id="first-party-cookies">First-party cookies</h2>
 <p>Chrome restricts the maximum lifetime of cookies to 400 days. Other than that, Chrome does not restrict the use of first-party cookies.</p>
 <h2 id="other-third-party-storage">Other third-party storage</h2>
-<p>Chrome does not restrict the use of other browser storage in third-party context.</p>
+<p>Chrome <strong>partitions</strong> storage in embedded frames that load content from a cross-site origin.</p>
 <h2 id="other-first-party-storage">Other first-party storage</h2>
 <p>Chrome does not restrict the use of other browser storage in first-party context.</p>
 <h2 id="cname-cloaking">CNAME cloaking</h2>

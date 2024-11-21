@@ -801,8 +801,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p>Changes added in the <strong>latest release</strong> of each browser are indicated with <span style="background: yellow;">yellow highlight</span>. You can <strong>click</strong> the <a class="fa fa-info-circle" rel="footnote"></a> icon to be redirected to the respective section in each browser&rsquo;s own &ldquo;Current Status&rdquo; page.</p>
 </div>
 
-<p><strong>Last updated</strong>: 10 Oct 2023<br>
-<code>sessionStorage</code> is partitioned on Safari.</p>
+<p><strong>Last updated</strong>: 21 Nov 2024<br>
+Chrome storage partitioning added.</p>
 <p><a title="Suggest an edit" href="https://github.com/cookie-status/cookie-status-dev/issues/new?labels=content&title=%5BContent%20issue%5D%20Current%20Status" target="_blank"><i class="fa fa-edit"></i> Suggest an edit</a></p>
 <p><a href="#" id="fullscreen">Toggle full screen</a></p>
 <div id="cs">
@@ -861,7 +861,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <tr>
 <td style="text-align:right"><strong>Cookies in 3rd party context</strong></td>
 <td><p><a href="/brave/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Restrict access in subresource requests.</p><p><a href="/brave/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Partitioned access in frame.</p><p><a href="/brave/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Partitioned storage is cleared when no more first-party documents that use the partition are open, or when the browser is closed.</td>
-<td><a href="/chrome/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Cookies restricted to a maximum lifetime of 400 days.</span></td>
+<td><p><a href="/chrome/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span>Cookies restricted to a maximum lifetime of 400 days.</span></p><p><a href="/chrome/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Chrome partitions third-party storage.</span></p></td>
 <td><a href="/edge/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Access restricted for known trackers.</td>
 <td><p><a href="/firefox/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Access restricted for known trackers.</p><p><a href="/firefox/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Cookies are partitioned between the site and the third-party. Cookies are not shared across sites.</span></p></td>
 <td><p><a href="/safari/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> All access restricted, except with Storage Access API.</p></td>
@@ -869,7 +869,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <tr>
 <td style="text-align:right"><strong>Cookies in 1st party context</strong></td>
 <td><p><a href="/brave/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 7 days.</p><p><a href="/brave/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Otherwise maximum expiry set to 6 months.</p></td>
-<td><a href="/chrome/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Cookies restricted to a maximum lifetime of 400 days.</span></td>
+<td><a href="/chrome/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span>Cookies restricted to a maximum lifetime of 400 days.</span></td>
 <td><a href="/edge/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
 <td><a href="/firefox/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> All storage is purged from known trackers daily, unless the user has interacted with the site in first-party context within the last 45 days.</td>
 <td><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, deletion happens after 7 days of browser use without user interaction on the site.</p><p><a href="/safari/#first-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> For cookies set with <code>document.cookie</code>, expiration set to 24 hours on pages with URL decoration (query parameters or fragments) when referring domain is a known tracker.</p></td>
@@ -877,7 +877,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <tr>
 <td style="text-align:right"><strong>Other browser storage in 3rd party context</strong></td>
 <td><p><a href="/brave/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> Partitioned access in frame.</p><p><a href="/brave/#other-third-party-storage" rel="footnote" class="fa fa-info-circle"></a> Partitioned storage is cleared when no more first-party documents that use the partition are open, or when the browser is closed.</p></td>
-<td><a href="/chrome/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions.</td>
+<td><a href="/chrome/#third-party-storage" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Chrome partitions third-party storage.</span></td>
 <td><p><a href="/edge/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> Access restricted for known trackers.</p><p><a href="/edge/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions for other domains.</p></td>
 <td><p><a href="/firefox/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>localStorage</code> and <code>IndexedDB</code> restricted for known trackers.</p><p><a href="/firefox/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>sessionStorage</code> is not restricted.</span></p><p><a href="/firefox/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Storage is partitioned between the site and the third-party. Storage is not shared across sites.</span></p></td>
 <td><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>localStorage</code> is partitioned and reset between application launches.</p><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>IndexedDB</code> is restricted.</p><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <span class="new"><code>sessionStorage</code> is partitioned.</span></p></td>
@@ -909,7 +909,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <tr>
 <td style="text-align:right"><strong>Other</strong></td>
 <td><p><a href="/brave/#other" rel="footnote" class="fa fa-info-circle"></a> Remove known tracking parameters (<code>fbclid</code>, <code>gclid</code>, <code>msclkid</code>, <code>mc_eid</code>, and others) from URL query strings.</p> <p><a href="/brave/#other" rel="footnote" class="fa fa-info-circle"></a> Randomize HTML canvas fingerprints by first-party domain.</p><p><a href="/brave/#other" rel="footnote" class="fa fa-info-circle"></a> Freeze Mac OS X version to 10_15_7 in the User Agent string.</p></td>
-<td><p><a href="/chrome/#other" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Freeze Mac OS X version to 10_15_7 in the User Agent string.</span></p></td>
+<td><p><a href="/chrome/#other" rel="footnote" class="fa fa-info-circle"></a> <span>Freeze Mac OS X version to 10_15_7 in the User Agent string.</span></p></td>
 <td><p><a href="/edge/#other" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Freeze Mac OS X version to 10_15_7 in the User Agent string.</span></p></td>
 <td><p><a href="/firefox/#other" rel="footnote" class="fa fa-info-circle"></a> Automatically block requests to tracking domains that are also listed in the Fingerprinting category of the Disconnect.me list.</p><p><a href="/firefox/#other" rel="footnote" class="fa fa-info-circle"></a> Freeze Mac OS X version to 10_15 in the User Agent string.</p></td>
 <td><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Detect delays in bounce trackers and treat them as regular bounces.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Extend WebKit&rsquo;s tracking protections to all browsers running on iOS 14 and newer. These protections can only be disabled by the user.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Purge all site data from classified domains if no user interaction (or Storage Access API grant) in first-party context has been recorded in the last 30 days.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Freeze Mac OS X version to 10_15_7 in the User Agent string.</p><p><a href="/safari/#other" rel="footnote" class="fa fa-info-circle"></a> Safari hides the user&rsquo;s IP address in requests sent to known trackers.</p></td>
@@ -919,18 +919,6 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 </div>
 
-<h3 id="bubbling-under">Bubbling under</h3>
-<p><strong>Last updated</strong>: 22 March 2021</p>
-<ul>
-<li>Brave: Add noise to Canvas, WebGL and AudioContext APIs to make fingerprinting more difficult (<a href="https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections">link to wiki page</a>).</li>
-<li>Brave: Cap all script-writable storage to a maximum lifetime (<a href="https://github.com/brave/brave-browser/issues/4438">link to issue</a>).</li>
-<li>Chrome: Deprecation of the User-Agent string (<a href="https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/-2JIRNMWJ7s/yHe4tQNLCgAJ">link to discussion</a>).</li>
-<li>Chrome: Scheme-bound cookies (<a href="https://github.com/mikewest/scheming-cookies">link to proposal</a>).</li>
-<li>Chrome: Deprecation of cookies in third-party contexts (<a href="https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html">link to blog post</a>).</li>
-<li>Safari: <code>isLoggedIn</code> (<a href="https://github.com/privacycg/is-logged-in">work item in the Privacy Community Group</a>).</li>
-<li>Safari: Exempt web applications from having their local browser data erased (<a href="https://trac.webkit.org/changeset/259440/webkit">link to changeset</a>).</li>
-<li>Safari: Remove the <a href="https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/">Temporary Compatibility Fix</a> which gives storage access to embedded popups in some contexts (e.g. login flows).</li>
-</ul>
 <h2 id="faq">FAQ</h2>
 <h3 id="1-why-does-this-resource-exist">1. Why does this resource exist?</h3>
 <p>Web browsers are going through fairly momentous shifts in order to better respond to the increasing number of data breaches and cases of data misuse by third parties.</p>
