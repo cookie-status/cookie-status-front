@@ -910,11 +910,13 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>To monitor the list of domains classified by your Safari instance, or to test ITP in action, you can utilize the <strong>ITP Debug Mode</strong>, with instructions for use found behind <a href="https://www.simoahava.com/privacy/itp-debug-mode-in-safari/">this link</a>.</p>
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p>Safari blocks <strong>all</strong> access to cookies in third-party context.</p>
+<p>To support legacy federated login scenarios, an exception to the rule above is a <a href="https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/">temporary compatibility fix</a> that was introduced in ITP 2.0. This fix applies to scenarios where a site opens a pop-up to a federated login service and then relies on third-party cookies to persist the login on the site itself. ITP detects this type of pop-up behavior and forwards third-party storage access to the site after the login service sets the cookie (in third-party context).</p>
+<p>Note that this is listed as a <strong>temporary</strong> fix and could be invalidated at any time. Because the pop-up already requires user interaction (the login action itself), WebKit recommends to use the Storage Access API for proper handling of third-party storage access (see below).</p>
 <h3 id="storage-access-api">Storage Access API</h3>
 <p>Safari introduced the <a href="https://webkit.org/blog/8124/introducing-storage-access-api/">Storage Access API</a> in February 2018. With the Storage Access API, a website can ask the user&rsquo;s permission to access storage in an embedded cross-site resource which would otherwise have its cookie access restricted.</p>
 <p>To be able to use the Storage Access API, the embedded site must have been interacted with in first-party context (URL in address bar) in the last 30 days of Safari use.</p>
 
-<div class="notices note" ><p><strong>Example</strong>: The user is on <code>www.blog-site.com</code>, which loads a comment service in an <code>&lt;iframe&gt;</code> from <code>www.comment-service.com</code>. Since this is a cross-site resource load, ITP will not allow access to the site due to the site not having prior cookies set (Safari&rsquo;s default cookie policy), and because the user hasn&rsquo;t interacted with the site in first-party context in the last 30 days of Safari use.</p>
+<div class="notices note" ><p><strong>Example</strong>: The user is on <code>www.blog-site.com</code>, which loads a comment service in an <code>&lt;iframe&gt;</code> from <code>www.comment-service.com</code>. Since this is a cross-site resource load, ITP will not allow storage access due to the site not having prior cookies set (Safari&rsquo;s default cookie policy), and because the user hasn&rsquo;t interacted with the site in first-party context in the last 30 days of Safari use.</p>
 </div>
 
 <figure class="left-align"><img src="/images/content/storage-access-api.jpg"/><figcaption>

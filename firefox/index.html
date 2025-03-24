@@ -921,6 +921,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p><strong>Example</strong>: If <code>siteA.com</code> tries to load a resource from <code>siteB.com</code>, the latter will have access (assuming it is not on the list of known trackers) to its cookies. However, these cookies are stored in a special <strong>partition</strong> keyed between <code>siteA.com</code> and <code>siteB.com</code>. If a second site, such as <code>siteC.com</code> loads a resource from <code>siteB.com</code>, the cookies the latter will have access to will not be the same as those available when embedded via <code>siteA.com</code>.</p>
 </div>
 
+<p>There are some edge cases where a partitioned third-party is granted unpartitioned access to its embedder. These involve pop-up windows and redirects, and you can read more about them <a href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/State_Partitioning#storage_access_heuristics">here</a>.</p>
 <h2 id="first-party-cookies">First-party cookies</h2>
 <p>All storage is cleared (more or less) daily from origins that are known trackers and that haven&rsquo;t received a top-level user interaction (including scroll) within the last 45 days. More details can be found <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection">here</a>.</p>
 
