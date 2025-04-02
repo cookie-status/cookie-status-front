@@ -887,11 +887,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 </tr>
 <tr>
 <td><strong>Latest update deployed in</strong></td>
-<td><a href="https://blogs.windows.com/msedgedev/2019/12/03/improving-tracking-prevention-microsoft-edge-79/">79</a></td>
+<td>114</td>
 </tr>
 <tr>
 <td><strong>Latest update includes</strong></td>
-<td>Site and organization mitigation to choosing which trackers to block.</td>
+<td>Cookies Having Independent Partitioned State (CHIPS) allows opt-in to partitioned third-party cookies.</td>
 </tr>
 <tr>
 <td><strong>User controls</strong></td>
@@ -954,6 +954,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 
 <h2 id="third-party-cookies">Third-party cookies</h2>
 <p>Third-party cookies are blocked from all domains listed in the Trust Protection Lists (considering the <strong>mitigations</strong> listed above).</p>
+<p>Edge supports an <strong>opt-in</strong> flag for cookies, <code>Partitioned;</code>. This is part of the <strong>C</strong>ookies <strong>H</strong>aving <strong>I</strong>ndependent <strong>P</strong>artitioned <strong>S</strong>tate proposal (CHIPS). Cookies with this flag can be accessed in third-party context, but they are partitioned between the site sending requests to the third-party and the third-party itself. Cookies in a partition cannot be accessed by other sites that also communicate with the same third-party.</p>
 <h2 id="first-party-cookies">First-party cookies</h2>
 <p>No restrictions.</p>
 

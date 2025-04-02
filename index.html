@@ -801,8 +801,8 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <div class="notices note" ><p>Changes added in the <strong>latest release</strong> of each browser are indicated with <span style="background: yellow;">yellow highlight</span>. You can <strong>click</strong> the <a class="fa fa-info-circle" rel="footnote"></a> icon to be redirected to the respective section in each browser&rsquo;s own &ldquo;Current Status&rdquo; page.</p>
 </div>
 
-<p><strong>Last updated</strong>: 21 Nov 2024<br>
-Chrome storage partitioning added.</p>
+<p><strong>Last updated</strong>: 2 Apr 2025<br>
+Added details about CHIPS for Chrome, Edge, Safari.</p>
 <p><a title="Suggest an edit" href="https://github.com/cookie-status/cookie-status-dev/issues/new?labels=content&title=%5BContent%20issue%5D%20Current%20Status" target="_blank"><i class="fa fa-edit"></i> Suggest an edit</a></p>
 <p><a href="#" id="fullscreen">Toggle full screen</a></p>
 <div id="cs">
@@ -861,10 +861,10 @@ Chrome storage partitioning added.</p>
 <tr>
 <td style="text-align:right"><strong>Cookies in 3rd party context</strong></td>
 <td><p><a href="/brave/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Restrict access in subresource requests.</p><p><a href="/brave/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Partitioned access in frame.</p><p><a href="/brave/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> Partitioned storage is cleared when no more first-party documents that use the partition are open, or when the browser is closed.</td>
-<td><a href="/chrome/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span>Cookies restricted to a maximum lifetime of 400 days.</span></td>
-<td><a href="/edge/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Access restricted for known trackers.</td>
+<td><p><a href="/chrome/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Opt-in mechanism (CHIPS) for partitioning cookies in 3P context.</span></p><p><a href="/chrome/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Cookies restricted to a maximum lifetime of 400 days.</p></td>
+<td><p><a href="/edge/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Opt-in mechanism (CHIPS) for partitioning cookies in 3P context.</span></p><p><a href="/edge/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Access restricted for known trackers.</p></td>
 <td><p><a href="/firefox/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> Access restricted for known trackers.</p><p><a href="/firefox/#third-party-cookies" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Cookies are partitioned between the site and the third-party. Cookies are not shared across sites.</span></p></td>
-<td><p><a href="/safari/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> All access restricted, except with Storage Access API.</p></td>
+<td><p><a href="/safari/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> All access restricted, except with Storage Access API.</p><p><a href="/safari/#third-party-cookies" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Opt-in mechanism (CHIPS) for partitioning cookies in 3P context.</span></p></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Cookies in 1st party context</strong></td>
@@ -877,10 +877,10 @@ Chrome storage partitioning added.</p>
 <tr>
 <td style="text-align:right"><strong>Other browser storage in 3rd party context</strong></td>
 <td><p><a href="/brave/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> Partitioned access in frame.</p><p><a href="/brave/#other-third-party-storage" rel="footnote" class="fa fa-info-circle"></a> Partitioned storage is cleared when no more first-party documents that use the partition are open, or when the browser is closed.</p></td>
-<td><a href="/chrome/#third-party-storage" rel="footnote" class="fa fa-info-circle"></a> <span class="new">Chrome partitions third-party storage.</span></td>
+<td><a href="/chrome/#third-party-storage" rel="footnote" class="fa fa-info-circle"></a> Chrome partitions third-party storage.</td>
 <td><p><a href="/edge/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> Access restricted for known trackers.</p><p><a href="/edge/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> No restrictions for other domains.</p></td>
 <td><p><a href="/firefox/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>localStorage</code> and <code>IndexedDB</code> restricted for known trackers.</p><p><a href="/firefox/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>sessionStorage</code> is not restricted.</span></p><p><a href="/firefox/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <span class="new">Storage is partitioned between the site and the third-party. Storage is not shared across sites.</span></p></td>
-<td><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>localStorage</code> is partitioned and reset between application launches.</p><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>IndexedDB</code> is restricted.</p><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <span class="new"><code>sessionStorage</code> is partitioned.</span></p></td>
+<td><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>localStorage</code> is partitioned and reset between application launches.</p><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a> <code>IndexedDB</code> is restricted.</p><p><a href="/safari/#other-third-party-storage" rel="footnote"  class="fa fa-info-circle"></a><code>sessionStorage</code> is partitioned.</p></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Other browser storage in 1st party context</strong></td>

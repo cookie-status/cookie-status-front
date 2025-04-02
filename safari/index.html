@@ -877,7 +877,7 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <tbody>
 <tr>
 <td><strong>Mechanism</strong></td>
-<td>Intelligent Tracking Prevention 2.3</td>
+<td>Intelligent Tracking Prevention</td>
 </tr>
 <tr>
 <td><strong>Originally deployed in</strong></td>
@@ -912,6 +912,11 @@ d2FyZQBHSU1QIDIuMTAuNEA6CGYAAAAASUVORK5CYII=" />
 <p>Safari blocks <strong>all</strong> access to cookies in third-party context.</p>
 <p>To support legacy federated login scenarios, an exception to the rule above is a <a href="https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/">temporary compatibility fix</a> that was introduced in ITP 2.0. This fix applies to scenarios where a site opens a pop-up to a federated login service and then relies on third-party cookies to persist the login on the site itself. ITP detects this type of pop-up behavior and forwards third-party storage access to the site after the login service sets the cookie (in third-party context).</p>
 <p>Note that this is listed as a <strong>temporary</strong> fix and could be invalidated at any time. Because the pop-up already requires user interaction (the login action itself), WebKit recommends to use the Storage Access API for proper handling of third-party storage access (see below).</p>
+<p>Safari introduced an <strong>opt-in</strong> flag for cookies in version 18.4: <code>Partitioned;</code>. This is part of the <strong>C</strong>ookies <strong>H</strong>aving <strong>I</strong>ndependent <strong>P</strong>artitioned <strong>S</strong>tate proposal (CHIPS). Cookies with this flag can be accessed in third-party context, but they are partitioned between the site sending requests to the third-party and the third-party itself. Cookies in a partition cannot be accessed by other sites that also communicate with the same third-party. Domains flagged by ITP cannot access cookies in 3P context, even with the <code>Partitioned;</code> flag.</p>
+
+<div class="notices note" ><p><strong>Example</strong>: The user is on <code>www.blog-site.com</code>, which sends a request to <code>www.comment-service.com</code>. The latter sets a cookie with the <code>Partitioned;</code> flag in the HTTP response. This cookie is included in requests from <code>www.blog-site.com</code> to <code>www.comment-service.com</code>, because even though Safari blocks third-party cookies, those with the <code>Partitioned;</code> flag are exempt from this blocking. However, if the user visits <code>www.other-site.com</code> that also sends requests to <code>www.comment-service.com</code>, cookies partitioned between <code>www.blog-site.com</code> and <code>www.comment-service.com</code> are not included in the requests.</p>
+</div>
+
 <h3 id="storage-access-api">Storage Access API</h3>
 <p>Safari introduced the <a href="https://webkit.org/blog/8124/introducing-storage-access-api/">Storage Access API</a> in February 2018. With the Storage Access API, a website can ask the user&rsquo;s permission to access storage in an embedded cross-site resource which would otherwise have its cookie access restricted.</p>
 <p>To be able to use the Storage Access API, the embedded site must have been interacted with in first-party context (URL in address bar) in the last 30 days of Safari use.</p>
